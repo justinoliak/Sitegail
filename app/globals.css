@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 158 14% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 158 14% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 158 14% 20%;
+    --primary: 158 30% 45%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 350 80% 95%;
+    --secondary-foreground: 350 80% 30%;
+    --muted: 158 20% 96%;
+    --muted-foreground: 158 14% 45%;
+    --accent: 350 80% 90%;
+    --accent-foreground: 350 80% 30%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 158 30% 90%;
+    --input: 158 30% 90%;
+    --ring: 158 30% 45%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 158 14% 10%;
+    --foreground: 0 0% 98%;
+    --card: 158 14% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 158 14% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 158 30% 45%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 350 80% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 158 14% 20%;
+    --muted-foreground: 158 14% 60%;
+    --accent: 350 80% 20%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 158 14% 20%;
+    --input: 158 14% 20%;
+    --ring: 158 30% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant', serif;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold leading-tight tracking-tight;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold leading-snug tracking-tight;
+  }
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
+    min-height: 2.5rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
+  }
+  
+  .btn-destructive {
+    @apply bg-destructive text-destructive-foreground hover:bg-destructive/90;
+  }
+  
+  .btn-outline {
+    @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground;
+  }
+}
