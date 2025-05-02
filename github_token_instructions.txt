@@ -1,0 +1,34 @@
+GitHub Personal Access Token Setup Instructions
+
+To fix the GitHub push issue, follow these steps to create and use a personal access token:
+
+1. Create a GitHub Personal Access Token:
+   - Go to GitHub.com and sign in
+   - Click on your profile picture in the top right corner
+   - Select "Settings"
+   - Scroll down to "Developer settings" (at the bottom of the left sidebar)
+   - Click on "Personal access tokens" and then "Tokens (classic)"
+   - Click "Generate new token" and then "Generate new token (classic)"
+   - Give it a descriptive name (e.g., "Website Push Token")
+   - Set the expiration as desired
+   - Check the "repo" scope to give full control of repositories
+   - Click "Generate token"
+   - IMPORTANT: Copy the token immediately - you won't see it again!
+
+2. Use the token for pushing to GitHub:
+   - In your terminal, run the following commands:
+
+   ```
+   cd /Users/justinoliak/Documents/gail/Sitegail
+   git push https://YOUR_USERNAME:YOUR_PERSONAL_ACCESS_TOKEN@github.com/justinoliak/Sitegail.git main
+   ```
+
+   Replace YOUR_USERNAME with your GitHub username and YOUR_PERSONAL_ACCESS_TOKEN with the token you just created.
+
+This approach will avoid any interactive authentication prompts and should successfully push your changes to GitHub.
+
+Alternatively, if you prefer not to use a personal access token, you can try:
+
+1. Using SSH keys for GitHub authentication
+2. Using the GitHub Desktop application to push changes
+3. Running `git push origin main` in Terminal (outside of Cursor) and entering your credentials when prompted 
