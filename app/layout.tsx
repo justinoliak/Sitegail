@@ -1,12 +1,13 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
+import { BackToTop } from "@/components/back-to-top";
 
-const inter = Inter({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Brea Dental & Aesthetics Clinic | Expert Dental Care in Brea, CA',
@@ -21,11 +22,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <head>
+        <link 
+          rel="preload" 
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" 
+          as="style" 
+        />
+      </head>
+      <body className={montserrat.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <Navigation />
           <main>{children}</main>
           <Footer />
+          <BackToTop />
           <Toaster />
         </ThemeProvider>
       </body>

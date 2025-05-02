@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -20,48 +20,66 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 158 14% 20%;
+    --background: 0 0% 100%;        /* #FFFFFF */
+    --foreground: 185 100% 4%;      /* #001011 */
+    
     --card: 0 0% 100%;
-    --card-foreground: 158 14% 20%;
+    --card-foreground: 185 100% 4%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 158 14% 20%;
-    --primary: 158 30% 45%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 350 80% 95%;
-    --secondary-foreground: 350 80% 30%;
-    --muted: 158 20% 96%;
-    --muted-foreground: 158 14% 45%;
-    --accent: 350 80% 90%;
-    --accent-foreground: 350 80% 30%;
-    --destructive: 0 84.2% 60.2%;
+    --popover-foreground: 185 100% 4%;
+    
+    --primary: 175 34% 75%;         /* #A6D8D4 Tiffany blue */
+    --primary-foreground: 185 100% 4%;
+    
+    --secondary: 42 71% 62%;        /* #E3BF5B Gold */
+    --secondary-foreground: 185 100% 4%;
+    
+    --muted: 175 30% 95%;           /* Light tint of Tiffany blue */
+    --muted-foreground: 185 30% 25%;
+    
+    --accent: 42 71% 62%;           /* #E3BF5B */
+    --accent-foreground: 185 100% 4%;
+    
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 158 30% 90%;
-    --input: 158 30% 90%;
-    --ring: 158 30% 45%;
-    --radius: 0.5rem;
+    
+    --border: 175 34% 85%;
+    --input: 175 34% 85%;
+    --ring: 175 34% 75%;            /* #A6D8D4 */
+    
+    --radius: 2rem;
   }
 
   .dark {
-    --background: 158 14% 10%;
-    --foreground: 0 0% 98%;
-    --card: 158 14% 12%;
-    --card-foreground: 0 0% 98%;
-    --popover: 158 14% 12%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 158 30% 45%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 350 80% 20%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 158 14% 20%;
-    --muted-foreground: 158 14% 60%;
-    --accent: 350 80% 20%;
-    --accent-foreground: 0 0% 98%;
+    --background: 185 100% 4%;      /* #001011 */
+    --foreground: 0 0% 100%;        /* #FFFFFF */
+    
+    --card: 185 95% 7%;
+    --card-foreground: 0 0% 100%;
+    
+    --popover: 185 95% 7%;
+    --popover-foreground: 0 0% 100%;
+    
+    --primary: 175 34% 75%;         /* #A6D8D4 */
+    --primary-foreground: 185 100% 4%;
+    
+    --secondary: 42 71% 62%;        /* #E3BF5B */
+    --secondary-foreground: 185 100% 4%;
+    
+    --muted: 185 70% 10%;
+    --muted-foreground: 0 0% 90%;
+    
+    --accent: 42 71% 62%;           /* #E3BF5B */
+    --accent-foreground: 185 100% 4%;
+    
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 158 14% 20%;
-    --input: 158 14% 20%;
-    --ring: 158 30% 45%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 185 70% 15%;
+    --input: 185 70% 15%;
+    --ring: 175 34% 75%;            /* #A6D8D4 */
+    --radius: 2rem;
   }
 }
 
@@ -71,20 +89,25 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Lato', sans-serif;
-    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    font-weight: 300;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant', serif;
+    font-family: 'Cormorant Garamond', serif;
+    @apply font-medium tracking-normal;
+    letter-spacing: -0.01em;
   }
   h1 {
-    @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight;
+    @apply text-4xl md:text-5xl xl:text-6xl font-semibold leading-tight;
+    letter-spacing: -0.02em;
   }
   h2 {
-    @apply text-3xl md:text-4xl font-semibold leading-tight tracking-tight;
+    @apply text-3xl md:text-4xl font-semibold leading-tight;
+    letter-spacing: -0.01em;
   }
   h3 {
-    @apply text-2xl md:text-3xl font-semibold leading-snug tracking-tight;
+    @apply text-2xl md:text-3xl font-semibold leading-snug;
   }
   p {
     @apply text-base md:text-lg leading-relaxed;
@@ -93,24 +116,157 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
-    min-height: 2.5rem;
-    padding: 0.5rem 1rem;
+    @apply inline-flex items-center justify-center rounded-full text-sm font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
+    padding: 0.75rem 1.5rem;
   }
   
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90;
+    @apply bg-primary text-foreground hover:bg-primary/90;
   }
   
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80;
-  }
-  
-  .btn-destructive {
-    @apply bg-destructive text-destructive-foreground hover:bg-destructive/90;
+    @apply bg-secondary text-foreground hover:bg-secondary/80;
   }
   
   .btn-outline {
     @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground;
   }
+  
+  .btn-lg {
+    @apply text-base px-6 py-3 font-bold;
+  }
+  
+  .btn-sm {
+    @apply text-sm px-4 py-2 font-bold;
+  }
+  
+  .container {
+    @apply px-6 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-20 lg:py-28;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .elegant-underline {
+    @apply relative inline-block;
+  }
+  
+  .elegant-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-px bg-primary transform scale-x-0 transition-transform duration-300 ease-in-out origin-bottom-right;
+  }
+  
+  .elegant-underline:hover::after {
+    @apply transform scale-x-100 origin-bottom-left;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gold-gradient {
+    @apply bg-gradient-to-r from-[#E3BF5B]/80 via-[#E3BF5B] to-[#E3BF5B]/80;
+  }
+
+  .tiffany-gradient {
+    @apply bg-gradient-to-r from-[#A6D8D4]/80 via-[#A6D8D4] to-[#A6D8D4]/80;
+  }
+  
+  /* Tend-inspired button styling */
+  .book-btn {
+    @apply inline-flex items-center justify-center rounded-full text-base font-bold transition-all duration-300 bg-primary text-foreground hover:bg-primary/90;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .book-btn-lg {
+    @apply px-8 py-4 text-lg font-bold;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.7; transform: scale(1); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.7s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.7s ease-out forwards;
+}
+
+/* Staggered animation delays */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+/* Smoother transitions */
+.transition-custom {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }

@@ -1,43 +1,151 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { Phone, Menu, X, ChevronRight } from "lucide-react";
 
 export function Navigation() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="border-b bg-background/80 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
-        <Link href="/" className="flex items-center space-x-2">
+    <nav className={`fixed top-4 left-0 right-0 z-50 transition-all duration-500 max-w-7xl mx-auto px-4 ${
+      scrolled ? "top-2" : "top-4"
+    }`}>
+      <div className={`mx-auto flex items-center justify-between rounded-full px-6 lg:px-8 ${
+        scrolled ? "py-2 bg-white/95 backdrop-blur-sm shadow-md" : "py-3 bg-white shadow-sm"
+      }`}>
+        <Link href="/" className="flex items-center space-x-2 relative z-10">
           <Image
-            src="/images/3.png"
+            src="/images/logo3.png"
             alt="Gail Ann Krishnan DDS MS"
-            width={180}
-            height={180}
-            className="h-20 w-auto"
+            width={160}
+            height={160}
+            className={`transition-all duration-300 rounded-xl ${scrolled ? "h-10 w-auto" : "h-12 w-auto"}`}
           />
         </Link>
         
-        <div className="hidden space-x-8 md:flex">
-          <Link href="/dental" className="text-foreground/80 hover:text-primary">Dental</Link>
-          <Link href="/facial-aesthetics" className="text-foreground/80 hover:text-primary">Facial Aesthetics</Link>
-          <Link href="/reviews" className="text-foreground/80 hover:text-primary">Reviews</Link>
-          <Link href="/contact" className="text-foreground/80 hover:text-primary">Contact</Link>
+        <div className="hidden space-x-8 md:flex items-center">
+          {[
+            { name: "Dental", href: "/dental" },
+            { name: "Facial Aesthetics", href: "/facial-aesthetics" },
+            { name: "Reviews", href: "/reviews" },
+            { name: "Contact", href: "/contact" }
+          ].map((item) => (
+            <Link 
+              key={item.name}
+              href={item.href} 
+              className="text-foreground/90 font-medium transition-all duration-300 hover:text-primary py-1"
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-6">
           <div className="hidden md:block">
-            <a href="tel:+17149900204" className="flex items-center text-foreground/80 hover:text-primary">
+            <a href="tel:+17149900204" className="flex items-center text-foreground/90 hover:text-primary font-medium transition-all duration-300">
               <Phone className="mr-2 h-4 w-4" />
               (714) 990-0204
             </a>
           </div>
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            Book Appointment
-          </Button>
+          
+          <Link href="/contact">
+            <Button 
+              size="lg" 
+              className={`hidden sm:inline-flex bg-primary text-foreground hover:bg-primary/90 font-bold transition-all duration-300 px-5 rounded-full ${
+                scrolled ? 'py-1.5' : 'py-2'
+              }`}>
+              Book Now
+            </Button>
+          </Link>
+          
+          {/* Mobile book button */}
+          <Link href="/contact" className="md:hidden">
+            <Button 
+              size="sm" 
+              className="bg-primary text-foreground hover:bg-primary/90 font-bold px-4 py-1.5 rounded-full">
+              Book
+            </Button>
+          </Link>
+          
+          {/* Mobile menu button */}
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="inline-flex items-center justify-center p-1.5 rounded-full bg-primary/5 text-foreground md:hidden hover:bg-primary/10 transition-colors duration-300"
+            aria-expanded={isMobileMenuOpen}
+          >
+            <span className="sr-only">Open main menu</span>
+            {isMobileMenuOpen ? (
+              <X className="block h-5 w-5" aria-hidden="true" />
+            ) : (
+              <Menu className="block h-5 w-5" aria-hidden="true" />
+            )}
+          </button>
         </div>
       </div>
+      
+      {/* Mobile menu with improved styling */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white rounded-3xl mt-2 shadow-lg animate-fade-in">
+          <div className="px-6 pt-4 pb-6 space-y-2">
+            {[
+              { name: "Dental", href: "/dental" },
+              { name: "Facial Aesthetics", href: "/facial-aesthetics" },
+              { name: "Reviews", href: "/reviews" },
+              { name: "Contact", href: "/contact" }
+            ].map((item) => (
+              <Link 
+                key={item.name}
+                href={item.href}
+                className="block px-3 py-3 text-base font-medium text-foreground hover:bg-primary/5 rounded-full transition-colors duration-200 flex justify-between items-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.name}
+                <ChevronRight className="h-4 w-4 text-primary" />
+              </Link>
+            ))}
+            
+            <div className="pt-3 border-t border-primary/10 mt-3">
+              <a 
+                href="tel:+17149900204"
+                className="block px-3 py-3 rounded-full text-base font-medium text-foreground hover:bg-primary/5 flex items-center transition-colors duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Phone className="inline-block mr-3 h-4 w-4 text-primary" />
+                (714) 990-0204
+              </a>
+              <div className="mt-4">
+                <Link href="/contact">
+                  <Button 
+                    size="lg" 
+                    className="w-full bg-primary text-foreground hover:bg-primary/90 flex items-center justify-center py-2.5 rounded-full font-bold"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Book Appointment
+                    <ChevronRight className="ml-1 h-4 w-4" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
