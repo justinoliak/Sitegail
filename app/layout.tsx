@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -31,10 +31,12 @@ export default function RootLayout({
       </head>
       <body className={montserrat.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-          <Navigation />
-          <main>{children}</main>
-          <Footer />
-          <BackToTop />
+          <div className="min-h-screen flex flex-col">
+            <Navigation />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+            <BackToTop />
+          </div>
           <Toaster />
         </ThemeProvider>
       </body>

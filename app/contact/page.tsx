@@ -8,8 +8,8 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="pt-28 pb-16 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-16 bg-gradient-to-b from-background to-primary/5">
+        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-foreground">Contact Us</h1>
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-8 max-w-4xl mx-auto">
@@ -20,8 +20,8 @@ export default function ContactPage() {
       </section>
 
       {/* Contact & Scheduling Information - Redesigned for better cohesion */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-28 bg-muted">
+        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {/* Main Card for Contact and Schedule */}
             <Card className="border-none shadow-lg rounded-[32px] overflow-hidden mb-16">
@@ -283,8 +283,8 @@ export default function ContactPage() {
       </section>
       
       {/* Map Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-28 bg-white">
+        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="relative h-[400px] w-full rounded-2xl overflow-hidden shadow-lg">
               <iframe 

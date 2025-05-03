@@ -66,8 +66,8 @@ export default function ReviewsPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="pt-28 pb-16 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-16 bg-gradient-to-b from-background to-primary/5">
+        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-foreground">Patient Reviews</h1>
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed mb-8 max-w-4xl mx-auto">
@@ -89,8 +89,8 @@ export default function ReviewsPage() {
       </section>
       
       {/* Reviews Grid */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-28 bg-white">
+        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {reviews.map((review) => (
               <Card key={review.id} className="bg-white border-none shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-[24px]">
@@ -121,23 +121,23 @@ export default function ReviewsPage() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto max-w-5xl px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6 max-w-2xl mx-auto leading-tight">
+      <section className="py-28 bg-muted">
+        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-8 max-w-3xl mx-auto leading-tight">
             Ready to experience our exceptional care?
           </h2>
-          <p className="text-lg text-foreground/80 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/80 mb-12 max-w-2xl mx-auto">
             Join our growing family of satisfied patients. Schedule your appointment today and discover the difference.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-5 justify-center">
             <Link href="/contact" className="transition-transform hover:-translate-y-1">
-              <Button size="lg" className="book-btn book-btn-lg font-medium shadow-md w-full sm:w-auto">
+              <Button size="lg" className="book-btn book-btn-lg font-bold shadow-md w-full sm:w-auto px-8 py-6 text-base">
                 Book Your Appointment
               </Button>
             </Link>
             <a href="tel:+17149900204" className="transition-transform hover:-translate-y-1">
-              <Button size="lg" variant="outline" className="rounded-full border-primary text-primary hover:bg-primary/10 hover:text-primary w-full sm:w-auto">
-                <Phone className="mr-2 h-5 w-5" /> Call (714) 990-0204
+              <Button size="lg" variant="outline" className="rounded-full border-primary text-primary hover:bg-primary/10 hover:text-primary w-full sm:w-auto px-6 py-6 text-base">
+                <Phone className="mr-3 h-5 w-5" /> Call (714) 990-0204
               </Button>
             </a>
           </div>

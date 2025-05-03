@@ -13,7 +13,9 @@ import {
   Users,
   Smile,
   ChevronDown,
-  ChevronRight
+  ChevronRight,
+  BadgeCheck,
+  Shield
 } from "lucide-react";
 
 const testimonials = [
@@ -37,51 +39,126 @@ const testimonials = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section with Tend-inspired styling */}
-      <section className="py-20 md:py-28 bg-background">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Enhanced Hero Section with Split Layout */}
+      <section className="pt-40 pb-28 bg-gradient-to-b from-background to-primary/5">
+        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             {/* Left column - Text content */}
-            <div className="order-2 lg:order-1">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 leading-[1.1] tracking-tight text-foreground max-w-xl">
-                Experience the Art of <span className="text-primary">Modern Dentistry</span>
+            <div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-8 leading-[1.1] tracking-tight text-foreground">
+                Comprehensive <span className="text-primary">Dental Care</span> Tailored for You
               </h1>
-              <p className="text-xl text-foreground/80 mb-8 leading-relaxed font-light max-w-lg">
-                Welcome to Dr. Gail Ann Krishnan's premier dental practice, where advanced clinical techniques meet personalized, preventive care.
+              
+              <p className="text-xl text-foreground/80 mb-10 leading-relaxed font-light max-w-lg">
+                Experience exceptional dental care with our comprehensive range of services, delivered with expertise and compassion.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              
+              <div className="flex flex-wrap gap-5 mb-12">
+                <div className="bg-white p-4 rounded-xl shadow-sm flex items-center space-x-3 border border-primary/10">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span className="text-sm font-medium">Gentle Approach</span>
+                </div>
+                <div className="bg-white p-4 rounded-xl shadow-sm flex items-center space-x-3 border border-primary/10">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span className="text-sm font-medium">Advanced Technology</span>
+                </div>
+                <div className="bg-white p-4 rounded-xl shadow-sm flex items-center space-x-3 border border-primary/10">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span className="text-sm font-medium">Preventive Focus</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-5">
                 <Link href="/contact" className="transition-transform hover:-translate-y-1">
-                  <Button size="lg" className="book-btn book-btn-lg font-bold shadow-md w-full sm:w-auto">
+                  <Button size="lg" className="book-btn book-btn-lg font-bold shadow-md w-full sm:w-auto px-8 py-6 text-base">
                     Schedule Your Visit
                   </Button>
                 </Link>
                 <a href="tel:+17149900204" className="transition-transform hover:-translate-y-1">
-                  <Button size="lg" variant="outline" className="rounded-full border-primary text-primary hover:bg-primary/10 hover:text-primary w-full sm:w-auto">
-                    <Phone className="mr-2 h-5 w-5" /> (714) 990-0204
+                  <Button size="lg" variant="outline" className="rounded-full border-primary text-primary hover:bg-primary/10 hover:text-primary w-full sm:w-auto px-6 py-6 text-base">
+                    <Phone className="mr-3 h-5 w-5" /> (714) 990-0204
                   </Button>
                 </a>
               </div>
+              
+              {/* Trust indicators */}
+              <div className="mt-12 flex items-center">
+                <div className="mr-8">
+                  <div className="flex items-center">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-secondary fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-sm text-foreground/70 mt-1.5">
+                    <span className="font-medium">100+</span> 5-star reviews
+                  </p>
+                </div>
+                <div className="flex items-center rounded-full bg-primary/10 px-5 py-2">
+                  <BadgeCheck className="h-4 w-4 text-primary mr-2" />
+                  <span className="text-sm font-medium text-foreground/80">Board Licensed</span>
+                </div>
+              </div>
             </div>
             
-            {/* Right column - Image */}
-            <div className="order-1 lg:order-2 relative h-[400px] md:h-[550px] rounded-2xl overflow-hidden">
-              <Image
-                src="/images/office2.png"
-                alt="Modern dental clinic reception area"
-                fill
-                className="object-cover object-center hover:scale-105 transition-all duration-[3s] rounded-2xl"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent"></div>
+            {/* Right column - Hero Image with Floating Elements */}
+            <div className="relative">
+              <div className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/office1.png"
+                  alt="Modern dental practice"
+                  fill
+                  className="object-cover object-center hover:scale-105 transition-all duration-[3s]"
+                  priority
+                />
+                
+                {/* Floating service cards */}
+                <div className="absolute -right-6 top-12 md:right-6 md:top-12 bg-white rounded-2xl p-4 shadow-lg w-48 animate-float">
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                      <Smile className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="ml-3">
+                      <p className="font-medium text-sm">Cosmetic Dentistry</p>
+                      <p className="text-xs text-foreground/60">Transform your smile</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="absolute -left-6 bottom-16 md:left-6 md:bottom-16 bg-white rounded-2xl p-4 shadow-lg w-48 animate-float animation-delay-500">
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                      <Shield className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="ml-3">
+                      <p className="font-medium text-sm">Preventive Care</p>
+                      <p className="text-xs text-foreground/60">Protect your health</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Decorative elements */}
+                <div className="absolute -right-8 bottom-32 w-16 h-16 rounded-full bg-secondary/20 animate-pulse"></div>
+                <div className="absolute -left-8 top-32 w-12 h-12 rounded-full bg-primary/20 animate-pulse"></div>
+              </div>
+              
+              {/* Patient First Badge */}
+              <div className="absolute -right-4 -bottom-4 bg-white rounded-full p-4 shadow-lg animate-pulse">
+                <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center">
+                  <div className="text-center">
+                    <Smile className="h-6 w-6 text-primary mx-auto" />
+                    <p className="text-[10px] text-primary/80 mt-1">PATIENT FIRST</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Info Section with Tend-inspired styling */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="py-28 bg-muted">
+        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <Card className="bg-white border-none shadow-md hover:shadow-lg transition-all duration-300 rounded-[24px]">
               <CardHeader className="pb-2 pt-6">
                 <CardTitle className="flex items-center text-xl text-foreground">
@@ -149,17 +226,17 @@ export default function Home() {
       </section>
 
       {/* Services Section - Using original terminology with Tend-inspired styling */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="text-center mb-16">
-            <span className="inline-block text-primary font-medium tracking-wider mb-4 uppercase text-sm">Our Expertise</span>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-foreground">Comprehensive Services</h2>
-            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+      <section className="py-28 bg-white">
+        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <span className="inline-block text-primary font-medium tracking-wider mb-5 uppercase text-sm">Our Expertise</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 text-foreground">Comprehensive Services</h2>
+            <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
               Dental care tailored to your unique needs with the latest technology and techniques
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="group">
               <Link href="/contact" className="block">
                 <Card className="bg-white border-none shadow-md hover:shadow-lg transition-all duration-300 h-full rounded-[24px]">
@@ -281,9 +358,9 @@ export default function Home() {
       </section>
 
       {/* About Section with Tend-inspired styling */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="py-28 bg-white">
+        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div className="relative aspect-square overflow-hidden rounded-2xl shadow-md">
               <Image 
                 src="/images/Facetune_30-04-2025-15-12-07.JPG"
@@ -324,14 +401,14 @@ export default function Home() {
       </section>
 
       {/* Office Photos Section with Tend-inspired styling */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="text-center mb-12">
-            <span className="inline-block text-primary font-medium tracking-wider mb-4 uppercase text-sm">Our Office</span>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+      <section className="py-28 bg-muted">
+        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <span className="inline-block text-primary font-medium tracking-wider mb-5 uppercase text-sm">Our Office</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 text-foreground">
               Experience Our Modern Facility
             </h2>
-            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+            <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
               Our state-of-the-art dental office is designed with your comfort in mind
             </p>
           </div>
@@ -398,10 +475,10 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section with Tend-inspired styling */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto max-w-7xl px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-foreground">
+      <section className="py-28 bg-white">
+        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 text-foreground">
               What Our Patients Say
             </h2>
             <div className="flex items-center justify-center mb-8">
@@ -449,12 +526,12 @@ export default function Home() {
       </section>
 
       {/* CTA Section with Tend-inspired styling */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto max-w-7xl px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold text-foreground mb-6 max-w-2xl mx-auto leading-tight">
+      <section className="py-28 bg-muted">
+        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-8 max-w-3xl mx-auto leading-tight">
             Ready to experience modern, personalized dental care?
           </h2>
-          <p className="text-lg text-foreground/80 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/80 mb-12 max-w-2xl mx-auto">
             New patients welcome! Please have your insurance card and photo ID ready. We can review any recent X-rays (taken within 12 months) to avoid duplicate imaging.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
