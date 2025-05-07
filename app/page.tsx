@@ -36,118 +36,73 @@ const testimonials = [
   }
 ];
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Enhanced Hero Section with Split Layout */}
-      <section className="pt-40 pb-28 bg-gradient-to-b from-background to-primary/5">
-        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-            {/* Left column - Text content */}
-            <div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-8 leading-[1.1] tracking-tight text-foreground">
-                Comprehensive <span className="text-primary">Dental Care</span> Tailored for You
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-b from-[#F7D1D1]/30 to-white">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <h1 className="text-4xl md:text-5xl font-semibold mb-4 text-[#3C3C3C]">
+                Exceptional Dental Care with a Gentle Touch
               </h1>
-              
-              <p className="text-xl text-foreground/80 mb-10 leading-relaxed font-light max-w-lg">
-                Experience exceptional dental care with our comprehensive range of services, delivered with expertise and compassion.
+              <p className="text-lg md:text-xl text-[#3C3C3C]/80 leading-relaxed mb-8">
+                Dr. Gail Ann Krishnan combines advanced dental expertise with a compassionate approach for a comfortable experience you can trust.
               </p>
-              
-              <div className="flex flex-wrap gap-5 mb-12">
-                <div className="bg-white p-4 rounded-xl shadow-sm flex items-center space-x-3 border border-primary/10">
-                  <CheckCircle className="h-5 w-5 text-primary" />
-                  <span className="text-sm font-medium">Gentle Approach</span>
-                </div>
-                <div className="bg-white p-4 rounded-xl shadow-sm flex items-center space-x-3 border border-primary/10">
-                  <CheckCircle className="h-5 w-5 text-primary" />
-                  <span className="text-sm font-medium">Advanced Technology</span>
-                </div>
-                <div className="bg-white p-4 rounded-xl shadow-sm flex items-center space-x-3 border border-primary/10">
-                  <CheckCircle className="h-5 w-5 text-primary" />
-                  <span className="text-sm font-medium">Preventive Focus</span>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-5">
-                <Link href="/contact" className="transition-transform hover:-translate-y-1">
-                  <Button size="lg" className="book-btn book-btn-lg font-bold shadow-md w-full sm:w-auto px-8 py-6 text-base">
-                    Schedule Your Visit
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/contact">
+                  <Button 
+                    className="bg-[#B87333] hover:bg-[#B87333]/90 text-white rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
+                  >
+                    Book Your Appointment
                   </Button>
                 </Link>
-                <a href="tel:+17149900204" className="transition-transform hover:-translate-y-1">
-                  <Button size="lg" variant="outline" className="rounded-full border-primary text-primary hover:bg-primary/10 hover:text-primary w-full sm:w-auto px-6 py-6 text-base">
-                    <Phone className="mr-3 h-5 w-5" /> (714) 990-0204
+                <Link href="/services">
+                  <Button 
+                    variant="outline"
+                    className="border-[#D8A7B1] text-[#3C3C3C] hover:bg-[#D8A7B1]/10 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
+                  >
+                    View Our Services
                   </Button>
-                </a>
-              </div>
-              
-              {/* Trust indicators */}
-              <div className="mt-12 flex items-center">
-                <div className="mr-8">
-                  <div className="flex items-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-secondary fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-sm text-foreground/70 mt-1.5">
-                    <span className="font-medium">100+</span> 5-star reviews
-                  </p>
+                </Link>
                 </div>
-                <div className="flex items-center rounded-full bg-primary/10 px-5 py-2">
-                  <BadgeCheck className="h-4 w-4 text-primary mr-2" />
-                  <span className="text-sm font-medium text-foreground/80">Board Licensed</span>
+              <div className="mt-8 flex items-center">
+                <div className="flex -space-x-2 mr-4">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div 
+                      key={i} 
+                      className="w-10 h-10 rounded-full border-2 border-white bg-[#F7D1D1] flex items-center justify-center text-[#3C3C3C] font-medium text-xs"
+                    >
+                      {i}
+                </div>
+                  ))}
+              </div>
+                <div>
+                  <p className="text-[#3C3C3C] font-medium">Trusted by 1000+ happy patients</p>
+                  <div className="flex">
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <Star key={i} className="h-4 w-4 fill-[#B87333] text-[#B87333]" />
+                    ))}
+                    <span className="ml-2 text-sm text-[#3C3C3C]/70">5.0 (256 reviews)</span>
+                  </div>
                 </div>
               </div>
             </div>
-            
-            {/* Right column - Hero Image with Floating Elements */}
-            <div className="relative">
-              <div className="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-xl">
+            <div className="order-1 lg:order-2 relative">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[32px] shadow-xl">
                 <Image
-                  src="/images/office1.png"
-                  alt="Modern dental practice"
+                  src="/images/hero-image.jpg"
+                  alt="Dr. Krishnan's welcoming dental office"
                   fill
-                  className="object-cover object-center hover:scale-105 transition-all duration-[3s]"
+                  className="object-cover"
                   priority
                 />
-                
-                {/* Floating service cards */}
-                <div className="absolute -right-6 top-12 md:right-6 md:top-12 bg-white rounded-2xl p-4 shadow-lg w-48 animate-float">
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                      <Smile className="h-5 w-5 text-primary" />
-                    </div>
-                    <div className="ml-3">
-                      <p className="font-medium text-sm">Cosmetic Dentistry</p>
-                      <p className="text-xs text-foreground/60">Transform your smile</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="absolute -left-6 bottom-16 md:left-6 md:bottom-16 bg-white rounded-2xl p-4 shadow-lg w-48 animate-float animation-delay-500">
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                      <Shield className="h-5 w-5 text-primary" />
-                    </div>
-                    <div className="ml-3">
-                      <p className="font-medium text-sm">Preventive Care</p>
-                      <p className="text-xs text-foreground/60">Protect your health</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Decorative elements */}
-                <div className="absolute -right-8 bottom-32 w-16 h-16 rounded-full bg-secondary/20 animate-pulse"></div>
-                <div className="absolute -left-8 top-32 w-12 h-12 rounded-full bg-primary/20 animate-pulse"></div>
               </div>
-              
-              {/* Patient First Badge */}
-              <div className="absolute -right-4 -bottom-4 bg-white rounded-full p-4 shadow-lg animate-pulse">
-                <div className="bg-primary/10 h-16 w-16 rounded-full flex items-center justify-center">
-                  <div className="text-center">
-                    <Smile className="h-6 w-6 text-primary mx-auto" />
-                    <p className="text-[10px] text-primary/80 mt-1">PATIENT FIRST</p>
-                  </div>
+              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-lg border-t-4 border-[#D8A7B1]">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-[#B87333]" />
+                  <p className="text-[#3C3C3C] font-medium">New patients welcome!</p>
                 </div>
               </div>
             </div>
@@ -155,396 +110,394 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Info Section with Tend-inspired styling */}
-      <section className="py-28 bg-muted">
-        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <Card className="bg-white border-none shadow-md hover:shadow-lg transition-all duration-300 rounded-[24px]">
-              <CardHeader className="pb-2 pt-6">
-                <CardTitle className="flex items-center text-xl text-foreground">
-                  <div className="mr-3 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <MapPin className="h-4 w-4 text-primary" />
-                  </div>
-                  Our Location
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/80">255 W Central Ave, Suite 201</p>
-                <p className="text-foreground/80">Brea, CA 92821</p>
-                <p className="text-sm text-foreground/70 mt-4">Free parking available at the Oliak Center</p>
-                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-primary mt-4 text-sm hover:underline">
-                  Get Directions
-                  <ChevronRight className="ml-1 h-3 w-3" />
-                </a>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-none shadow-md hover:shadow-lg transition-all duration-300 rounded-[24px]">
-              <CardHeader className="pb-2 pt-6">
-                <CardTitle className="flex items-center text-xl text-foreground">
-                  <div className="mr-3 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Clock className="h-4 w-4 text-primary" />
-                  </div>
-                  Office Hours
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex justify-between text-foreground/80 mb-1 pb-1 border-b border-foreground/10">
-                  <span className="font-medium">Monday - Friday:</span>
-                  <span>8am - 6pm</span>
-                </div>
-                <div className="flex justify-between text-foreground/80 mb-1 pb-1 border-b border-foreground/10">
-                  <span className="font-medium">Saturday:</span>
-                  <span>9am - 2pm</span>
-                </div>
-                <div className="flex justify-between text-foreground/80">
-                  <span className="font-medium">Sunday:</span>
-                  <span>Closed</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-none shadow-md hover:shadow-lg transition-all duration-300 rounded-[24px]">
-              <CardHeader className="pb-2 pt-6">
-                <CardTitle className="flex items-center text-xl text-foreground">
-                  <div className="mr-3 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Calendar className="h-4 w-4 text-primary" />
-                  </div>
-                  Insurance
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/80 mb-3">We accept most PPO plans including Delta Dental</p>
-                <p className="text-foreground/80 flex items-center">
-                  <span className="inline-block w-2 h-2 rounded-full bg-secondary mr-2"></span>
-                  CareCredit financing available
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section - Using original terminology with Tend-inspired styling */}
-      <section className="py-28 bg-white">
-        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <span className="inline-block text-primary font-medium tracking-wider mb-5 uppercase text-sm">Our Expertise</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 text-foreground">Comprehensive Services</h2>
-            <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
-              Dental care tailored to your unique needs with the latest technology and techniques
+      {/* Services Section */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl font-semibold mb-4 text-[#3C3C3C]">
+              Comprehensive Dental Services for Your Entire Family
+            </h2>
+            <p className="text-lg text-[#3C3C3C]/80">
+              From routine check-ups to complete smile transformations, we provide personalized care for all your dental needs.
             </p>
+                  </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Service Card 1 */}
+            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden group bg-white">
+              <div className="h-48 relative bg-[#F7D1D1]/20">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image 
+                    src="/images/preventive-care.jpg" 
+                    alt="Preventive Dental Care" 
+                    width={300} 
+                    height={200}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-[#3C3C3C] group-hover:text-[#B87333] transition-colors duration-300">Preventive Care</h3>
+                <p className="text-[#3C3C3C]/70 mb-4">
+                  Maintain your smile's health with regular cleanings, exams, and early intervention to prevent dental issues.
+                </p>
+                <Link 
+                  href="/services/preventive" 
+                  className="inline-flex items-center text-[#B87333] font-medium group-hover:underline"
+                >
+                  Learn more <ChevronRight className="h-4 w-4 ml-1" />
+                </Link>
+                </div>
+            </Card>
+
+            {/* Service Card 2 */}
+            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden group bg-white">
+              <div className="h-48 relative bg-[#F7D1D1]/20">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image 
+                    src="/images/cosmetic-dentistry.jpg" 
+                    alt="Cosmetic Dentistry" 
+                    width={300} 
+                    height={200}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                  </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-[#3C3C3C] group-hover:text-[#B87333] transition-colors duration-300">Cosmetic Dentistry</h3>
+                <p className="text-[#3C3C3C]/70 mb-4">
+                  Transform your smile with our aesthetic treatments including whitening, veneers, and smile makeovers.
+                </p>
+                <Link 
+                  href="/services/cosmetic" 
+                  className="inline-flex items-center text-[#B87333] font-medium group-hover:underline"
+                >
+                  Learn more <ChevronRight className="h-4 w-4 ml-1" />
+                </Link>
+              </div>
+            </Card>
+
+            {/* Service Card 3 */}
+            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden group bg-white">
+              <div className="h-48 relative bg-[#F7D1D1]/20">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image 
+                    src="/images/restorative-dentistry.jpg" 
+                    alt="Restorative Dentistry" 
+                    width={300} 
+                    height={200}
+                    className="object-cover w-full h-full"
+                  />
+          </div>
+        </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-[#3C3C3C] group-hover:text-[#B87333] transition-colors duration-300">Restorative Dentistry</h3>
+                <p className="text-[#3C3C3C]/70 mb-4">
+                  Regain full function and confidence with our advanced restorative solutions for damaged or missing teeth.
+                </p>
+                <Link 
+                  href="/services/restorative" 
+                  className="inline-flex items-center text-[#B87333] font-medium group-hover:underline"
+                >
+                  Learn more <ChevronRight className="h-4 w-4 ml-1" />
+              </Link>
+            </div>
+                </Card>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="group">
-              <Link href="/contact" className="block">
-                <Card className="bg-white border-none shadow-md hover:shadow-lg transition-all duration-300 h-full rounded-[24px]">
-                  <CardHeader className="pb-2 pt-6">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                      <CheckCircle className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-2xl text-foreground">Preventive Care</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="text-foreground/70 space-y-3 mb-6">
-                      <li className="flex items-center">
-                        <div className="mr-3 h-5 w-5 text-primary flex-shrink-0">•</div>
-                        <span>Professional cleanings</span>
-                      </li>
-                      <li className="flex items-center">
-                        <div className="mr-3 h-5 w-5 text-primary flex-shrink-0">•</div>
-                        <span>Digital X-rays</span>
-                      </li>
-                      <li className="flex items-center">
-                        <div className="mr-3 h-5 w-5 text-primary flex-shrink-0">•</div>
-                        <span>Comprehensive exams</span>
-                      </li>
-                      <li className="flex items-center">
-                        <div className="mr-3 h-5 w-5 text-primary flex-shrink-0">•</div>
-                        <span>Periodontal maintenance</span>
-                      </li>
-                    </ul>
-                    <div className="flex items-center text-primary group-hover:translate-x-1 transition-transform duration-300">
-                      <span className="font-medium">Learn More</span>
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            </div>
-            
-            <div className="group">
-              <Link href="/contact" className="block">
-                <Card className="bg-white border-none shadow-md hover:shadow-lg transition-all duration-300 h-full rounded-[24px]">
-                  <CardHeader className="pb-2 pt-6">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                      <Users className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-2xl text-foreground">Restorative Care</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="text-foreground/70 space-y-3 mb-6">
-                      <li className="flex items-center">
-                        <div className="mr-3 h-5 w-5 text-primary flex-shrink-0">•</div>
-                        <span>Composite fillings</span>
-                      </li>
-                      <li className="flex items-center">
-                        <div className="mr-3 h-5 w-5 text-primary flex-shrink-0">•</div>
-                        <span>Crowns and bridges</span>
-                      </li>
-                      <li className="flex items-center">
-                        <div className="mr-3 h-5 w-5 text-primary flex-shrink-0">•</div>
-                        <span>Inlays and onlays</span>
-                      </li>
-                      <li className="flex items-center">
-                        <div className="mr-3 h-5 w-5 text-primary flex-shrink-0">•</div>
-                        <span>Simple extractions</span>
-                      </li>
-                    </ul>
-                    <div className="flex items-center text-primary group-hover:translate-x-1 transition-transform duration-300">
-                      <span className="font-medium">Learn More</span>
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            </div>
-            
-            <div className="group">
-              <Link href="/contact" className="block">
-                <Card className="bg-white border-none shadow-md hover:shadow-lg transition-all duration-300 h-full rounded-[24px]">
-                  <CardHeader className="pb-2 pt-6">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                      <Smile className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle className="text-2xl text-foreground">Cosmetic Services</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="text-foreground/70 space-y-3 mb-6">
-                      <li className="flex items-center">
-                        <div className="mr-3 h-5 w-5 text-primary flex-shrink-0">•</div>
-                        <span>Professional whitening</span>
-                      </li>
-                      <li className="flex items-center">
-                        <div className="mr-3 h-5 w-5 text-primary flex-shrink-0">•</div>
-                        <span>Cosmetic bonding</span>
-                      </li>
-                      <li className="flex items-center">
-                        <div className="mr-3 h-5 w-5 text-primary flex-shrink-0">•</div>
-                        <span>Custom nightguards</span>
-                      </li>
-                      <li className="flex items-center">
-                        <div className="mr-3 h-5 w-5 text-primary flex-shrink-0">•</div>
-                        <span>Athletic mouthguards</span>
-                      </li>
-                    </ul>
-                    <div className="flex items-center text-primary group-hover:translate-x-1 transition-transform duration-300">
-                      <span className="font-medium">Learn More</span>
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            </div>
-          </div>
-          
-          <div className="mt-12 text-center">
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-6 py-2">
-              <Link href="/contact" className="no-underline">View All Services</Link>
+          <div className="text-center mt-12">
+            <Link href="/services">
+              <Button 
+                variant="outline" 
+                className="border-[#D8A7B1] text-[#3C3C3C] hover:bg-[#D8A7B1]/10 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
+              >
+                View All Services
             </Button>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* About Section with Tend-inspired styling */}
-      <section className="py-28 bg-white">
-        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-            <div className="relative aspect-square overflow-hidden rounded-2xl shadow-md">
+      {/* About Dr. Krishnan Section */}
+      <section className="py-20 bg-[#F7D1D1]/10">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative">
+              <div className="relative aspect-square overflow-hidden rounded-[8px] shadow-xl">
               <Image 
-                src="/images/Facetune_30-04-2025-15-12-07.JPG"
+                  src="/images/dr-krishnan.jpg"
                 alt="Dr. Gail Ann Krishnan"
                 fill
-                className="object-cover hover:scale-105 transition-all duration-3000 rounded-2xl"
+                  className="object-cover"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/90 to-transparent p-8">
-                <h3 className="text-white text-2xl font-semibold mb-1">Dr. Gail Ann Krishnan</h3>
-                <p className="text-white/90 text-base">DDS, MS, Board Licensed</p>
+              </div>
+              <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-lg border-t-4 border-[#D8A7B1] max-w-xs">
+                <h4 className="text-lg font-semibold mb-2 text-[#3C3C3C]">Dr. Gail Ann Krishnan</h4>
+                <p className="text-[#3C3C3C]/70">DDS, MS with over 15 years of experience in comprehensive dentistry</p>
               </div>
             </div>
             <div>
-              <span className="inline-block text-primary font-medium tracking-wider mb-4 uppercase text-sm">About</span>
-              <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-foreground leading-tight">
-                Elevating Your Dental Experience
+              <h2 className="text-3xl font-semibold mb-6 text-[#3C3C3C]">
+                Meet Dr. Gail Ann Krishnan
               </h2>
-              <p className="text-lg text-foreground/80 leading-relaxed mb-8">
-                As a board-licensed general dentist and Assistant Clinical Professor at the University of Michigan School of Dentistry, Dr. Krishnan combines advanced clinical techniques with a preventive, minimally-invasive approach. Her focus on patient education and comfort has earned her consistent 5-star reviews from satisfied patients.
+              <p className="text-lg text-[#3C3C3C]/80 mb-6 leading-relaxed">
+                Dr. Krishnan combines her extensive education and clinical expertise with a genuinely compassionate approach to patient care. She believes in creating partnerships with her patients, educating them about their oral health, and developing personalized treatment plans.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
-                <div className="bg-background p-6 rounded-xl shadow-sm border-t-2 border-primary/30">
-                  <h3 className="text-2xl font-semibold mb-1 text-foreground">DDS, MS</h3>
-                  <p className="text-foreground/70">Advanced Degrees</p>
+              <p className="text-lg text-[#3C3C3C]/80 mb-8 leading-relaxed">
+                Her commitment to continuing education ensures that she stays at the forefront of dental advancements, bringing the latest techniques and technologies to benefit her patients.
+              </p>
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-[#B87333]" />
+                  <span className="text-[#3C3C3C]">DDS, University of California</span>
                 </div>
-                <div className="bg-background p-6 rounded-xl shadow-sm border-t-2 border-secondary">
-                  <h3 className="text-2xl font-semibold mb-1 text-foreground flex items-center">5/5 <Star className="h-4 w-4 text-secondary ml-1 fill-current"/></h3>
-                  <p className="text-foreground/70">Patient Rating</p>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-[#B87333]" />
+                  <span className="text-[#3C3C3C]">MS in Dental Sciences</span>
                 </div>
-                <div className="bg-background p-6 rounded-xl shadow-sm border-t-2 border-primary/30">
-                  <h3 className="text-2xl font-semibold mb-1 text-foreground">Board Licensed</h3>
-                  <p className="text-foreground/70">General Dentist</p>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-[#B87333]" />
+                  <span className="text-[#3C3C3C]">ADA Member</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-[#B87333]" />
+                  <span className="text-[#3C3C3C]">Invisalign Certified</span>
                 </div>
               </div>
+              <Link href="/about">
+                <Button 
+                  variant="outline" 
+                  className="border-[#D8A7B1] text-[#3C3C3C] hover:bg-[#D8A7B1]/10 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
+                >
+                  Learn More About Dr. Krishnan
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Office Photos Section with Tend-inspired styling */}
-      <section className="py-28 bg-muted">
-        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="inline-block text-primary font-medium tracking-wider mb-5 uppercase text-sm">Our Office</span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 text-foreground">
-              Experience Our Modern Facility
-            </h2>
-            <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
-              Our state-of-the-art dental office is designed with your comfort in mind
-            </p>
-          </div>
-          
-          <div className="relative overflow-hidden">
-            <div className="flex gap-6 overflow-x-auto pb-8 snap-x scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent">
-              <div className="min-w-[300px] md:min-w-[500px] h-[350px] rounded-2xl overflow-hidden shadow-md flex-shrink-0 snap-center group">
-                <Image
-                  src="/images/office/office1.png"
-                  alt="Modern dental office reception area"
-                  width={800}
-                  height={600}
-                  className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105 rounded-2xl"
-                />
-              </div>
-              <div className="min-w-[300px] md:min-w-[500px] h-[350px] rounded-2xl overflow-hidden shadow-md flex-shrink-0 snap-center group">
-                <Image
-                  src="/images/office/office2.png"
-                  alt="Dental operatory with advanced equipment"
-                  width={800}
-                  height={600}
-                  className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105 rounded-2xl"
-                />
-              </div>
-              <div className="min-w-[300px] md:min-w-[500px] h-[350px] rounded-2xl overflow-hidden shadow-md flex-shrink-0 snap-center group">
-                <Image
-                  src="/images/office/office3.jpg"
-                  alt="Modern dental office waiting area"
-                  width={800}
-                  height={600}
-                  className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105 rounded-2xl"
-                />
-              </div>
-              <div className="min-w-[300px] md:min-w-[500px] h-[350px] rounded-2xl overflow-hidden shadow-md flex-shrink-0 snap-center group">
-                <Image
-                  src="/images/office1.png"
-                  alt="Panoramic view of dental office"
-                  width={800}
-                  height={600}
-                  className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105 rounded-2xl"
-                />
-              </div>
-              <div className="min-w-[300px] md:min-w-[500px] h-[350px] rounded-2xl overflow-hidden shadow-md flex-shrink-0 snap-center group">
-                <Image
-                  src="/images/office2.png"
-                  alt="Dental chair and equipment"
-                  width={800}
-                  height={600}
-                  className="w-full h-full object-cover object-center transition-all duration-700 group-hover:scale-105 rounded-2xl"
-                />
-              </div>
-            </div>
-            
-            {/* Navigation dots */}
-            <div className="flex justify-center mt-6">
-              <div className="flex gap-2">
-                {[...Array(5)].map((_, i) => (
-                  <div key={i} className={`w-2 h-2 rounded-full ${i === 0 ? 'bg-primary' : 'bg-primary/30'} transition-all duration-300 hover:bg-primary cursor-pointer`}></div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section with Tend-inspired styling */}
-      <section className="py-28 bg-white">
-        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 text-foreground">
+      {/* Trust Builders Section */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl font-semibold mb-4 text-[#3C3C3C]">
               What Our Patients Say
             </h2>
-            <div className="flex items-center justify-center mb-8">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-secondary fill-current" />
-                ))}
-              </div>
-              <p className="ml-3 text-foreground/70">
-                <span className="font-medium">+100</span> 5-star reviews
-              </p>
-            </div>
+            <p className="text-lg text-[#3C3C3C]/80">
+              We're proud to have earned the trust and satisfaction of our patients through our commitment to exceptional care.
+            </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-white border-none shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-[24px]">
-                <CardContent className="pt-8 pb-8">
-                  <div className="flex mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-secondary fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-foreground/80 mb-6">"{testimonial.text}"</p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg">
-                      {testimonial.name.charAt(0)}
-                    </div>
-                    <div className="ml-3">
-                      <p className="font-medium text-foreground">{testimonial.name}</p>
-                      <p className="text-sm text-foreground/70">{testimonial.location}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {/* Testimonial 1 */}
+            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden bg-white p-8">
+              <div className="flex mb-4">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star key={i} className="h-5 w-5 fill-[#B87333] text-[#B87333]" />
+                ))}
+              </div>
+              <p className="text-[#3C3C3C]/80 mb-6 italic">
+                "Dr. Krishnan and her team are amazing! They made me feel comfortable from the moment I walked in. My smile has never looked better, and I actually look forward to my dental visits now."
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 rounded-full bg-[#F7D1D1] flex items-center justify-center text-[#3C3C3C] font-medium mr-4">
+                  SM
+                </div>
+                <div>
+                  <h4 className="font-medium text-[#3C3C3C]">Sarah M.</h4>
+                  <p className="text-sm text-[#3C3C3C]/70">Patient since 2019</p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Testimonial 2 */}
+            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden bg-white p-8">
+              <div className="flex mb-4">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star key={i} className="h-5 w-5 fill-[#B87333] text-[#B87333]" />
+                ))}
+              </div>
+              <p className="text-[#3C3C3C]/80 mb-6 italic">
+                "After years of dental anxiety, I finally found a dentist who understands. Dr. Krishnan took the time to address all my concerns and made sure I was comfortable throughout my procedure."
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 rounded-full bg-[#F7D1D1] flex items-center justify-center text-[#3C3C3C] font-medium mr-4">
+                  JD
+                </div>
+                <div>
+                  <h4 className="font-medium text-[#3C3C3C]">James D.</h4>
+                  <p className="text-sm text-[#3C3C3C]/70">Patient since 2021</p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Testimonial 3 */}
+            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden bg-white p-8">
+              <div className="flex mb-4">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star key={i} className="h-5 w-5 fill-[#B87333] text-[#B87333]" />
+                ))}
+              </div>
+              <p className="text-[#3C3C3C]/80 mb-6 italic">
+                "I couldn't be happier with my veneers! Dr. Krishnan listened to exactly what I wanted and delivered results that exceeded my expectations. The entire team is professional and friendly."
+              </p>
+              <div className="flex items-center">
+                <div className="w-12 h-12 rounded-full bg-[#F7D1D1] flex items-center justify-center text-[#3C3C3C] font-medium mr-4">
+                  EL
+                </div>
+                <div>
+                  <h4 className="font-medium text-[#3C3C3C]">Emily L.</h4>
+                  <p className="text-sm text-[#3C3C3C]/70">Patient since 2020</p>
+                </div>
+              </div>
+            </Card>
           </div>
-          
-          <div className="text-center mt-10">
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-              <Link href="/contact" className="no-underline">View All Reviews</Link>
-            </Button>
+
+          <div className="flex flex-wrap justify-center gap-6 mt-16">
+            <div className="bg-[#F7D1D1]/20 rounded-[8px] p-6 flex items-center">
+              <Shield className="h-8 w-8 text-[#B87333] mr-4" />
+              <div>
+                <h4 className="font-medium text-[#3C3C3C]">PPO Insurance Accepted</h4>
+                <p className="text-sm text-[#3C3C3C]/70">We work with most major insurance providers</p>
+              </div>
+            </div>
+            <div className="bg-[#F7D1D1]/20 rounded-[8px] p-6 flex items-center">
+              <Shield className="h-8 w-8 text-[#B87333] mr-4" />
+              <div>
+                <h4 className="font-medium text-[#3C3C3C]">Gentle Dental Care</h4>
+                <p className="text-sm text-[#3C3C3C]/70">Comfort-focused approach for all patients</p>
+              </div>
+            </div>
+            <div className="bg-[#F7D1D1]/20 rounded-[8px] p-6 flex items-center">
+              <Shield className="h-8 w-8 text-[#B87333] mr-4" />
+              <div>
+                <h4 className="font-medium text-[#3C3C3C]">Modern Technology</h4>
+                <p className="text-sm text-[#3C3C3C]/70">State-of-the-art equipment for better care</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section with Tend-inspired styling */}
-      <section className="py-28 bg-muted">
-        <div className="container max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-8 max-w-3xl mx-auto leading-tight">
-            Ready to experience modern, personalized dental care?
+      {/* Location & Hours Section */}
+      <section className="py-20 bg-[#F7D1D1]/10">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-3xl font-semibold mb-6 text-[#3C3C3C]">
+                Our Location & Hours
+            </h2>
+              <p className="text-lg text-[#3C3C3C]/80 mb-8">
+                Conveniently located in Brea with free parking for all our patients. We offer flexible appointment times to accommodate your busy schedule.
+              </p>
+              
+              <div className="space-y-6 mb-8">
+                <div className="flex items-start">
+                  <MapPin className="h-6 w-6 text-[#B87333] mr-4 mt-1" />
+                  <div>
+                    <h4 className="font-medium text-[#3C3C3C] mb-1">Office Location</h4>
+                    <p className="text-[#3C3C3C]/80">255 W Central Ave, Suite 201</p>
+                    <p className="text-[#3C3C3C]/80">Brea, CA 92821</p>
+                    <a 
+                      href="https://maps.google.com/?q=255+W+Central+Ave+Suite+201+Brea+CA+92821" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-[#B87333] hover:underline inline-flex items-center mt-1"
+                    >
+                      Get directions <ChevronRight className="h-4 w-4 ml-1" />
+                    </a>
+                  </div>
+                    </div>
+                
+                <div className="flex items-start">
+                  <Clock className="h-6 w-6 text-[#B87333] mr-4 mt-1" />
+                  <div>
+                    <h4 className="font-medium text-[#3C3C3C] mb-1">Office Hours</h4>
+                    <div className="grid grid-cols-2 gap-x-8 gap-y-2">
+                      <div className="text-[#3C3C3C]/80">Mon - Fri:</div>
+                      <div className="text-[#3C3C3C]/80">8am - 6pm</div>
+                      <div className="text-[#3C3C3C]/80">Sat:</div>
+                      <div className="text-[#3C3C3C]/80">9am - 2pm</div>
+                      <div className="text-[#3C3C3C]/80">Sun:</div>
+                      <div className="text-[#3C3C3C]/80">Closed</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <Phone className="h-6 w-6 text-[#B87333] mr-4 mt-1" />
+                  <div>
+                    <h4 className="font-medium text-[#3C3C3C] mb-1">Contact Us</h4>
+                    <p className="text-[#3C3C3C]/80">Phone: (714) 990-0204</p>
+                    <p className="text-[#3C3C3C]/80">Email: breadentaloffice@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          
+            <div>
+              <div className="h-[400px] rounded-[8px] overflow-hidden shadow-lg">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.7790247825244!2d-117.9010532!3d33.9221456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd5cc6d32e7bf%3A0xe5b43a5e17e89fe8!2s255%20W%20Central%20Ave%20%23201%2C%20Brea%2C%20CA%2092821!5e0!3m2!1sen!2sus!4v1652891234567!5m2!1sen!2sus" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={false} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-[8px]"
+                ></iframe>
+              </div>
+              <div className="bg-white shadow-lg p-6 rounded-[8px] mt-6 border-t-4 border-[#D8A7B1]">
+                <p className="text-[#3C3C3C]/80">
+                  <span className="font-medium text-[#3C3C3C]">Free parking available.</span> Our office is located in the Oliak Center with convenient access from Central Avenue.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-20 bg-white">
+        <div className="container max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-[#F7D1D1] to-[#D8A7B1]/70 rounded-[16px] p-8 md:p-12 shadow-xl">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-semibold mb-4 text-[#3C3C3C]">
+                Ready to Schedule Your Visit?
           </h2>
-          <p className="text-xl text-foreground/80 mb-12 max-w-2xl mx-auto">
-            New patients welcome! Please have your insurance card and photo ID ready. We can review any recent X-rays (taken within 12 months) to avoid duplicate imaging.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="transition-transform hover:-translate-y-1">
-              <Button size="lg" className="book-btn book-btn-lg font-medium shadow-md w-full sm:w-auto">
-                Book Your Appointment
+              <p className="text-lg text-[#3C3C3C]/80 max-w-2xl mx-auto">
+                We're committed to providing you with the highest quality dental care in a comfortable, welcoming environment. New patients are always welcome!
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+              <Link href="/contact">
+                <Button 
+                  className="bg-[#B87333] hover:bg-[#B87333]/90 text-white rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto"
+                >
+                  <Calendar className="mr-2 h-5 w-5" /> Book Your Appointment
               </Button>
             </Link>
-            <a href="tel:+17149900204" className="transition-transform hover:-translate-y-1">
-              <Button size="lg" variant="outline" className="rounded-full border-primary text-primary hover:bg-primary/10 hover:text-primary w-full sm:w-auto">
+              <a href="tel:+17149900204">
+                <Button 
+                  variant="outline"
+                  className="bg-white border-[#3C3C3C]/20 text-[#3C3C3C] hover:bg-white/80 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto"
+                >
                 <Phone className="mr-2 h-5 w-5" /> Call (714) 990-0204
               </Button>
             </a>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-[#3C3C3C]/80 italic">
+                "We promise to make your dental experience as comfortable and stress-free as possible."
+              </p>
+              <p className="font-medium text-[#3C3C3C] mt-2">
+                — Dr. Gail Ann Krishnan
+              </p>
+            </div>
           </div>
         </div>
       </section>
