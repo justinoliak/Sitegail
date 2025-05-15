@@ -5,13 +5,31 @@
 @tailwind utilities;
 
 :root {
+  /* Base system colors */
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  
+  /* Brand color palette */
   --blush-pink: #F7D1D1;
   --dusty-rose: #D8A7B1;
   --charcoal: #3C3C3C;
   --copper: #B87333;
+  --white: #FFFFFF;
+  --black: #001011;
+  
+  /* Opacity variations */
+  --blush-pink-10: rgba(247, 209, 209, 0.1);
+  --blush-pink-20: rgba(247, 209, 209, 0.2);
+  --blush-pink-30: rgba(247, 209, 209, 0.3);
+  --dusty-rose-10: rgba(216, 167, 177, 0.1);
+  --dusty-rose-20: rgba(216, 167, 177, 0.2);
+  --dusty-rose-90: rgba(216, 167, 177, 0.9);
+  --charcoal-50: rgba(60, 60, 60, 0.5);
+  --charcoal-70: rgba(60, 60, 60, 0.7);
+  --charcoal-80: rgba(60, 60, 60, 0.8);
+  --charcoal-90: rgba(60, 60, 60, 0.9);
+  --copper-90: rgba(184, 115, 51, 0.9);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -53,6 +71,12 @@
     --ring: 175 34% 75%;            /* #A6D8D4 */
     
     --radius: 2rem;
+    
+    /* Additional theme colors for our brand */
+    --blush: 349 67% 89%;           /* #F7D1D1 */
+    --rose: 345 40% 75%;            /* #D8A7B1 */
+    --charcoal: 0 0% 24%;           /* #3C3C3C */
+    --copper: 30 56% 46%;           /* #B87333 */
   }
 
   .dark {
@@ -83,6 +107,12 @@
     --border: 185 70% 15%;
     --input: 185 70% 15%;
     --ring: 175 34% 75%;            /* #A6D8D4 */
+    
+    --blush: 349 67% 89%;           /* #F7D1D1 */
+    --rose: 345 40% 75%;            /* #D8A7B1 */
+    --charcoal: 0 0% 24%;           /* #3C3C3C */
+    --copper: 30 56% 46%;           /* #B87333 */
+    
     --radius: 2rem;
   }
 }

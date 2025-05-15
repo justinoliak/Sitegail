@@ -65,6 +65,30 @@ const config: Config = {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        // Brand colors
+        blush: {
+          DEFAULT: 'hsl(var(--blush))',
+          light: 'var(--blush-pink-10)',
+          medium: 'var(--blush-pink-20)',
+          dark: 'var(--blush-pink-30)',
+        },
+        rose: {
+          DEFAULT: 'hsl(var(--rose))',
+          light: 'var(--dusty-rose-10)',
+          medium: 'var(--dusty-rose-20)',
+          dark: 'var(--dusty-rose-90)',
+        },
+        charcoal: {
+          DEFAULT: 'hsl(var(--charcoal))',
+          50: 'var(--charcoal-50)',
+          70: 'var(--charcoal-70)',
+          80: 'var(--charcoal-80)',
+          90: 'var(--charcoal-90)',
+        },
+        copper: {
+          DEFAULT: 'hsl(var(--copper))',
+          90: 'var(--copper-90)',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',
