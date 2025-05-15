@@ -66,17 +66,25 @@ const config: Config = {
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         // Brand colors
-        blush: {
-          DEFAULT: 'hsl(var(--blush))',
-          light: 'var(--blush-pink-10)',
-          medium: 'var(--blush-pink-20)',
-          dark: 'var(--blush-pink-30)',
+        teal: {
+          DEFAULT: 'hsl(var(--teal))',
+          light: 'var(--teal-10)',
+          medium: 'var(--teal-20)',
+          dark: 'var(--teal-30)',
         },
-        rose: {
-          DEFAULT: 'hsl(var(--rose))',
-          light: 'var(--dusty-rose-10)',
-          medium: 'var(--dusty-rose-20)',
-          dark: 'var(--dusty-rose-90)',
+        jade: {
+          DEFAULT: 'hsl(var(--jade))',
+          light: 'var(--jade-10)',
+          medium: 'var(--jade-20)',
+          dark: 'var(--jade-90)',
+        },
+        gray: {
+          DEFAULT: 'hsl(var(--gray))',
+          50: '#F5F5F5',
+          100: '#EBEBEB',
+          200: '#D9D9D9',
+          300: '#C4C4C4',
+          400: '#9D9D9D',
         },
         charcoal: {
           DEFAULT: 'hsl(var(--charcoal))',
@@ -85,9 +93,11 @@ const config: Config = {
           80: 'var(--charcoal-80)',
           90: 'var(--charcoal-90)',
         },
-        copper: {
-          DEFAULT: 'hsl(var(--copper))',
-          90: 'var(--copper-90)',
+        amber: {
+          DEFAULT: 'hsl(var(--amber))',
+          90: 'var(--amber-90)',
+          light: '#FDBE41',
+          dark: '#E19305',
         },
       },
       borderRadius: {

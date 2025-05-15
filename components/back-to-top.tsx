@@ -31,7 +31,7 @@ export function BackToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 p-4 bg-copper text-white rounded-full shadow-lg hover:bg-copper-90 transition-all duration-300 z-40 w-12 h-12 flex items-center justify-center touch-manipulation"
+          className="fixed bottom-6 right-6 p-4 bg-amber text-white rounded-full shadow-lg hover:bg-amber-light transition-all duration-300 z-40 w-12 h-12 flex items-center justify-center touch-manipulation"
           aria-label="Back to top"
           style={{ minWidth: '44px', minHeight: '44px' }}
         >
