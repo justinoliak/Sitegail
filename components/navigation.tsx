@@ -38,13 +38,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#F7D1D1]/20 hover:text-[#3C3C3C] focus:bg-[#F7D1D1]/20",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-teal/20 hover:text-charcoal focus:bg-teal/20",
             className
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none text-[#3C3C3C]">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-[#3C3C3C]/80">
+          <div className="text-sm font-medium leading-none text-charcoal">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-charcoal/80">
             {children}
           </p>
         </a>
@@ -119,7 +119,7 @@ export function Navigation() {
                 <NavigationMenuList className="space-x-4">
                   {/* Dental Services Dropdown */}
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-[#3C3C3C]/90 font-medium hover:text-[#D8A7B1] hover:bg-transparent focus:bg-transparent bg-transparent">
+                    <NavigationMenuTrigger className="text-charcoal/90 font-medium hover:text-teal hover:bg-transparent focus:bg-transparent bg-transparent">
                       Dental Services
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -136,7 +136,7 @@ export function Navigation() {
                         <ListItem 
                           title="All Dental Services" 
                           href="/services"
-                          className="bg-[#F7D1D1]/30 hover:bg-[#F7D1D1]/40"
+                          className="bg-teal/30 hover:bg-teal/40"
                         >
                           View our complete range of dental services
                         </ListItem>
@@ -146,7 +146,7 @@ export function Navigation() {
                   
                   {/* Facial Aesthetics Dropdown */}
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-[#3C3C3C]/90 font-medium hover:text-[#D8A7B1] hover:bg-transparent focus:bg-transparent bg-transparent">
+                    <NavigationMenuTrigger className="text-charcoal/90 font-medium hover:text-teal hover:bg-transparent focus:bg-transparent bg-transparent">
                       Aesthetic Treatments
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -167,7 +167,7 @@ export function Navigation() {
                   {/* Regular Menu Items */}
                   <NavigationMenuItem>
                     <Link href="/about" legacyBehavior passHref>
-                      <NavigationMenuLink className="text-[#3C3C3C]/90 font-medium hover:text-[#D8A7B1] transition-colors py-2 px-4">
+                      <NavigationMenuLink className="text-charcoal/90 font-medium hover:text-teal transition-colors py-2 px-4">
                         About
                       </NavigationMenuLink>
                     </Link>
@@ -175,7 +175,7 @@ export function Navigation() {
                   
                   <NavigationMenuItem>
                     <Link href="/gallery" legacyBehavior passHref>
-                      <NavigationMenuLink className="text-[#3C3C3C]/90 font-medium hover:text-[#D8A7B1] transition-colors py-2 px-4">
+                      <NavigationMenuLink className="text-charcoal/90 font-medium hover:text-teal transition-colors py-2 px-4">
                         Smile Gallery
                       </NavigationMenuLink>
                     </Link>
@@ -183,7 +183,7 @@ export function Navigation() {
                   
                   <NavigationMenuItem>
                     <Link href="/contact" legacyBehavior passHref>
-                      <NavigationMenuLink className="text-[#3C3C3C]/90 font-medium hover:text-[#D8A7B1] transition-colors py-2 px-4">
+                      <NavigationMenuLink className="text-charcoal/90 font-medium hover:text-teal transition-colors py-2 px-4">
                         Contact
                       </NavigationMenuLink>
                     </Link>
@@ -196,7 +196,7 @@ export function Navigation() {
               <div className="hidden md:block">
                 <a 
                   href="tel:+17149900204" 
-                  className="flex items-center text-[#3C3C3C]/90 hover:text-[#D8A7B1] font-medium transition-all duration-300"
+                  className="flex items-center text-charcoal/90 hover:text-teal font-medium transition-all duration-300"
                 >
                   <Phone className="mr-2 h-4 w-4" />
                   (714) 990-0204
@@ -207,7 +207,7 @@ export function Navigation() {
               <Link href="/contact">
                 <Button 
                   size="lg" 
-                  className={`hidden sm:inline-flex bg-[#B87333] text-white hover:bg-[#B87333]/90 font-bold transition-all duration-300 px-6 rounded-full shadow-sm ${
+                  className={`hidden sm:inline-flex bg-amber text-white hover:bg-amber/90 font-bold transition-all duration-300 px-6 rounded-full shadow-sm ${
                     scrolled ? 'py-2' : 'py-2.5'
                   }`}>
                   Book Now
@@ -218,7 +218,7 @@ export function Navigation() {
               <a href="tel:+17149900204" className="md:hidden">
                 <Button 
                   size="sm" 
-                  className="bg-[#D8A7B1] text-white hover:bg-[#D8A7B1]/90 font-medium px-4 py-2 rounded-full shadow-sm flex items-center"
+                  className="bg-teal text-white hover:bg-teal/90 font-medium px-4 py-2 rounded-full shadow-sm flex items-center"
                 >
                   <Phone className="mr-1 h-4 w-4" />
                   Call
@@ -228,7 +228,7 @@ export function Navigation() {
               {/* Mobile menu button - improved tap target */}
               <button 
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="inline-flex items-center justify-center p-2.5 rounded-full bg-[#F7D1D1]/20 text-[#3C3C3C] md:hidden hover:bg-[#F7D1D1]/40 transition-colors duration-300 min-w-[44px] min-h-[44px]"
+                className="inline-flex items-center justify-center p-2.5 rounded-full bg-teal/20 text-charcoal md:hidden hover:bg-teal/40 transition-colors duration-300 min-w-[44px] min-h-[44px]"
                 aria-expanded={isMobileMenuOpen}
                 aria-label="Toggle menu"
               >
@@ -249,16 +249,16 @@ export function Navigation() {
             <div className="md:hidden bg-white rounded-3xl mt-2 shadow-lg animate-fade-in">
               <div className="px-4 pt-6 pb-8 space-y-1">
                 {/* Mobile dropdown for Dental */}
-                <div className="border-b border-[#F7D1D1]/20 pb-2">
+                <div className="border-b border-teal/20 pb-2">
                   <button
                     onClick={() => toggleMobileDropdown('dental')}
-                    className="w-full px-5 py-4 text-base font-medium text-[#3C3C3C] hover:bg-[#F7D1D1]/10 rounded-xl transition-colors duration-200 flex justify-between items-center min-h-[54px]"
+                    className="w-full px-5 py-4 text-base font-medium text-charcoal hover:bg-teal/10 rounded-xl transition-colors duration-200 flex justify-between items-center min-h-[54px]"
                     aria-expanded={activeMobileDropdown === 'dental'}
                     aria-controls="dental-dropdown"
                   >
                     Dental Services
                     <ChevronDown 
-                      className={`h-5 w-5 text-[#D8A7B1] transition-transform duration-200 ${
+                      className={`h-5 w-5 text-jade transition-transform duration-200 ${
                         activeMobileDropdown === 'dental' ? 'rotate-180' : ''
                       }`} 
                     />
@@ -271,35 +271,35 @@ export function Navigation() {
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="block px-4 py-3.5 text-sm text-[#3C3C3C]/90 hover:bg-[#F7D1D1]/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
+                        className="block px-4 py-3.5 text-sm text-charcoal/90 hover:bg-teal/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <span className="w-2 h-2 rounded-full bg-[#D8A7B1] mr-2"></span>
+                        <span className="w-2 h-2 rounded-full bg-jade mr-2"></span>
                         {service.name}
                       </Link>
                     ))}
                     <Link
                       href="/services"
-                      className="block px-4 py-3.5 mt-1 text-sm font-medium text-[#3C3C3C] bg-[#F7D1D1]/10 hover:bg-[#F7D1D1]/20 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
+                      className="block px-4 py-3.5 mt-1 text-sm font-medium text-charcoal bg-teal/10 hover:bg-teal/20 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      <ChevronRight className="h-4 w-4 text-[#D8A7B1] mr-1" />
+                      <ChevronRight className="h-4 w-4 text-jade mr-1" />
                       View All Dental Services
                     </Link>
                   </div>
                 </div>
                 
                 {/* Mobile dropdown for Aesthetic Treatments */}
-                <div className="border-b border-[#F7D1D1]/20 pb-2">
+                <div className="border-b border-teal/20 pb-2">
                   <button
                     onClick={() => toggleMobileDropdown('aesthetics')}
-                    className="w-full px-5 py-4 text-base font-medium text-[#3C3C3C] hover:bg-[#F7D1D1]/10 rounded-xl transition-colors duration-200 flex justify-between items-center min-h-[54px]"
+                    className="w-full px-5 py-4 text-base font-medium text-charcoal hover:bg-teal/10 rounded-xl transition-colors duration-200 flex justify-between items-center min-h-[54px]"
                     aria-expanded={activeMobileDropdown === 'aesthetics'}
                     aria-controls="aesthetics-dropdown"
                   >
                     Aesthetic Treatments
                     <ChevronDown 
-                      className={`h-5 w-5 text-[#D8A7B1] transition-transform duration-200 ${
+                      className={`h-5 w-5 text-jade transition-transform duration-200 ${
                         activeMobileDropdown === 'aesthetics' ? 'rotate-180' : ''
                       }`} 
                     />
@@ -312,10 +312,10 @@ export function Navigation() {
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="block px-4 py-3.5 text-sm text-[#3C3C3C]/90 hover:bg-[#F7D1D1]/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
+                        className="block px-4 py-3.5 text-sm text-charcoal/90 hover:bg-teal/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <span className="w-2 h-2 rounded-full bg-[#D8A7B1] mr-2"></span>
+                        <span className="w-2 h-2 rounded-full bg-jade mr-2"></span>
                         {service.name}
                       </Link>
                     ))}
@@ -325,45 +325,45 @@ export function Navigation() {
                 {/* Regular mobile links - with improved tap targets */}
                 <Link 
                   href="/about"
-                  className="block px-5 py-4 text-base font-medium text-[#3C3C3C] hover:bg-[#F7D1D1]/10 rounded-xl transition-colors duration-200 flex justify-between items-center border-b border-[#F7D1D1]/20 min-h-[54px]"
+                  className="block px-5 py-4 text-base font-medium text-charcoal hover:bg-teal/10 rounded-xl transition-colors duration-200 flex justify-between items-center border-b border-teal/20 min-h-[54px]"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   About
-                  <ChevronRight className="h-5 w-5 text-[#D8A7B1]" />
+                  <ChevronRight className="h-5 w-5 text-jade" />
                 </Link>
                 
                 <Link 
                   href="/gallery"
-                  className="block px-5 py-4 text-base font-medium text-[#3C3C3C] hover:bg-[#F7D1D1]/10 rounded-xl transition-colors duration-200 flex justify-between items-center border-b border-[#F7D1D1]/20 min-h-[54px]"
+                  className="block px-5 py-4 text-base font-medium text-charcoal hover:bg-teal/10 rounded-xl transition-colors duration-200 flex justify-between items-center border-b border-teal/20 min-h-[54px]"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Smile Gallery
-                  <ChevronRight className="h-5 w-5 text-[#D8A7B1]" />
+                  <ChevronRight className="h-5 w-5 text-jade" />
                 </Link>
                 
                 <Link 
                   href="/contact"
-                  className="block px-5 py-4 text-base font-medium text-[#3C3C3C] hover:bg-[#F7D1D1]/10 rounded-xl transition-colors duration-200 flex justify-between items-center border-b border-[#F7D1D1]/20 min-h-[54px]"
+                  className="block px-5 py-4 text-base font-medium text-charcoal hover:bg-teal/10 rounded-xl transition-colors duration-200 flex justify-between items-center border-b border-teal/20 min-h-[54px]"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact
-                  <ChevronRight className="h-5 w-5 text-[#D8A7B1]" />
+                  <ChevronRight className="h-5 w-5 text-jade" />
                 </Link>
                 
                 <div className="pt-4 mt-4">
                   <a 
                     href="tel:+17149900204"
-                    className="block px-5 py-4 rounded-xl text-base font-medium text-[#3C3C3C] hover:bg-[#F7D1D1]/10 flex items-center transition-colors duration-200 min-h-[54px]"
+                    className="block px-5 py-4 rounded-xl text-base font-medium text-charcoal hover:bg-teal/10 flex items-center transition-colors duration-200 min-h-[54px]"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <Phone className="inline-block mr-3 h-5 w-5 text-[#D8A7B1]" />
+                    <Phone className="inline-block mr-3 h-5 w-5 text-jade" />
                     (714) 990-0204
                   </a>
                   <div className="mt-5 px-1">
                     <Link href="/contact">
                       <Button 
                         size="lg" 
-                        className="w-full bg-[#B87333] text-white hover:bg-[#B87333]/90 flex items-center justify-center py-4 rounded-full font-bold shadow-sm min-h-[54px]"
+                        className="w-full bg-amber text-white hover:bg-amber/90 flex items-center justify-center py-4 rounded-full font-bold shadow-sm min-h-[54px]"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         Book Now
@@ -383,7 +383,7 @@ export function Navigation() {
         <Link href="/contact" className="w-full max-w-xs">
           <Button 
             size="lg" 
-            className="w-full bg-[#B87333] text-white hover:bg-[#B87333]/90 font-bold py-3 rounded-full shadow-lg flex items-center justify-center touch-manipulation"
+            className="w-full bg-amber text-white hover:bg-amber/90 font-bold py-3 rounded-full shadow-lg flex items-center justify-center touch-manipulation"
           >
             <Calendar className="mr-2 h-5 w-5" />
             Book Appointment
