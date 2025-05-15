@@ -11,26 +11,25 @@
   --background-end-rgb: 255, 255, 255;
   
   /* Brand color palette */
-  --teal: #5FB0B7;
-  --jade: #004E64;
-  --gray: #EBEBEB;
-  --charcoal: #333333;
-  --amber: #FCAB10;
+  --blush-pink: #F7D1D1;
+  --dusty-rose: #D8A7B1;
+  --charcoal: #3C3C3C;
+  --copper: #B87333;
   --white: #FFFFFF;
   --black: #001011;
   
   /* Opacity variations */
-  --teal-10: rgba(95, 176, 183, 0.1);
-  --teal-20: rgba(95, 176, 183, 0.2);
-  --teal-30: rgba(95, 176, 183, 0.3);
-  --jade-10: rgba(0, 78, 100, 0.1);
-  --jade-20: rgba(0, 78, 100, 0.2);
-  --jade-90: rgba(0, 78, 100, 0.9);
-  --charcoal-50: rgba(51, 51, 51, 0.5);
-  --charcoal-70: rgba(51, 51, 51, 0.7);
-  --charcoal-80: rgba(51, 51, 51, 0.8);
-  --charcoal-90: rgba(51, 51, 51, 0.9);
-  --amber-90: rgba(252, 171, 16, 0.9);
+  --blush-pink-10: rgba(247, 209, 209, 0.1);
+  --blush-pink-20: rgba(247, 209, 209, 0.2);
+  --blush-pink-30: rgba(247, 209, 209, 0.3);
+  --dusty-rose-10: rgba(216, 167, 177, 0.1);
+  --dusty-rose-20: rgba(216, 167, 177, 0.2);
+  --dusty-rose-90: rgba(216, 167, 177, 0.9);
+  --charcoal-50: rgba(60, 60, 60, 0.5);
+  --charcoal-70: rgba(60, 60, 60, 0.7);
+  --charcoal-80: rgba(60, 60, 60, 0.8);
+  --charcoal-90: rgba(60, 60, 60, 0.9);
+  --copper-90: rgba(184, 115, 51, 0.9);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -44,77 +43,75 @@
 @layer base {
   :root {
     --background: 0 0% 100%;        /* #FFFFFF */
-    --foreground: 0 0% 20%;         /* #333333 Charcoal */
+    --foreground: 185 100% 4%;      /* #001011 */
     
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 20%;
+    --card-foreground: 185 100% 4%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 20%;
+    --popover-foreground: 185 100% 4%;
     
-    --primary: 185 38% 54%;         /* #5FB0B7 Muted Teal */
-    --primary-foreground: 0 0% 100%;
+    --primary: 175 34% 75%;         /* #A6D8D4 Tiffany blue */
+    --primary-foreground: 185 100% 4%;
     
-    --secondary: 194 100% 20%;      /* #004E64 Deep Jade */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 42 71% 62%;        /* #E3BF5B Gold */
+    --secondary-foreground: 185 100% 4%;
     
-    --muted: 0 0% 92%;              /* #EBEBEB Light Gray */
-    --muted-foreground: 0 0% 20%;
+    --muted: 175 30% 95%;           /* Light tint of Tiffany blue */
+    --muted-foreground: 185 30% 25%;
     
-    --accent: 38 97% 53%;           /* #FCAB10 Amber */
-    --accent-foreground: 0 0% 20%;
+    --accent: 42 71% 62%;           /* #E3BF5B */
+    --accent-foreground: 185 100% 4%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 185 38% 84%;
-    --input: 185 38% 84%;
-    --ring: 185 38% 54%;            /* #5FB0B7 */
+    --border: 175 34% 85%;
+    --input: 175 34% 85%;
+    --ring: 175 34% 75%;            /* #A6D8D4 */
     
     --radius: 2rem;
     
     /* Additional theme colors for our brand */
-    --teal: 185 38% 54%;            /* #5FB0B7 */
-    --jade: 194 100% 20%;           /* #004E64 */
-    --gray: 0 0% 92%;               /* #EBEBEB */
-    --charcoal: 0 0% 20%;           /* #333333 */
-    --amber: 38 97% 53%;            /* #FCAB10 */
+    --blush: 349 67% 89%;           /* #F7D1D1 */
+    --rose: 345 40% 75%;            /* #D8A7B1 */
+    --charcoal: 0 0% 24%;           /* #3C3C3C */
+    --copper: 30 56% 46%;           /* #B87333 */
   }
 
   .dark {
-    --background: 194 100% 10%;     /* Darker version of Jade */
+    --background: 185 100% 4%;      /* #001011 */
     --foreground: 0 0% 100%;        /* #FFFFFF */
     
-    --card: 194 90% 15%;
+    --card: 185 95% 7%;
     --card-foreground: 0 0% 100%;
     
-    --popover: 194 90% 15%;
+    --popover: 185 95% 7%;
     --popover-foreground: 0 0% 100%;
     
-    --primary: 185 38% 54%;         /* #5FB0B7 Muted Teal */
-    --primary-foreground: 0 0% 100%;
+    --primary: 175 34% 75%;         /* #A6D8D4 */
+    --primary-foreground: 185 100% 4%;
     
-    --secondary: 194 100% 20%;      /* #004E64 Deep Jade */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 42 71% 62%;        /* #E3BF5B */
+    --secondary-foreground: 185 100% 4%;
     
-    --muted: 194 70% 15%;
+    --muted: 185 70% 10%;
     --muted-foreground: 0 0% 90%;
     
-    --accent: 38 97% 53%;           /* #FCAB10 Amber */
-    --accent-foreground: 0 0% 20%;
+    --accent: 42 71% 62%;           /* #E3BF5B */
+    --accent-foreground: 185 100% 4%;
     
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 194 70% 25%;
-    --input: 194 70% 25%;
-    --ring: 185 38% 54%;            /* #5FB0B7 */
+    --border: 185 70% 15%;
+    --input: 185 70% 15%;
+    --ring: 175 34% 75%;            /* #A6D8D4 */
     
-    --teal: 185 38% 54%;            /* #5FB0B7 */
-    --jade: 194 100% 20%;           /* #004E64 */
-    --gray: 0 0% 92%;               /* #EBEBEB */
-    --charcoal: 0 0% 20%;           /* #333333 */
-    --amber: 38 97% 53%;            /* #FCAB10 */
+    --blush: 349 67% 89%;           /* #F7D1D1 */
+    --rose: 345 40% 75%;            /* #D8A7B1 */
+    --charcoal: 0 0% 24%;           /* #3C3C3C */
+    --copper: 30 56% 46%;           /* #B87333 */
     
     --radius: 2rem;
   }
@@ -210,11 +207,11 @@
   }
 
   .gold-gradient {
-    @apply bg-gradient-to-r from-[#E3BF5B]/80 via-[#E3BF5B] to-[#E3BF5B]/80;
+    @apply bg-gradient-to-r from-secondary/80 via-secondary to-secondary/80;
   }
 
   .tiffany-gradient {
-    @apply bg-gradient-to-r from-[#A6D8D4]/80 via-[#A6D8D4] to-[#A6D8D4]/80;
+    @apply bg-gradient-to-r from-primary/80 via-primary to-primary/80;
   }
   
   /* Tend-inspired button styling */
@@ -327,13 +324,13 @@ body {
 
 /* Book appointment button styling */
 .book-btn {
-  background-color: var(--amber);
-  color: white;
+  background-color: var(--copper);
+  color: hsl(var(--background));
   transition: all 0.3s ease;
 }
 
 .book-btn:hover {
-  background-color: var(--amber);
+  background-color: var(--copper);
   opacity: 0.9;
   transform: translateY(-2px);
 }
