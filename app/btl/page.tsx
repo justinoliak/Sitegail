@@ -10,9 +10,8 @@ export default function BTLPage() {
   return (
     <main className="flex-1">
       {/* 1. Hero Section - Emotional Appeal */}
-      <section className="pt-32 pb-16 md:pt-36 md:pb-20 relative">
+      <section className="pt-32 pb-16 md:pt-36 md:pb-20 relative bg-light-mint/40">
         <div className="absolute inset-0 bg-gradient-to-b from-light-mint/70 to-transparent z-0"></div>
-        <div className="absolute inset-0 bg-cover bg-center z-[-1]" style={{ backgroundImage: "url('/images/btl/BTL-Aesthetics_PIC_All-App_Blue-Transparent_ENUS100.png')" }}></div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
