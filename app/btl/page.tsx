@@ -1,38 +1,35 @@
 "use client";
-export const dynamic = "force-dynamic";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import path from "path";
+import dynamic from "next/dynamic";
 
-// Changed imports to fix React Server Components bundler error
-import dynamicImport from "next/dynamic";
+// Set dynamic rendering mode for this page
+export const dynamicPage = "force-dynamic";
 
-// Create path to the components directory to fix TypeScript errors
-const componentsPath = "@/components/sections";
+// Import the components using dynamic import with proper error handling
+const TransformationGallery = dynamic(() => import("@/components/sections/transformation-gallery"), {
+  ssr: false,
+  loading: () => <div className="py-32 text-center">Loading gallery...</div>
+});
 
-// Use explicit import() function syntax and ensure ssr options are clearly set
-const FAQAccordionSection = dynamicImport(
-  () => import(`${componentsPath}/faq-accordion-section`), 
-  { ssr: false }
-);
+const TreatmentOptions = dynamic(() => import("@/components/sections/treatment-options"), {
+  ssr: false,
+  loading: () => <div className="py-32 text-center">Loading treatments...</div>
+});
 
-const TransformationGallery = dynamicImport(
-  () => import(`${componentsPath}/transformation-gallery`), 
-  { ssr: false }
-);
+const PricingPackages = dynamic(() => import("@/components/sections/pricing-packages"), {
+  ssr: false,
+  loading: () => <div className="py-32 text-center">Loading pricing...</div>
+});
 
-const TreatmentOptions = dynamicImport(
-  () => import(`${componentsPath}/treatment-options`), 
-  { ssr: false }
-);
-
-const PricingPackages = dynamicImport(
-  () => import(`${componentsPath}/pricing-packages`), 
-  { ssr: false }
-);
+const FAQAccordionSection = dynamic(() => import("@/components/sections/faq-accordion-section"), {
+  ssr: false,
+  loading: () => <div className="py-32 text-center">Loading FAQs...</div>
+});
 
 export default function BTLPage() {
   return (

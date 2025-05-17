@@ -4,15 +4,16 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import FAQAccordion from "@/components/ui/faq-accordion";
+import { Button } from "@/components/ui/button";
 
 export default function FAQAccordionSection() {
   return (
-    <section className="py-12 md:py-16 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-32 bg-light-mint">
+      <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl font-semibold text-charcoal mb-4">Frequently Asked Questions</h2>
-            <p className="text-base md:text-lg text-charcoal/80">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl font-semibold mb-6 text-charcoal">Frequently Asked Questions</h2>
+            <p className="text-charcoal/80 text-lg">
               We're here to address your concerns about BTL Exion treatments
             </p>
           </div>
@@ -46,11 +47,16 @@ export default function FAQAccordionSection() {
             ]} 
           />
           
-          <div className="mt-8 text-center">
-            <p className="mb-4 text-charcoal/80">Don't see your question answered here?</p>
-            <Link href="/contact" className="text-accent-mint hover:underline font-medium inline-flex items-center">
-              Contact us for more information
-              <ArrowRight className="ml-2 h-4 w-4" />
+          <div className="mt-16 text-center">
+            <p className="mb-8 text-charcoal/80 text-lg">Don't see your question answered here?</p>
+            <Link href="/contact">
+              <Button 
+                variant="outline"
+                className="border-primary-mint text-charcoal hover:bg-primary-mint/10 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
+              >
+                Contact Us for More Information
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
             </Link>
           </div>
         </div>
