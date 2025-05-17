@@ -90,7 +90,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="order-1 lg:order-2 relative h-full">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-[32px] shadow-xl h-[120%] lg:h-[140%] lg:-mt-16 lg:mb-10 pt-8">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-[32px] shadow-xl h-[110%] lg:h-[130%] lg:-mt-12 lg:mb-8 pt-8">
                 <Image
                   src="/images/gail-photos/gailwithpatient1.jpg"
                   alt="Dr. Krishnan's welcoming dental office"
