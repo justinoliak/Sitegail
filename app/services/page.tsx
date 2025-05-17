@@ -162,6 +162,162 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Insurance & Technology Highlights */}
+      <section className="py-16 bg-background">
+        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="bg-light-mint/30 rounded-[24px] p-8 md:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div>
+                <h2 className="text-2xl font-semibold mb-6 text-charcoal flex items-center">
+                  <ShieldCheck className="h-6 w-6 text-accent-mint mr-3"/> Insurance Accepted
+                </h2>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                    <p className="text-charcoal/80">We accept all PPO insurance plans</p>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                    <p className="text-charcoal/80">In-Network Provider for Delta Dental</p>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                    <p className="text-charcoal/80">Flexible payment options available</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h2 className="text-2xl font-semibold mb-6 text-charcoal flex items-center">
+                  <Star className="h-6 w-6 text-accent-mint mr-3"/> Advanced Technology
+                </h2>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                    <p className="text-charcoal/80">Siroma Digital Sensors for safe, no-radiation x-rays</p>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                    <p className="text-charcoal/80">Accutron™ Digital Newport™ Flowmeter System for comfortable nitrous oxide sedation</p>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                    <p className="text-charcoal/80">State-of-the-art sterilization and safety protocols</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Services Section */}
+      <section className="py-32 bg-background">
+        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-3xl font-semibold mb-6 text-charcoal">Featured Services</h2>
+            <p className="text-charcoal/80 text-lg">
+              Our most popular treatments delivering exceptional results for our patients.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {featuredServices.map((service, index) => (
+              <Card key={index} className="border-none rounded-[12px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden group bg-background">
+                <div className="h-56 relative bg-light-mint">
+                  <div className="absolute inset-0">
+                    <Image 
+                      src={service.image} 
+                      alt={service.title} 
+                      fill
+                      className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="absolute top-4 right-4 bg-accent-mint text-white rounded-full p-2">
+                    <Star className="h-4 w-4" />
+                  </div>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-xl font-semibold mb-4 text-charcoal group-hover:text-accent-mint transition-colors duration-300">{service.title}</h3>
+                  <p className="text-charcoal/70 mb-6">
+                    {service.description}
+                  </p>
+                  <Link 
+                    href={service.link} 
+                    className="inline-flex items-center text-accent-mint font-medium group-hover:underline"
+                  >
+                    Learn more <ArrowRight className="h-4 w-4 ml-2" />
+                  </Link>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories Sections */}
+      {serviceCategories.map((category, index) => (
+        <section 
+          key={category.id}
+          id={category.id} 
+          className={`py-32 ${index % 2 === 0 ? 'bg-light-mint' : 'bg-background'}`}
+        >
+          <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className={`${index % 2 !== 0 ? 'order-2' : ''}`}>
+                <div className="flex items-center mb-8">
+                  <div className="w-12 h-12 rounded-full bg-accent-mint flex items-center justify-center mr-5">
+                    {category.icon}
+                  </div>
+                  <h2 className="text-3xl font-semibold text-charcoal">{category.title}</h2>
+                </div>
+                <p className="text-lg text-charcoal/80 mb-10 leading-relaxed">
+                  {category.description}
+                </p>
+                
+                <div className="space-y-6">
+                  {category.services.map((service, serviceIndex) => (
+                    <div key={serviceIndex} className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-accent-mint mr-4 mt-1 flex-shrink-0" />
+                      <div>
+                        <Link href={service.link}>
+                          <h3 className="text-lg font-medium text-charcoal mb-2 hover:text-accent-mint transition-colors">
+                            {service.name}
+                          </h3>
+                        </Link>
+                        <p className="text-charcoal/70">
+                          {service.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className={`${index % 2 !== 0 ? 'order-1' : ''}`}>
+                <div className="relative aspect-[3/4] overflow-hidden rounded-[32px] shadow-xl">
+                  <Image
+                    src={category.image}
+                    alt={category.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 to-transparent"></div>
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <h3 className="text-2xl font-semibold text-white mb-3">{category.title}</h3>
+                    <div className="flex space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-5 w-5 text-accent-mint fill-accent-mint" />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      ))}
+
       {/* Before & After Gallery Preview */}
       <section className="py-32 bg-background">
         <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -240,64 +396,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Insurance & Technology Highlights */}
-      <section className="py-32 bg-light-mint">
-        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-semibold mb-6 text-charcoal">Our Commitment to You</h2>
-            <p className="text-charcoal/80 text-lg">
-              We believe in making quality dental care accessible and comfortable with flexible insurance options and advanced technology.
-            </p>
-          </div>
-          
-          <div className="bg-background/90 backdrop-blur-sm rounded-[24px] p-8 md:p-12 shadow-lg">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div>
-                <h3 className="text-2xl font-semibold mb-6 text-charcoal flex items-center">
-                  <ShieldCheck className="h-6 w-6 text-accent-mint mr-3"/> Insurance Accepted
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
-                    <p className="text-charcoal/80">We accept all PPO insurance plans</p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
-                    <p className="text-charcoal/80">In-Network Provider for Delta Dental</p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
-                    <p className="text-charcoal/80">Flexible payment options available</p>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="text-2xl font-semibold mb-6 text-charcoal flex items-center">
-                  <Star className="h-6 w-6 text-accent-mint mr-3"/> Advanced Technology
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
-                    <p className="text-charcoal/80">Siroma Digital Sensors for safe, no-radiation x-rays</p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
-                    <p className="text-charcoal/80">Accutron™ Digital Newport™ Flowmeter System for comfortable nitrous oxide sedation</p>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
-                    <p className="text-charcoal/80">State-of-the-art sterilization and safety protocols</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Preview Section */}
-      <section className="py-32 bg-background">
+      <section className="py-32 bg-light-mint">
         <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl font-semibold mb-6 text-charcoal">Frequently Asked Questions</h2>
