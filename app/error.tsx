@@ -17,12 +17,12 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-[#FFF5F0]">
+    <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-primary/10">
       <div className="max-w-md w-full p-8 bg-white rounded shadow-lg">
-        <h1 className="text-2xl font-bold text-[#001011] mb-6">Something went wrong</h1>
+        <h1 className="text-2xl font-bold text-foreground mb-6">Something went wrong</h1>
         
         <div className="space-y-4">
-          <p className="text-[#001011]/80">
+          <p className="text-foreground/80">
             An error occurred while loading this page. This has been logged and we're working on it.
           </p>
           
@@ -35,7 +35,7 @@ export default function Error({
           <div className="mt-6 space-y-4">
             <Button 
               onClick={reset}
-              className="w-full bg-[#A6D8D4] text-[#001011] hover:bg-[#A6D8D4]/90"
+              className="w-full bg-primary text-foreground hover:bg-primary/90"
             >
               Try again
             </Button>
@@ -43,7 +43,7 @@ export default function Error({
             <Link href="/">
               <Button 
                 variant="outline" 
-                className="w-full mt-2 border-[#A6D8D4] text-[#A6D8D4] hover:bg-[#A6D8D4]/10"
+                className="w-full mt-2 border-primary text-primary hover:bg-primary/10"
               >
                 Return to Home
               </Button>

@@ -184,18 +184,18 @@ export function BeforeAfterSlider({
           className="absolute w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center transform -translate-x-1/2"
           style={{ left: `${sliderPosition}%` }}
         >
-          <ChevronRight className="h-6 w-6 text-[#D8A7B1] -rotate-90 mr-0.5" />
-          <ChevronRight className="h-6 w-6 text-[#D8A7B1] rotate-90 ml-0.5" />
+          <ChevronRight className="h-6 w-6 text-dusty-rose -rotate-90 mr-0.5" />
+          <ChevronRight className="h-6 w-6 text-dusty-rose rotate-90 ml-0.5" />
         </div>
       </div>
       
       {/* Labels */}
       {showLabels && (
         <>
-          <div className="absolute bottom-3 left-3 bg-[#3C3C3C]/70 text-white text-xs py-1 px-3 rounded-md">
+          <div className="absolute bottom-3 left-3 bg-charcoal/70 text-white text-xs py-1 px-3 rounded-md">
             {labels.before}
           </div>
-          <div className="absolute bottom-3 right-3 bg-[#D8A7B1]/70 text-white text-xs py-1 px-3 rounded-md">
+          <div className="absolute bottom-3 right-3 bg-dusty-rose/70 text-white text-xs py-1 px-3 rounded-md">
             {labels.after}
           </div>
         </>

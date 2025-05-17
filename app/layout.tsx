@@ -3,9 +3,9 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/navigation";
-import { Footer } from "@/components/footer";
+import Footer from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
-import { BackToTop } from "@/components/back-to-top";
+import BackToTop from "@/components/back-to-top";
 
 const montserrat = Montserrat({ subsets: ['latin'] });
 

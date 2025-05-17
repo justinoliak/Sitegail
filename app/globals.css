@@ -5,31 +5,18 @@
 @tailwind utilities;
 
 :root {
-  /* Base system colors */
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  
-  /* Brand color palette */
-  --blush-pink: #EBEBEB;    /* Light Gray replacing blush-pink */
-  --dusty-rose: #5FB0B7;    /* Muted Teal replacing dusty-rose */
-  --charcoal: #333333;      /* Charcoal */
-  --copper: #FCAB10;        /* Amber replacing copper */
-  --white: #FFFFFF;
-  --black: #333333;         /* Using charcoal for black */
-  
-  /* Opacity variations */
-  --blush-pink-10: rgba(235, 235, 235, 0.1);  /* Light Gray 10% */
-  --blush-pink-20: rgba(235, 235, 235, 0.2);  /* Light Gray 20% */
-  --blush-pink-30: rgba(235, 235, 235, 0.3);  /* Light Gray 30% */
-  --dusty-rose-10: rgba(95, 176, 183, 0.1);   /* Muted Teal 10% */
-  --dusty-rose-20: rgba(95, 176, 183, 0.2);   /* Muted Teal 20% */
-  --dusty-rose-90: rgba(95, 176, 183, 0.9);   /* Muted Teal 90% */
-  --charcoal-50: rgba(51, 51, 51, 0.5);       /* Charcoal 50% */
-  --charcoal-70: rgba(51, 51, 51, 0.7);       /* Charcoal 70% */
-  --charcoal-80: rgba(51, 51, 51, 0.8);       /* Charcoal 80% */
-  --charcoal-90: rgba(51, 51, 51, 0.9);       /* Charcoal 90% */
-  --copper-90: rgba(252, 171, 16, 0.9);       /* Amber 90% */
+  --light-mint: #E2F7F0;
+  --primary-mint: #7DCFB6;
+  --primary-mint-dark: #5BB8A0;
+  --charcoal: #333333;
+  --accent-mint: #00B894;
+  --accent-mint-dark: #009B7D;
+  --secondary-dark: #009B7D;
+  --navy-blue: #2D4059;
+  --light-gray: #F5F7F9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,68 +38,60 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 20%;
     
-    --primary: 184 40% 54%;         /* #5FB0B7 Muted Teal */
+    --primary: 162 49% 65%;         /* #7DCFB6 Primary Mint */
+    --primary-dark: 162 49% 55%;    /* #5BB8A0 Darker Primary Mint */
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 195 100% 20%;      /* #004E64 Deep Jade */
+    --secondary: 166 100% 36%;      /* #00B894 Deeper Accent Mint */
+    --secondary-dark: 166 100% 30%; /* #009B7D Darker Accent Mint */
     --secondary-foreground: 0 0% 100%;
     
-    --muted: 0 0% 92%;              /* #EBEBEB Light Gray */
-    --muted-foreground: 0 0% 20%;
+    --muted: 163 59% 93%;           /* #E2F7F0 Light Mint */
+    --muted-foreground: 0 0% 30%;   /* Increased contrast from 45% to 30% */
     
-    --accent: 38 97% 54%;           /* #FCAB10 Amber */
-    --accent-foreground: 0 0% 20%;
+    --accent: 166 100% 36%;         /* #00B894 Deeper Accent Mint */
+    --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 184 40% 80%;
-    --input: 184 40% 80%;
-    --ring: 184 40% 54%;            /* #5FB0B7 */
+    --border: 162 49% 85%;
+    --input: 162 49% 85%;
+    --ring: 162 49% 65%;            /* #7DCFB6 */
     
     --radius: 2rem;
-    
-    /* Additional theme colors for our brand */
-    --blush: 0 0% 92%;              /* #EBEBEB Light Gray */
-    --rose: 184 40% 54%;            /* #5FB0B7 Muted Teal */
-    --charcoal: 0 0% 20%;           /* #333333 Charcoal */
-    --copper: 38 97% 54%;           /* #FCAB10 Amber */
   }
 
   .dark {
-    --background: 0 0% 20%;         /* #333333 Charcoal */
+    --background: 213 30% 26%;      /* #2D4059 Navy Blue */
     --foreground: 0 0% 100%;        /* #FFFFFF */
     
-    --card: 0 0% 15%;
+    --card: 213 35% 20%;
     --card-foreground: 0 0% 100%;
     
-    --popover: 0 0% 15%;
+    --popover: 213 35% 20%;
     --popover-foreground: 0 0% 100%;
     
-    --primary: 184 40% 54%;         /* #5FB0B7 Muted Teal */
-    --primary-foreground: 0 0% 100%;
+    --primary: 162 49% 65%;         /* #7DCFB6 Primary Mint */
+    --primary-dark: 162 49% 55%;    /* #5BB8A0 Darker Primary Mint */
+    --primary-foreground: 213 30% 26%;
     
-    --secondary: 195 100% 20%;      /* #004E64 Deep Jade */
+    --secondary: 166 100% 36%;      /* #00B894 Deeper Accent Mint */
+    --secondary-dark: 166 100% 30%; /* #009B7D Darker Accent Mint */
     --secondary-foreground: 0 0% 100%;
     
-    --muted: 0 0% 30%;
+    --muted: 213 20% 30%;
     --muted-foreground: 0 0% 90%;
     
-    --accent: 38 97% 54%;           /* #FCAB10 Amber */
-    --accent-foreground: 0 0% 20%;
+    --accent: 166 100% 36%;         /* #00B894 Deeper Accent Mint */
+    --accent-foreground: 0 0% 100%;
     
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 0 0% 30%;
-    --input: 0 0% 30%;
-    --ring: 184 40% 54%;            /* #5FB0B7 */
-    
-    --blush: 0 0% 92%;              /* #EBEBEB Light Gray */
-    --rose: 184 40% 54%;            /* #5FB0B7 Muted Teal */
-    --charcoal: 0 0% 20%;           /* #333333 Charcoal */
-    --copper: 38 97% 54%;           /* #FCAB10 Amber */
-    
+    --border: 213 25% 40%;
+    --input: 213 25% 40%;
+    --ring: 162 49% 65%;            /* #7DCFB6 */
     --radius: 2rem;
   }
 }
@@ -157,11 +136,11 @@
   }
   
   .btn-primary {
-    @apply bg-primary text-foreground hover:bg-primary/90;
+    @apply bg-primary text-white hover:bg-primary-dark;
   }
   
   .btn-secondary {
-    @apply bg-secondary text-foreground hover:bg-secondary/80;
+    @apply bg-secondary text-white hover:bg-secondary-dark;
   }
   
   .btn-outline {
@@ -206,22 +185,41 @@
     text-wrap: balance;
   }
 
-  .gold-gradient {
-    @apply bg-gradient-to-r from-secondary/80 via-secondary to-secondary/80;
+  .mint-gradient {
+    @apply bg-gradient-to-r from-secondary/90 via-secondary to-secondary/90 text-white;
   }
 
-  .tiffany-gradient {
-    @apply bg-gradient-to-r from-primary/80 via-primary to-primary/80;
+  .seafoam-gradient {
+    @apply bg-gradient-to-r from-primary/90 via-primary to-primary/90 text-white;
+  }
+  
+  /* Text on mint backgrounds */
+  .text-on-mint {
+    @apply text-charcoal font-medium;
+  }
+  
+  /* Improved contrast for text on light mint */
+  .text-on-light-mint {
+    @apply text-charcoal/90 font-medium;
   }
   
   /* Tend-inspired button styling */
   .book-btn {
-    @apply inline-flex items-center justify-center rounded-full text-base font-bold transition-all duration-300 bg-primary text-foreground hover:bg-primary/90;
+    @apply inline-flex items-center justify-center rounded-full text-base font-bold transition-all duration-300;
+    background-color: var(--accent-mint);
+    color: #FFFFFF;
     padding: 0.75rem 1.5rem;
+  }
+  
+  .book-btn:hover {
+    background-color: var(--accent-mint-dark);
+    transform: translateY(-2px);
   }
   
   .book-btn-lg {
     @apply px-8 py-4 text-lg font-bold;
+    border-radius: 24px;
+    font-weight: 500;
   }
 }
 
@@ -320,22 +318,4 @@ body {
   position: relative;
   box-shadow: 0 0 0 100vmax hsl(var(--muted));
   clip-path: inset(0 -100vmax);
-}
-
-/* Book appointment button styling */
-.book-btn {
-  background-color: var(--copper);
-  color: hsl(var(--background));
-  transition: all 0.3s ease;
-}
-
-.book-btn:hover {
-  background-color: var(--copper);
-  opacity: 0.9;
-  transform: translateY(-2px);
-}
-
-.book-btn-lg {
-  border-radius: 24px;
-  font-weight: 500;
 }

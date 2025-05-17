@@ -32,15 +32,27 @@ const config: Config = {
         'loose': '2',
       },
       colors: {
+        // Brand colors
+        'light-mint': 'var(--light-mint)',
+        'primary-mint': 'var(--primary-mint)',
+        'primary-mint-dark': 'var(--primary-mint-dark)',
+        'charcoal': 'var(--charcoal)',
+        'accent-mint': 'var(--accent-mint)',
+        'accent-mint-dark': 'var(--accent-mint-dark)',
+        'navy-blue': 'var(--navy-blue)',
+        'light-gray': 'var(--light-gray)',
+        // Shadow UI colors
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+          dark: 'hsl(var(--primary-dark))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
+          dark: 'hsl(var(--secondary-dark))',
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
@@ -65,40 +77,6 @@ const config: Config = {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        // Brand colors
-        teal: {
-          DEFAULT: 'hsl(var(--teal))',
-          light: 'var(--teal-10)',
-          medium: 'var(--teal-20)',
-          dark: 'var(--teal-30)',
-        },
-        jade: {
-          DEFAULT: 'hsl(var(--jade))',
-          light: 'var(--jade-10)',
-          medium: 'var(--jade-20)',
-          dark: 'var(--jade-90)',
-        },
-        gray: {
-          DEFAULT: 'hsl(var(--gray))',
-          50: '#F5F5F5',
-          100: '#EBEBEB',
-          200: '#D9D9D9',
-          300: '#C4C4C4',
-          400: '#9D9D9D',
-        },
-        charcoal: {
-          DEFAULT: 'hsl(var(--charcoal))',
-          50: 'var(--charcoal-50)',
-          70: 'var(--charcoal-70)',
-          80: 'var(--charcoal-80)',
-          90: 'var(--charcoal-90)',
-        },
-        amber: {
-          DEFAULT: 'hsl(var(--amber))',
-          90: 'var(--amber-90)',
-          light: '#FDBE41',
-          dark: '#E19305',
-        },
       },
       borderRadius: {
         lg: 'var(--radius)',

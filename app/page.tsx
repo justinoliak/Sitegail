@@ -40,72 +40,68 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-blush-light to-background">
-        <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="lg:w-1/2">
+      <section className="pt-32 pb-20 bg-gradient-to-b from-light-mint to-background">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
               <h1 className="text-4xl md:text-5xl font-semibold mb-4 text-charcoal">
-                Welcome to <span className="text-copper">Dr. Gail Ann Krishnan's</span> Dental Practice
+                Exceptional Dental Care with a Gentle Touch
               </h1>
               <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed mb-8">
-                Comprehensive dental care in a comfortable environment. From routine check-ups to advanced cosmetic procedures, we provide personalized treatment with a gentle touch.
+                Dr. Gail Ann Krishnan combines advanced dental expertise with a compassionate approach for a comfortable experience you can trust.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact">
                   <Button 
-                    size="lg" 
-                    className="bg-copper hover:bg-copper-90 text-background rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
+                    className="bg-accent-mint hover:bg-accent-mint-dark text-white rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
                   >
-                    Schedule an Appointment
+                    Book Your Appointment
                   </Button>
                 </Link>
                 <Link href="/services">
                   <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-rose text-charcoal hover:bg-rose-light rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
+                    variant="outline"
+                    className="border-primary-mint text-charcoal hover:bg-primary-mint/10 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
                   >
-                    Explore Our Services
+                    View Our Services
                   </Button>
                 </Link>
-              </div>
-              
-              <div className="mt-12 flex items-center">
-                <div className="flex -space-x-4">
-                  <div className="w-10 h-10 rounded-full border-2 border-background bg-blush flex items-center justify-center text-charcoal font-medium text-xs">
-                    JM
-                  </div>
-                  <div className="w-10 h-10 rounded-full border-2 border-background bg-blush flex items-center justify-center text-charcoal font-medium text-xs">
-                    SA
-                  </div>
-                  <div className="w-10 h-10 rounded-full border-2 border-background bg-blush flex items-center justify-center text-charcoal font-medium text-xs">
-                    KL
-                  </div>
                 </div>
-                <p className="text-charcoal font-medium">Trusted by 1000+ happy patients</p>
-                <div className="ml-4 flex items-center">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-copper text-copper" />
+              <div className="mt-8 flex items-center">
+                <div className="flex -space-x-2 mr-4">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div 
+                      key={i} 
+                      className="w-10 h-10 rounded-full border-2 border-background bg-primary-mint flex items-center justify-center text-white font-medium text-xs"
+                    >
+                      {i}
+                </div>
                   ))}
-                  <span className="ml-2 text-sm text-charcoal/70">5.0 (256 reviews)</span>
+              </div>
+                <div>
+                  <p className="text-charcoal font-medium">Trusted by 1000+ happy patients</p>
+                  <div className="flex">
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <Star key={i} className="h-4 w-4 fill-accent-mint text-accent-mint" />
+                    ))}
+                    <span className="ml-2 text-sm text-charcoal/70">5.0 (256 reviews)</span>
+                  </div>
                 </div>
               </div>
             </div>
-            
-            <div className="lg:w-1/2 relative">
-              <div className="rounded-2xl overflow-hidden shadow-xl">
+            <div className="order-1 lg:order-2 relative">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[32px] shadow-xl">
                 <Image
-                  src="/images/office1.png"
-                  alt="Modern dental office interior"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
+                  src="/images/hero-image.jpg"
+                  alt="Dr. Krishnan's welcoming dental office"
+                  fill
+                  className="object-cover"
+                  priority
                 />
               </div>
-              
-              <div className="absolute -bottom-6 -right-6 bg-background p-4 rounded-2xl shadow-lg border-t-4 border-rose">
-                <div className="flex items-center">
-                  <CheckCircle className="h-5 w-5 text-copper" />
+              <div className="absolute -bottom-6 -right-6 bg-background p-4 rounded-2xl shadow-lg border-t-4 border-primary-mint">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-accent-mint" />
                   <p className="text-charcoal font-medium">New patients welcome!</p>
                 </div>
               </div>
@@ -116,114 +112,114 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-semibold mb-4 text-charcoal">
-              Our Comprehensive Dental Services
+              Comprehensive Dental Services for Your Entire Family
             </h2>
             <p className="text-lg text-charcoal/80">
-              We provide a wide range of dental services to meet all your oral health needs
+              From routine check-ups to complete smile transformations, we provide personalized care for all your dental needs.
             </p>
+                  </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Service Card 1 */}
+            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden group bg-background">
+              <div className="h-48 relative bg-light-mint">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image 
+                    src="/images/preventive-care.jpg" 
+                    alt="Preventive Dental Care" 
+                    width={300} 
+                    height={200}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-charcoal group-hover:text-accent-mint transition-colors duration-300">Preventive Care</h3>
+                <p className="text-charcoal/70 mb-4">
+                  Maintain your smile's health with regular cleanings, exams, and early intervention to prevent dental issues.
+                </p>
+                <Link 
+                  href="/services/preventive" 
+                  className="inline-flex items-center text-accent-mint font-medium group-hover:underline"
+                >
+                  Learn more <ChevronRight className="h-4 w-4 ml-1" />
+                </Link>
+                </div>
+            </Card>
+
+            {/* Service Card 2 */}
+            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden group bg-background">
+              <div className="h-48 relative bg-light-mint">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image 
+                    src="/images/cosmetic-dentistry.jpg" 
+                    alt="Cosmetic Dentistry" 
+                    width={300} 
+                    height={200}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                  </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-charcoal group-hover:text-accent-mint transition-colors duration-300">Cosmetic Dentistry</h3>
+                <p className="text-charcoal/70 mb-4">
+                  Transform your smile with our aesthetic treatments including whitening, veneers, and smile makeovers.
+                </p>
+                <Link 
+                  href="/services/cosmetic" 
+                  className="inline-flex items-center text-accent-mint font-medium group-hover:underline"
+                >
+                  Learn more <ChevronRight className="h-4 w-4 ml-1" />
+                </Link>
+              </div>
+            </Card>
+
+            {/* Service Card 3 */}
+            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden group bg-background">
+              <div className="h-48 relative bg-light-mint">
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <Image 
+                    src="/images/restorative-dentistry.jpg" 
+                    alt="Restorative Dentistry" 
+                    width={300} 
+                    height={200}
+                    className="object-cover w-full h-full"
+                  />
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden group bg-background">
-              <div className="h-48 relative bg-blush-medium">
-                <Image
-                  src="/images/services/preventive.jpg"
-                  alt="Preventive dental care"
-                  fill
-                  className="object-cover object-center opacity-90 group-hover:scale-105 transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 bg-background/90 rounded-full px-4 py-1">
-                  <p className="text-sm font-medium text-charcoal">Preventive</p>
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-charcoal group-hover:text-copper transition-colors duration-300">Preventive Care</h3>
+        </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2 text-charcoal group-hover:text-accent-mint transition-colors duration-300">Restorative Dentistry</h3>
                 <p className="text-charcoal/70 mb-4">
-                  Regular cleanings, exams, and early intervention to maintain your oral health.
+                  Regain full function and confidence with our advanced restorative solutions for damaged or missing teeth.
                 </p>
                 <Link 
-                  href="/dental#preventive"
-                  className="inline-flex items-center text-copper font-medium group-hover:underline"
+                  href="/services/restorative" 
+                  className="inline-flex items-center text-accent-mint font-medium group-hover:underline"
                 >
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden group bg-background">
-              <div className="h-48 relative bg-blush-medium">
-                <Image
-                  src="/images/services/cosmetic.jpg"
-                  alt="Cosmetic dentistry procedures"
-                  fill
-                  className="object-cover object-center opacity-90 group-hover:scale-105 transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 bg-background/90 rounded-full px-4 py-1">
-                  <p className="text-sm font-medium text-charcoal">Cosmetic</p>
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-charcoal group-hover:text-copper transition-colors duration-300">Cosmetic Dentistry</h3>
-                <p className="text-charcoal/70 mb-4">
-                  Enhance your smile with whitening, veneers, and other cosmetic procedures.
-                </p>
-                <Link 
-                  href="/dental#cosmetic"
-                  className="inline-flex items-center text-copper font-medium group-hover:underline"
-                >
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </CardContent>
-            </Card>
-            
-            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden group bg-background">
-              <div className="h-48 relative bg-blush-medium">
-                <Image
-                  src="/images/services/restorative.jpg"
-                  alt="Restorative dental procedures"
-                  fill
-                  className="object-cover object-center opacity-90 group-hover:scale-105 transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 bg-background/90 rounded-full px-4 py-1">
-                  <p className="text-sm font-medium text-charcoal">Restorative</p>
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-charcoal group-hover:text-copper transition-colors duration-300">Restorative Dentistry</h3>
-                <p className="text-charcoal/70 mb-4">
-                  Repair damaged teeth with fillings, crowns, implants, and other solutions.
-                </p>
-                <Link 
-                  href="/dental#restorative"
-                  className="inline-flex items-center text-copper font-medium group-hover:underline"
-                >
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </CardContent>
-            </Card>
+                  Learn more <ChevronRight className="h-4 w-4 ml-1" />
+              </Link>
+            </div>
+                </Card>
           </div>
           
           <div className="text-center mt-12">
-            <Link href="/dental">
+            <Link href="/services">
               <Button 
-                variant="outline"
-                className="border-rose text-charcoal hover:bg-rose-light rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
+                variant="outline" 
+                className="border-primary-mint text-charcoal hover:bg-primary-mint/10 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
               >
                 View All Services
-              </Button>
+            </Button>
             </Link>
           </div>
         </div>
       </section>
 
       {/* About Dr. Krishnan Section */}
-      <section className="py-20 bg-[#F7D1D1]/10">
+      <section className="py-20 bg-light-mint">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
@@ -235,43 +231,43 @@ export default function HomePage() {
                   className="object-cover"
               />
               </div>
-              <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-lg border-t-4 border-[#D8A7B1] max-w-xs">
-                <h4 className="text-lg font-semibold mb-2 text-[#3C3C3C]">Dr. Gail Ann Krishnan</h4>
-                <p className="text-[#3C3C3C]/70">DDS, MS with over 15 years of experience in comprehensive dentistry</p>
+              <div className="absolute -bottom-8 -left-8 bg-background p-6 rounded-2xl shadow-lg border-t-4 border-primary-mint max-w-xs">
+                <h4 className="text-lg font-semibold mb-2 text-charcoal">Dr. Gail Ann Krishnan</h4>
+                <p className="text-charcoal/70">DDS, MS with over 15 years of experience in comprehensive dentistry</p>
               </div>
             </div>
             <div>
-              <h2 className="text-3xl font-semibold mb-6 text-[#3C3C3C]">
+              <h2 className="text-3xl font-semibold mb-6 text-charcoal">
                 Meet Dr. Gail Ann Krishnan
               </h2>
-              <p className="text-lg text-[#3C3C3C]/80 mb-6 leading-relaxed">
+              <p className="text-lg text-charcoal/80 mb-6 leading-relaxed">
                 Dr. Krishnan combines her extensive education and clinical expertise with a genuinely compassionate approach to patient care. She believes in creating partnerships with her patients, educating them about their oral health, and developing personalized treatment plans.
               </p>
-              <p className="text-lg text-[#3C3C3C]/80 mb-8 leading-relaxed">
+              <p className="text-lg text-charcoal/80 mb-8 leading-relaxed">
                 Her commitment to continuing education ensures that she stays at the forefront of dental advancements, bringing the latest techniques and technologies to benefit her patients.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-[#B87333]" />
-                  <span className="text-[#3C3C3C]">DDS, University of California</span>
+                  <CheckCircle className="h-5 w-5 text-accent-mint" />
+                  <span className="text-charcoal">DDS, University of California</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-[#B87333]" />
-                  <span className="text-[#3C3C3C]">MS in Dental Sciences</span>
+                  <CheckCircle className="h-5 w-5 text-accent-mint" />
+                  <span className="text-charcoal">MS in Dental Sciences</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-[#B87333]" />
-                  <span className="text-[#3C3C3C]">ADA Member</span>
+                  <CheckCircle className="h-5 w-5 text-accent-mint" />
+                  <span className="text-charcoal">ADA Member</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-[#B87333]" />
-                  <span className="text-[#3C3C3C]">Invisalign Certified</span>
+                  <CheckCircle className="h-5 w-5 text-accent-mint" />
+                  <span className="text-charcoal">Invisalign Certified</span>
                 </div>
               </div>
               <Link href="/about">
                 <Button 
                   variant="outline" 
-                  className="border-[#D8A7B1] text-[#3C3C3C] hover:bg-[#D8A7B1]/10 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
+                  className="border-primary-mint text-charcoal hover:bg-primary-mint/10 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
                 >
                   Learn More About Dr. Krishnan
                 </Button>
@@ -282,102 +278,102 @@ export default function HomePage() {
       </section>
 
       {/* Trust Builders Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-semibold mb-4 text-[#3C3C3C]">
+            <h2 className="text-3xl font-semibold mb-4 text-charcoal">
               What Our Patients Say
             </h2>
-            <p className="text-lg text-[#3C3C3C]/80">
+            <p className="text-lg text-charcoal/80">
               We're proud to have earned the trust and satisfaction of our patients through our commitment to exceptional care.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
-            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden bg-white p-8">
+            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden bg-background p-8">
               <div className="flex mb-4">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="h-5 w-5 fill-[#B87333] text-[#B87333]" />
+                  <Star key={i} className="h-5 w-5 fill-accent-mint text-accent-mint" />
                 ))}
               </div>
-              <p className="text-[#3C3C3C]/80 mb-6 italic">
+              <p className="text-charcoal/80 mb-6 italic">
                 "Dr. Krishnan and her team are amazing! They made me feel comfortable from the moment I walked in. My smile has never looked better, and I actually look forward to my dental visits now."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-[#F7D1D1] flex items-center justify-center text-[#3C3C3C] font-medium mr-4">
+                <div className="w-12 h-12 rounded-full bg-primary-mint flex items-center justify-center text-white font-medium mr-4">
                   SM
                 </div>
                 <div>
-                  <h4 className="font-medium text-[#3C3C3C]">Sarah M.</h4>
-                  <p className="text-sm text-[#3C3C3C]/70">Patient since 2019</p>
+                  <h4 className="font-medium text-charcoal">Sarah M.</h4>
+                  <p className="text-sm text-charcoal/70">Patient since 2019</p>
                 </div>
               </div>
             </Card>
 
             {/* Testimonial 2 */}
-            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden bg-white p-8">
+            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden bg-background p-8">
               <div className="flex mb-4">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="h-5 w-5 fill-[#B87333] text-[#B87333]" />
+                  <Star key={i} className="h-5 w-5 fill-accent-mint text-accent-mint" />
                 ))}
               </div>
-              <p className="text-[#3C3C3C]/80 mb-6 italic">
+              <p className="text-charcoal/80 mb-6 italic">
                 "After years of dental anxiety, I finally found a dentist who understands. Dr. Krishnan took the time to address all my concerns and made sure I was comfortable throughout my procedure."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-[#F7D1D1] flex items-center justify-center text-[#3C3C3C] font-medium mr-4">
+                <div className="w-12 h-12 rounded-full bg-primary-mint flex items-center justify-center text-white font-medium mr-4">
                   JD
                 </div>
                 <div>
-                  <h4 className="font-medium text-[#3C3C3C]">James D.</h4>
-                  <p className="text-sm text-[#3C3C3C]/70">Patient since 2021</p>
+                  <h4 className="font-medium text-charcoal">James D.</h4>
+                  <p className="text-sm text-charcoal/70">Patient since 2021</p>
                 </div>
               </div>
             </Card>
 
             {/* Testimonial 3 */}
-            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden bg-white p-8">
+            <Card className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden bg-background p-8">
               <div className="flex mb-4">
                 {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="h-5 w-5 fill-[#B87333] text-[#B87333]" />
+                  <Star key={i} className="h-5 w-5 fill-accent-mint text-accent-mint" />
                 ))}
               </div>
-              <p className="text-[#3C3C3C]/80 mb-6 italic">
+              <p className="text-charcoal/80 mb-6 italic">
                 "I couldn't be happier with my veneers! Dr. Krishnan listened to exactly what I wanted and delivered results that exceeded my expectations. The entire team is professional and friendly."
               </p>
               <div className="flex items-center">
-                <div className="w-12 h-12 rounded-full bg-[#F7D1D1] flex items-center justify-center text-[#3C3C3C] font-medium mr-4">
+                <div className="w-12 h-12 rounded-full bg-primary-mint flex items-center justify-center text-white font-medium mr-4">
                   EL
                 </div>
                 <div>
-                  <h4 className="font-medium text-[#3C3C3C]">Emily L.</h4>
-                  <p className="text-sm text-[#3C3C3C]/70">Patient since 2020</p>
+                  <h4 className="font-medium text-charcoal">Emily L.</h4>
+                  <p className="text-sm text-charcoal/70">Patient since 2020</p>
                 </div>
               </div>
             </Card>
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 mt-16">
-            <div className="bg-[#F7D1D1]/20 rounded-[8px] p-6 flex items-center">
-              <Shield className="h-8 w-8 text-[#B87333] mr-4" />
+            <div className="bg-light-mint rounded-[8px] p-6 flex items-center">
+              <Shield className="h-8 w-8 text-accent-mint mr-4" />
               <div>
-                <h4 className="font-medium text-[#3C3C3C]">PPO Insurance Accepted</h4>
-                <p className="text-sm text-[#3C3C3C]/70">We work with most major insurance providers</p>
+                <h4 className="font-medium text-charcoal">PPO Insurance Accepted</h4>
+                <p className="text-sm text-charcoal/70">We work with most major insurance providers</p>
               </div>
             </div>
-            <div className="bg-[#F7D1D1]/20 rounded-[8px] p-6 flex items-center">
-              <Shield className="h-8 w-8 text-[#B87333] mr-4" />
+            <div className="bg-light-mint rounded-[8px] p-6 flex items-center">
+              <Shield className="h-8 w-8 text-accent-mint mr-4" />
               <div>
-                <h4 className="font-medium text-[#3C3C3C]">Gentle Dental Care</h4>
-                <p className="text-sm text-[#3C3C3C]/70">Comfort-focused approach for all patients</p>
+                <h4 className="font-medium text-charcoal">Gentle Dental Care</h4>
+                <p className="text-sm text-charcoal/70">Comfort-focused approach for all patients</p>
               </div>
             </div>
-            <div className="bg-[#F7D1D1]/20 rounded-[8px] p-6 flex items-center">
-              <Shield className="h-8 w-8 text-[#B87333] mr-4" />
+            <div className="bg-light-mint rounded-[8px] p-6 flex items-center">
+              <Shield className="h-8 w-8 text-accent-mint mr-4" />
               <div>
-                <h4 className="font-medium text-[#3C3C3C]">Modern Technology</h4>
-                <p className="text-sm text-[#3C3C3C]/70">State-of-the-art equipment for better care</p>
+                <h4 className="font-medium text-charcoal">Modern Technology</h4>
+                <p className="text-sm text-charcoal/70">State-of-the-art equipment for better care</p>
               </div>
             </div>
           </div>
@@ -385,29 +381,29 @@ export default function HomePage() {
       </section>
 
       {/* Location & Hours Section */}
-      <section className="py-20 bg-[#F7D1D1]/10">
+      <section className="py-20 bg-light-mint">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-semibold mb-6 text-[#3C3C3C]">
+              <h2 className="text-3xl font-semibold mb-6 text-charcoal">
                 Our Location & Hours
             </h2>
-              <p className="text-lg text-[#3C3C3C]/80 mb-8">
+              <p className="text-lg text-charcoal/80 mb-8">
                 Conveniently located in Brea with free parking for all our patients. We offer flexible appointment times to accommodate your busy schedule.
               </p>
               
               <div className="space-y-6 mb-8">
                 <div className="flex items-start">
-                  <MapPin className="h-6 w-6 text-[#B87333] mr-4 mt-1" />
+                  <MapPin className="h-6 w-6 text-accent-mint mr-4 mt-1" />
                   <div>
-                    <h4 className="font-medium text-[#3C3C3C] mb-1">Office Location</h4>
-                    <p className="text-[#3C3C3C]/80">255 W Central Ave, Suite 201</p>
-                    <p className="text-[#3C3C3C]/80">Brea, CA 92821</p>
+                    <h4 className="font-medium text-charcoal mb-1">Office Location</h4>
+                    <p className="text-charcoal/80">255 W Central Ave, Suite 201</p>
+                    <p className="text-charcoal/80">Brea, CA 92821</p>
                     <a 
                       href="https://maps.google.com/?q=255+W+Central+Ave+Suite+201+Brea+CA+92821" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-[#B87333] hover:underline inline-flex items-center mt-1"
+                      className="text-accent-mint hover:underline inline-flex items-center mt-1"
                     >
                       Get directions <ChevronRight className="h-4 w-4 ml-1" />
                     </a>
@@ -415,26 +411,26 @@ export default function HomePage() {
                     </div>
                 
                 <div className="flex items-start">
-                  <Clock className="h-6 w-6 text-[#B87333] mr-4 mt-1" />
+                  <Clock className="h-6 w-6 text-accent-mint mr-4 mt-1" />
                   <div>
-                    <h4 className="font-medium text-[#3C3C3C] mb-1">Office Hours</h4>
+                    <h4 className="font-medium text-charcoal mb-1">Office Hours</h4>
                     <div className="grid grid-cols-2 gap-x-8 gap-y-2">
-                      <div className="text-[#3C3C3C]/80">Mon - Fri:</div>
-                      <div className="text-[#3C3C3C]/80">8am - 6pm</div>
-                      <div className="text-[#3C3C3C]/80">Sat:</div>
-                      <div className="text-[#3C3C3C]/80">9am - 2pm</div>
-                      <div className="text-[#3C3C3C]/80">Sun:</div>
-                      <div className="text-[#3C3C3C]/80">Closed</div>
+                      <div className="text-charcoal/80">Mon - Fri:</div>
+                      <div className="text-charcoal/80">8am - 6pm</div>
+                      <div className="text-charcoal/80">Sat:</div>
+                      <div className="text-charcoal/80">9am - 2pm</div>
+                      <div className="text-charcoal/80">Sun:</div>
+                      <div className="text-charcoal/80">Closed</div>
                     </div>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <Phone className="h-6 w-6 text-[#B87333] mr-4 mt-1" />
+                  <Phone className="h-6 w-6 text-accent-mint mr-4 mt-1" />
                   <div>
-                    <h4 className="font-medium text-[#3C3C3C] mb-1">Contact Us</h4>
-                    <p className="text-[#3C3C3C]/80">Phone: (714) 990-0204</p>
-                    <p className="text-[#3C3C3C]/80">Email: breadentaloffice@gmail.com</p>
+                    <h4 className="font-medium text-charcoal mb-1">Contact Us</h4>
+                    <p className="text-charcoal/80">Phone: (714) 990-0204</p>
+                    <p className="text-charcoal/80">Email: breadentaloffice@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -453,9 +449,9 @@ export default function HomePage() {
                   className="rounded-[8px]"
                 ></iframe>
               </div>
-              <div className="bg-white shadow-lg p-6 rounded-[8px] mt-6 border-t-4 border-[#D8A7B1]">
-                <p className="text-[#3C3C3C]/80">
-                  <span className="font-medium text-[#3C3C3C]">Free parking available.</span> Our office is located in the Oliak Center with convenient access from Central Avenue.
+              <div className="bg-background shadow-lg p-6 rounded-[8px] mt-6 border-t-4 border-primary-mint">
+                <p className="text-charcoal/80">
+                  <span className="font-medium text-charcoal">Free parking available.</span> Our office is located in the Oliak Center with convenient access from Central Avenue.
                 </p>
               </div>
             </div>
@@ -464,14 +460,14 @@ export default function HomePage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-background">
         <div className="container max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-[#F7D1D1] to-[#D8A7B1]/70 rounded-[16px] p-8 md:p-12 shadow-xl">
+          <div className="mint-gradient rounded-[16px] p-8 md:p-12 shadow-xl">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-semibold mb-4 text-[#3C3C3C]">
+              <h2 className="text-3xl font-semibold mb-4 text-white">
                 Ready to Schedule Your Visit?
           </h2>
-              <p className="text-lg text-[#3C3C3C]/80 max-w-2xl mx-auto">
+              <p className="text-lg text-white/90 max-w-2xl mx-auto">
                 We're committed to providing you with the highest quality dental care in a comfortable, welcoming environment. New patients are always welcome!
               </p>
             </div>
@@ -479,7 +475,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               <Link href="/contact">
                 <Button 
-                  className="bg-[#B87333] hover:bg-[#B87333]/90 text-white rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto"
+                  className="bg-accent-mint hover:bg-accent-mint-dark text-white rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto"
                 >
                   <Calendar className="mr-2 h-5 w-5" /> Book Your Appointment
               </Button>
@@ -487,7 +483,7 @@ export default function HomePage() {
               <a href="tel:+17149900204">
                 <Button 
                   variant="outline"
-                  className="bg-white border-[#3C3C3C]/20 text-[#3C3C3C] hover:bg-white/80 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto"
+                  className="bg-white/90 border-charcoal/20 text-charcoal hover:bg-white rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto"
                 >
                 <Phone className="mr-2 h-5 w-5" /> Call (714) 990-0204
               </Button>
@@ -495,10 +491,10 @@ export default function HomePage() {
             </div>
             
             <div className="text-center">
-              <p className="text-[#3C3C3C]/80 italic">
+              <p className="text-white/90 italic">
                 "We promise to make your dental experience as comfortable and stress-free as possible."
               </p>
-              <p className="font-medium text-[#3C3C3C] mt-2">
+              <p className="font-medium text-white mt-2">
                 — Dr. Gail Ann Krishnan
               </p>
             </div>

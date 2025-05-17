@@ -38,13 +38,13 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-teal/20 hover:text-charcoal focus:bg-teal/20",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-light-mint/20 hover:text-charcoal focus:bg-light-mint/20",
             className
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none text-charcoal">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-charcoal/80">
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
         </a>
@@ -100,7 +100,7 @@ export function Navigation() {
       >
         <div className="container max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`mx-auto flex items-center justify-between rounded-full ${
-            scrolled ? "py-2 bg-white/95 backdrop-blur-sm shadow-md" : "py-3 bg-white shadow-sm"
+            scrolled ? "py-2 bg-background/95 backdrop-blur-sm shadow-md" : "py-3 bg-background shadow-sm"
           }`}>
             <Link href="/" className="flex items-center space-x-2 relative z-10 ml-4">
               <Image
@@ -119,7 +119,7 @@ export function Navigation() {
                 <NavigationMenuList className="space-x-4">
                   {/* Dental Services Dropdown */}
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-charcoal/90 font-medium hover:text-teal hover:bg-transparent focus:bg-transparent bg-transparent">
+                    <NavigationMenuTrigger className="text-charcoal/90 font-medium hover:text-primary-mint hover:bg-transparent focus:bg-transparent bg-transparent">
                       Dental Services
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -136,7 +136,7 @@ export function Navigation() {
                         <ListItem 
                           title="All Dental Services" 
                           href="/services"
-                          className="bg-teal/30 hover:bg-teal/40"
+                          className="bg-light-mint/30 hover:bg-light-mint/40"
                         >
                           View our complete range of dental services
                         </ListItem>
@@ -146,8 +146,8 @@ export function Navigation() {
                   
                   {/* Facial Aesthetics Dropdown */}
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-charcoal/90 font-medium hover:text-teal hover:bg-transparent focus:bg-transparent bg-transparent">
-                      Aesthetic Treatments
+                    <NavigationMenuTrigger className="text-charcoal/90 font-medium hover:text-primary-mint hover:bg-transparent focus:bg-transparent bg-transparent">
+                      Facial Aesthetics
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid gap-3 p-6 w-[400px] md:w-[500px] grid-cols-1 md:grid-cols-2">
@@ -167,7 +167,7 @@ export function Navigation() {
                   {/* Regular Menu Items */}
                   <NavigationMenuItem>
                     <Link href="/about" legacyBehavior passHref>
-                      <NavigationMenuLink className="text-charcoal/90 font-medium hover:text-teal transition-colors py-2 px-4">
+                      <NavigationMenuLink className="text-charcoal/90 font-medium hover:text-primary-mint transition-colors py-2 px-4">
                         About
                       </NavigationMenuLink>
                     </Link>
@@ -175,15 +175,15 @@ export function Navigation() {
                   
                   <NavigationMenuItem>
                     <Link href="/gallery" legacyBehavior passHref>
-                      <NavigationMenuLink className="text-charcoal/90 font-medium hover:text-teal transition-colors py-2 px-4">
-                        Smile Gallery
+                      <NavigationMenuLink className="text-charcoal/90 font-medium hover:text-primary-mint transition-colors py-2 px-4">
+                        Gallery
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
                   
                   <NavigationMenuItem>
                     <Link href="/contact" legacyBehavior passHref>
-                      <NavigationMenuLink className="text-charcoal/90 font-medium hover:text-teal transition-colors py-2 px-4">
+                      <NavigationMenuLink className="text-charcoal/90 font-medium hover:text-primary-mint transition-colors py-2 px-4">
                         Contact
                       </NavigationMenuLink>
                     </Link>
@@ -194,23 +194,23 @@ export function Navigation() {
 
             <div className="flex items-center space-x-8 mr-4">
               <div className="hidden md:block">
-                <a 
-                  href="tel:+17149900204" 
-                  className="flex items-center text-charcoal/90 hover:text-teal font-medium transition-all duration-300"
+                <Link
+                  href="tel:+17149900204"
+                  className="flex items-center text-charcoal/90 hover:text-primary-mint font-medium transition-all duration-300"
                 >
                   <Phone className="mr-2 h-4 w-4" />
                   (714) 990-0204
-                </a>
+                </Link>
               </div>
               
               {/* Desktop Book Button */}
               <Link href="/contact">
                 <Button 
                   size="lg" 
-                  className={`hidden sm:inline-flex bg-amber text-white hover:bg-amber/90 font-bold transition-all duration-300 px-6 rounded-full shadow-sm ${
-                    scrolled ? 'py-2' : 'py-2.5'
+                  className={`hidden sm:inline-flex bg-accent-mint text-white hover:bg-accent-mint/90 font-bold transition-all duration-300 px-6 rounded-full shadow-sm ${
+                    scrolled ? 'py-2' : 'py-3'
                   }`}>
-                  Book Now
+                  Book Online
                 </Button>
               </Link>
               
@@ -218,7 +218,7 @@ export function Navigation() {
               <a href="tel:+17149900204" className="md:hidden">
                 <Button 
                   size="sm" 
-                  className="bg-teal text-white hover:bg-teal/90 font-medium px-4 py-2 rounded-full shadow-sm flex items-center"
+                  className="bg-light-mint/30 hover:bg-light-mint/40 font-medium px-4 py-2 rounded-full shadow-sm flex items-center"
                 >
                   <Phone className="mr-1 h-4 w-4" />
                   Call
@@ -228,7 +228,7 @@ export function Navigation() {
               {/* Mobile menu button - improved tap target */}
               <button 
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="inline-flex items-center justify-center p-2.5 rounded-full bg-teal/20 text-charcoal md:hidden hover:bg-teal/40 transition-colors duration-300 min-w-[44px] min-h-[44px]"
+                className="inline-flex items-center justify-center p-2.5 rounded-full bg-light-mint/20 text-charcoal md:hidden hover:bg-light-mint/40 transition-colors duration-300 min-w-[44px] min-h-[44px]"
                 aria-expanded={isMobileMenuOpen}
                 aria-label="Toggle menu"
               >
@@ -246,19 +246,19 @@ export function Navigation() {
         {/* Improved Mobile Menu with React State for Dropdowns */}
         {isMobileMenuOpen && (
           <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="md:hidden bg-white rounded-3xl mt-2 shadow-lg animate-fade-in">
+            <div className="md:hidden bg-background rounded-3xl mt-2 shadow-lg animate-fade-in">
               <div className="px-4 pt-6 pb-8 space-y-1">
                 {/* Mobile dropdown for Dental */}
-                <div className="border-b border-teal/20 pb-2">
+                <div className="border-b border-light-mint/20 pb-2">
                   <button
                     onClick={() => toggleMobileDropdown('dental')}
-                    className="w-full px-5 py-4 text-base font-medium text-charcoal hover:bg-teal/10 rounded-xl transition-colors duration-200 flex justify-between items-center min-h-[54px]"
+                    className="w-full px-5 py-4 text-base font-medium text-charcoal hover:bg-light-mint/10 rounded-xl transition-colors duration-200 flex justify-between items-center min-h-[54px]"
                     aria-expanded={activeMobileDropdown === 'dental'}
                     aria-controls="dental-dropdown"
                   >
                     Dental Services
                     <ChevronDown 
-                      className={`h-5 w-5 text-jade transition-transform duration-200 ${
+                      className={`h-5 w-5 text-primary-mint transition-transform duration-200 ${
                         activeMobileDropdown === 'dental' ? 'rotate-180' : ''
                       }`} 
                     />
@@ -271,35 +271,35 @@ export function Navigation() {
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="block px-4 py-3.5 text-sm text-charcoal/90 hover:bg-teal/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
+                        className="block px-4 py-3.5 text-sm text-charcoal/90 hover:bg-light-mint/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <span className="w-2 h-2 rounded-full bg-jade mr-2"></span>
+                        <span className="w-2 h-2 rounded-full bg-primary-mint mr-2"></span>
                         {service.name}
                       </Link>
                     ))}
                     <Link
                       href="/services"
-                      className="block px-4 py-3.5 mt-1 text-sm font-medium text-charcoal bg-teal/10 hover:bg-teal/20 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
+                      className="block px-4 py-3.5 mt-1 text-sm font-medium text-charcoal bg-light-mint/10 hover:bg-light-mint/20 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      <ChevronRight className="h-4 w-4 text-jade mr-1" />
+                      <ChevronRight className="h-4 w-4 text-primary-mint mr-1" />
                       View All Dental Services
                     </Link>
                   </div>
                 </div>
                 
                 {/* Mobile dropdown for Aesthetic Treatments */}
-                <div className="border-b border-teal/20 pb-2">
+                <div className="border-b border-light-mint/20 pb-2">
                   <button
                     onClick={() => toggleMobileDropdown('aesthetics')}
-                    className="w-full px-5 py-4 text-base font-medium text-charcoal hover:bg-teal/10 rounded-xl transition-colors duration-200 flex justify-between items-center min-h-[54px]"
+                    className="w-full px-5 py-4 text-base font-medium text-charcoal hover:bg-light-mint/10 rounded-xl transition-colors duration-200 flex justify-between items-center min-h-[54px]"
                     aria-expanded={activeMobileDropdown === 'aesthetics'}
                     aria-controls="aesthetics-dropdown"
                   >
-                    Aesthetic Treatments
+                    Facial Aesthetics
                     <ChevronDown 
-                      className={`h-5 w-5 text-jade transition-transform duration-200 ${
+                      className={`h-5 w-5 text-primary-mint transition-transform duration-200 ${
                         activeMobileDropdown === 'aesthetics' ? 'rotate-180' : ''
                       }`} 
                     />
@@ -312,10 +312,10 @@ export function Navigation() {
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="block px-4 py-3.5 text-sm text-charcoal/90 hover:bg-teal/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
+                        className="block px-4 py-3.5 text-sm text-charcoal/90 hover:bg-light-mint/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <span className="w-2 h-2 rounded-full bg-jade mr-2"></span>
+                        <span className="w-2 h-2 rounded-full bg-primary-mint mr-2"></span>
                         {service.name}
                       </Link>
                     ))}
@@ -325,48 +325,48 @@ export function Navigation() {
                 {/* Regular mobile links - with improved tap targets */}
                 <Link 
                   href="/about"
-                  className="block px-5 py-4 text-base font-medium text-charcoal hover:bg-teal/10 rounded-xl transition-colors duration-200 flex justify-between items-center border-b border-teal/20 min-h-[54px]"
+                  className="block px-5 py-4 text-base font-medium text-charcoal hover:bg-light-mint/10 rounded-xl transition-colors duration-200 flex justify-between items-center border-b border-light-mint/20 min-h-[54px]"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   About
-                  <ChevronRight className="h-5 w-5 text-jade" />
+                  <ChevronRight className="h-5 w-5 text-primary-mint" />
                 </Link>
                 
                 <Link 
                   href="/gallery"
-                  className="block px-5 py-4 text-base font-medium text-charcoal hover:bg-teal/10 rounded-xl transition-colors duration-200 flex justify-between items-center border-b border-teal/20 min-h-[54px]"
+                  className="block px-5 py-4 text-base font-medium text-charcoal hover:bg-light-mint/10 rounded-xl transition-colors duration-200 flex justify-between items-center border-b border-light-mint/20 min-h-[54px]"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Smile Gallery
-                  <ChevronRight className="h-5 w-5 text-jade" />
+                  Gallery
+                  <ChevronRight className="h-5 w-5 text-primary-mint" />
                 </Link>
                 
                 <Link 
                   href="/contact"
-                  className="block px-5 py-4 text-base font-medium text-charcoal hover:bg-teal/10 rounded-xl transition-colors duration-200 flex justify-between items-center border-b border-teal/20 min-h-[54px]"
+                  className="block px-5 py-4 text-base font-medium text-charcoal hover:bg-light-mint/10 rounded-xl transition-colors duration-200 flex justify-between items-center border-b border-light-mint/20 min-h-[54px]"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact
-                  <ChevronRight className="h-5 w-5 text-jade" />
+                  <ChevronRight className="h-5 w-5 text-primary-mint" />
                 </Link>
                 
                 <div className="pt-4 mt-4">
                   <a 
                     href="tel:+17149900204"
-                    className="block px-5 py-4 rounded-xl text-base font-medium text-charcoal hover:bg-teal/10 flex items-center transition-colors duration-200 min-h-[54px]"
+                    className="block px-5 py-4 rounded-xl text-base font-medium text-charcoal hover:bg-light-mint/10 flex items-center transition-colors duration-200 min-h-[54px]"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <Phone className="inline-block mr-3 h-5 w-5 text-jade" />
+                    <Phone className="inline-block mr-3 h-5 w-5 text-primary-mint" />
                     (714) 990-0204
                   </a>
                   <div className="mt-5 px-1">
                     <Link href="/contact">
                       <Button 
                         size="lg" 
-                        className="w-full bg-amber text-white hover:bg-amber/90 flex items-center justify-center py-4 rounded-full font-bold shadow-sm min-h-[54px]"
+                        className="w-full bg-accent-mint text-white hover:bg-accent-mint/90 flex items-center justify-center py-4 rounded-full font-bold shadow-sm min-h-[54px]"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        Book Now
+                        Book Online
                         <ChevronRight className="ml-1 h-5 w-5" />
                       </Button>
                     </Link>
@@ -383,7 +383,7 @@ export function Navigation() {
         <Link href="/contact" className="w-full max-w-xs">
           <Button 
             size="lg" 
-            className="w-full bg-amber text-white hover:bg-amber/90 font-bold py-3 rounded-full shadow-lg flex items-center justify-center touch-manipulation"
+            className="w-full bg-accent-mint text-white hover:bg-accent-mint/90 font-bold py-3 rounded-full shadow-lg flex items-center justify-center touch-manipulation"
           >
             <Calendar className="mr-2 h-5 w-5" />
             Book Appointment

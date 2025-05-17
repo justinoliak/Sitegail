@@ -12,30 +12,30 @@ export default function BTLPage() {
     <main className="flex-1">
       {/* 1. Hero Section - Emotional Appeal */}
       <section className="pt-32 pb-16 md:pt-36 md:pb-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F7D1D1]/70 to-transparent z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-light-mint/70 to-transparent z-0"></div>
         <div className="absolute inset-0 bg-cover bg-center z-[-1]" style={{ backgroundImage: "url('/images/btl-hero.jpg')" }}></div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-5xl font-semibold text-[#3C3C3C] leading-tight mb-4 md:mb-6">
+            <h1 className="text-3xl md:text-5xl font-semibold text-charcoal leading-tight mb-4 md:mb-6">
               Reveal Your Most Radiant Self With Advanced Aesthetic Treatments
             </h1>
-            <p className="text-lg md:text-xl text-[#3C3C3C]/90 leading-relaxed mb-4 md:mb-6">
+            <p className="text-lg md:text-xl text-charcoal/90 leading-relaxed mb-4 md:mb-6">
               Experience the transformative power of BTL Exion technology—the gold standard in non-invasive facial rejuvenation and skin treatments
             </p>
-            <p className="text-base md:text-lg text-[#3C3C3C]/80 mb-6 md:mb-8">
+            <p className="text-base md:text-lg text-charcoal/80 mb-6 md:mb-8">
               Natural-looking results • No downtime • Customized to your skin's needs
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact" className="w-full sm:w-auto">
-                <Button className="bg-[#B87333] text-white hover:bg-[#B87333]/90 rounded-full px-6 py-3 text-base md:text-lg w-full sm:w-auto min-h-[54px] touch-manipulation">
+                <Button className="bg-accent-mint text-white hover:bg-accent-mint/90 rounded-full px-6 py-3 text-base md:text-lg w-full sm:w-auto min-h-[54px] touch-manipulation">
                   Schedule Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="#transformation-gallery" className="w-full sm:w-auto">
-                <Button variant="link" className="text-[#3C3C3C] hover:text-[#D8A7B1] min-h-[44px] w-full sm:w-auto">
+                <Button variant="link" className="text-charcoal hover:text-primary-mint min-h-[44px] w-full sm:w-auto">
                   See Transformation Gallery
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -64,7 +64,7 @@ export default function BTLPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
             {/* Problem Column */}
             <div>
-              <h2 className="text-2xl md:text-3xl font-semibold text-[#3C3C3C] mb-6 md:mb-8">Are You Noticing...</h2>
+              <h2 className="text-2xl md:text-3xl font-semibold text-charcoal mb-6 md:mb-8">Are You Noticing...</h2>
               <ul className="space-y-4">
                 {[
                   "Fine lines and wrinkles becoming more visible?",
@@ -74,10 +74,10 @@ export default function BTLPage() {
                   "Tired-looking skin despite your best efforts?"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <div className="w-8 h-8 rounded-full bg-[#D8A7B1]/20 flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
-                      <span className="text-[#D8A7B1] font-medium">{index + 1}</span>
+                    <div className="w-8 h-8 rounded-full bg-primary-mint/20 flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
+                      <span className="text-primary-mint font-medium">{index + 1}</span>
                     </div>
-                    <p className="text-[#3C3C3C]/80 text-base md:text-lg">{item}</p>
+                    <p className="text-charcoal/80 text-base md:text-lg">{item}</p>
                   </li>
                 ))}
               </ul>
@@ -85,7 +85,7 @@ export default function BTLPage() {
             
             {/* Solution Column */}
             <div className="mt-8 md:mt-0">
-              <h2 className="text-2xl md:text-3xl font-semibold text-[#3C3C3C] mb-6 md:mb-8">BTL Exion Can Help You...</h2>
+              <h2 className="text-2xl md:text-3xl font-semibold text-charcoal mb-6 md:mb-8">BTL Exion Can Help You...</h2>
               <ul className="space-y-4">
                 {[
                   "Smooth away fine lines and wrinkles naturally",
@@ -95,10 +95,10 @@ export default function BTLPage() {
                   "Revitalize your appearance without surgery or injections"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <div className="w-8 h-8 rounded-full bg-[#D8A7B1]/20 flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
-                      <Check className="h-4 w-4 text-[#D8A7B1]" />
+                    <div className="w-8 h-8 rounded-full bg-primary-mint/20 flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
+                      <Check className="h-4 w-4 text-primary-mint" />
                     </div>
-                    <p className="text-[#3C3C3C]/80 text-base md:text-lg">{item}</p>
+                    <p className="text-charcoal/80 text-base md:text-lg">{item}</p>
                   </li>
                 ))}
               </ul>
@@ -108,9 +108,9 @@ export default function BTLPage() {
       </section>
 
       {/* 3. Benefits Grid */}
-      <section className="py-12 md:py-16 bg-[#F7D1D1]/20">
+      <section className="py-12 md:py-16 bg-light-mint">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#3C3C3C] text-center mb-8 md:mb-12">Key Benefits of BTL Exion</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold text-charcoal text-center mb-8 md:mb-12">Key Benefits of BTL Exion</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
@@ -135,18 +135,18 @@ export default function BTLPage() {
                 icon: "natural"
               }
             ].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] border border-[#F7D1D1]/20 touch-manipulation">
-                <div className="w-16 h-16 rounded-full bg-[#F7D1D1]/30 flex items-center justify-center mb-4 md:mb-6">
+              <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] border border-light-mint touch-manipulation">
+                <div className="w-16 h-16 rounded-full bg-light-mint flex items-center justify-center mb-4 md:mb-6">
                   <Image 
                     src={`/images/icon-${benefit.icon}.svg`} 
                     alt={benefit.title}
                     width={32} 
                     height={32}
-                    className="text-[#B87333]"
+                    className="text-accent-mint"
                   />
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-[#3C3C3C] mb-2 md:mb-3">{benefit.title}</h3>
-                <p className="text-sm md:text-base text-[#3C3C3C]/70">{benefit.description}</p>
+                <h3 className="text-lg md:text-xl font-semibold text-charcoal mb-2 md:mb-3">{benefit.title}</h3>
+                <p className="text-sm md:text-base text-charcoal/70">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -169,15 +169,15 @@ export default function BTLPage() {
                   containerClassName="w-full h-auto"
                   enableBlur={true}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#3C3C3C]/60 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 to-transparent"></div>
               </div>
             </div>
             
             <div className="lg:w-1/2 space-y-4 md:space-y-6">
-              <h2 className="text-2xl md:text-3xl font-semibold text-[#3C3C3C]">
+              <h2 className="text-2xl md:text-3xl font-semibold text-charcoal">
                 The Science Behind Your Transformation
               </h2>
-              <p className="text-base md:text-lg text-[#3C3C3C]/80 leading-relaxed">
+              <p className="text-base md:text-lg text-charcoal/80 leading-relaxed">
                 The revolutionary BTL Exion platform combines multiple cutting-edge technologies to deliver personalized treatments for your unique skin concerns. This advanced system represents the pinnacle of aesthetic innovation, offering treatments that were once only possible with invasive procedures.
               </p>
               
@@ -201,18 +201,18 @@ export default function BTLPage() {
                   }
                 ].map((tech, index) => (
                   <div key={index} className="flex items-start">
-                    <div className="min-w-[40px] h-10 rounded-full bg-[#F7D1D1]/30 flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
-                      <span className="text-[#B87333] font-medium">{index + 1}</span>
+                    <div className="min-w-[40px] h-10 rounded-full bg-light-mint flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
+                      <span className="text-accent-mint font-medium">{index + 1}</span>
                     </div>
                     <div>
-                      <h4 className="font-medium text-[#3C3C3C]">{tech.title}</h4>
-                      <p className="text-sm text-[#3C3C3C]/80">{tech.description}</p>
+                      <h4 className="font-medium text-charcoal">{tech.title}</h4>
+                      <p className="text-sm text-charcoal/80">{tech.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
               
-              <p className="text-[#3C3C3C]/90 italic border-l-4 border-[#D8A7B1] pl-4 mt-6">
+              <p className="text-charcoal/90 italic border-l-4 border-primary-mint pl-4 mt-6">
                 Dr. Krishnan has undergone extensive training in the BTL Exion technology, ensuring you receive the safest, most effective treatments possible.
               </p>
             </div>
@@ -221,13 +221,13 @@ export default function BTLPage() {
       </section>
 
       {/* 5. Before & After Gallery with new BeforeAfterSlider */}
-      <section id="transformation-gallery" className="py-12 md:py-16 bg-[#F7D1D1]/10">
+      <section id="transformation-gallery" className="py-12 md:py-16 bg-light-mint">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-4xl font-semibold text-[#3C3C3C] mb-4 md:mb-6">
+            <h2 className="text-2xl md:text-4xl font-semibold text-charcoal mb-4 md:mb-6">
               Real Results from Dr. Krishnan's Patients
             </h2>
-            <p className="text-base md:text-lg text-[#3C3C3C]/80">
+            <p className="text-base md:text-lg text-charcoal/80">
               See the transformative potential of BTL Exion treatments. These results represent typical outcomes, though individual experiences may vary.
             </p>
           </div>
@@ -262,8 +262,8 @@ export default function BTLPage() {
                 />
                 
                 <div className="p-4">
-                  <h3 className="font-medium text-[#3C3C3C]">{item.title}</h3>
-                  <p className="text-sm text-[#3C3C3C]/70">{item.description}</p>
+                  <h3 className="font-medium text-charcoal">{item.title}</h3>
+                  <p className="text-sm text-charcoal/70">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -271,7 +271,7 @@ export default function BTLPage() {
 
           <div className="text-center">
             <Link href="/contact">
-              <Button className="bg-[#B87333] text-white hover:bg-[#B87333]/90 rounded-full px-6 py-3 min-h-[54px] touch-manipulation">
+              <Button className="bg-accent-mint text-white hover:bg-accent-mint/90 rounded-full px-6 py-3 min-h-[54px] touch-manipulation">
                 See Which Treatment Is Right For You
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -284,10 +284,10 @@ export default function BTLPage() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-16">
-            <h2 className="text-2xl md:text-4xl font-semibold text-[#3C3C3C] mb-4 md:mb-6">
+            <h2 className="text-2xl md:text-4xl font-semibold text-charcoal mb-4 md:mb-6">
               Customized Treatments For Your Unique Needs
             </h2>
-            <p className="text-base md:text-lg text-[#3C3C3C]/80">
+            <p className="text-base md:text-lg text-charcoal/80">
               Our BTL Exion platform offers versatile treatment options that can be personalized to address your specific concerns.
             </p>
           </div>
@@ -319,27 +319,27 @@ export default function BTLPage() {
                 sessions: "4 weekly sessions recommended for optimal results"
               }
             ].map((treatment, index) => (
-              <div key={index} className="bg-gradient-to-br from-white to-[#F7D1D1]/10 rounded-xl shadow-md overflow-hidden border border-[#F7D1D1]/20 touch-manipulation">
+              <div key={index} className="bg-gradient-to-br from-white to-light-mint/10 rounded-xl shadow-md overflow-hidden border border-light-mint touch-manipulation">
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-[#3C3C3C] mb-2">{treatment.headline}</h3>
-                  <p className="text-[#3C3C3C]/80 mb-6">{treatment.description}</p>
+                  <h3 className="text-xl font-semibold text-charcoal mb-2">{treatment.headline}</h3>
+                  <p className="text-charcoal/80 mb-6">{treatment.description}</p>
                   
                   <div className="space-y-4 mb-6">
                     <div>
-                      <h4 className="text-sm font-medium text-[#B87333] uppercase tracking-wider">Best For</h4>
-                      <p className="text-[#3C3C3C]/80 text-sm">{treatment.bestFor}</p>
+                      <h4 className="text-sm font-medium text-accent-mint uppercase tracking-wider">Best For</h4>
+                      <p className="text-charcoal/80 text-sm">{treatment.bestFor}</p>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-[#B87333] uppercase tracking-wider">Typical Results</h4>
-                      <p className="text-[#3C3C3C]/80 text-sm">{treatment.results}</p>
+                      <h4 className="text-sm font-medium text-accent-mint uppercase tracking-wider">Typical Results</h4>
+                      <p className="text-charcoal/80 text-sm">{treatment.results}</p>
                     </div>
                     <div>
-                      <h4 className="text-sm font-medium text-[#B87333] uppercase tracking-wider">Session Information</h4>
-                      <p className="text-[#3C3C3C]/80 text-sm">{treatment.sessions}</p>
+                      <h4 className="text-sm font-medium text-accent-mint uppercase tracking-wider">Session Information</h4>
+                      <p className="text-charcoal/80 text-sm">{treatment.sessions}</p>
                     </div>
                   </div>
                   
-                  <Link href="/contact" className="inline-flex items-center text-[#B87333] hover:text-[#B87333]/80 font-medium min-h-[44px] py-2">
+                  <Link href="/contact" className="inline-flex items-center text-accent-mint hover:text-accent-mint/80 font-medium min-h-[44px] py-2">
                     Book a Consultation
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -351,24 +351,24 @@ export default function BTLPage() {
       </section>
 
       {/* Mobile Tap-to-Call Action */}
-      <div className="md:hidden bg-[#F7D1D1] py-4 px-4">
+      <div className="md:hidden bg-primary-mint py-4 px-4">
         <a href="tel:+17149900204" className="flex items-center justify-center gap-3 min-h-[54px] touch-manipulation">
           <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-            <Phone className="h-5 w-5 text-[#D8A7B1]" />
+            <Phone className="h-5 w-5 text-primary-mint" />
           </div>
           <div>
-            <p className="text-sm text-[#3C3C3C]/80">Questions? Call us now</p>
-            <p className="text-lg font-medium text-[#3C3C3C]">(714) 990-0204</p>
+            <p className="text-sm text-charcoal/80">Questions? Call us now</p>
+            <p className="text-lg font-medium text-charcoal">(714) 990-0204</p>
           </div>
         </a>
       </div>
 
       {/* 7. Why Choose Us */}
-      <section className="py-12 md:py-16 bg-[#F7D1D1]/10">
+      <section className="py-12 md:py-16 bg-light-mint">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row overflow-hidden rounded-2xl">
-            <div className="lg:w-1/2 bg-[#F7D1D1] p-8 md:p-12">
-              <h2 className="text-2xl md:text-3xl font-semibold text-[#3C3C3C] mb-8">
+            <div className="lg:w-1/2 bg-primary-mint p-8 md:p-12">
+              <h2 className="text-2xl md:text-3xl font-semibold text-charcoal mb-8">
                 Why Choose Dr. Gail Ann for Your Aesthetic Treatments?
               </h2>
               
@@ -397,31 +397,31 @@ export default function BTLPage() {
                 ].map((point, index) => (
                   <li key={index} className="flex items-start">
                     <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
-                      <Check className="h-5 w-5 text-[#B87333]" />
+                      <Check className="h-5 w-5 text-accent-mint" />
                     </div>
                     <div>
-                      <h3 className="font-medium text-[#3C3C3C]">{point.title}</h3>
-                      <p className="text-[#3C3C3C]/80 text-sm">{point.description}</p>
+                      <h3 className="font-medium text-charcoal">{point.title}</h3>
+                      <p className="text-charcoal/80 text-sm">{point.description}</p>
                     </div>
                   </li>
                 ))}
               </ul>
               
               <div className="mt-8 flex flex-wrap gap-4">
-                <div className="bg-white/80 py-2 px-4 rounded-full text-xs font-medium text-[#3C3C3C]">
+                <div className="bg-white/80 py-2 px-4 rounded-full text-xs font-medium text-charcoal">
                   BTL Certified Provider
                 </div>
-                <div className="bg-white/80 py-2 px-4 rounded-full text-xs font-medium text-[#3C3C3C]">
+                <div className="bg-white/80 py-2 px-4 rounded-full text-xs font-medium text-charcoal">
                   American Academy of Facial Esthetics Member
                 </div>
-                <div className="bg-white/80 py-2 px-4 rounded-full text-xs font-medium text-[#3C3C3C]">
+                <div className="bg-white/80 py-2 px-4 rounded-full text-xs font-medium text-charcoal">
                   Advanced Aesthetic Training
                 </div>
               </div>
               
               <div className="mt-8">
                 <Link href="/about">
-                  <Button className="bg-[#B87333] text-white hover:bg-[#B87333]/90 rounded-full min-h-[54px] touch-manipulation">
+                  <Button className="bg-accent-mint text-white hover:bg-accent-mint/90 rounded-full min-h-[54px] touch-manipulation">
                     Meet Dr. Krishnan
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -447,7 +447,7 @@ export default function BTLPage() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#3C3C3C] text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-semibold text-charcoal text-center mb-8 md:mb-12">
               Common Questions About BTL Exion Treatments
             </h2>
             
@@ -489,7 +489,7 @@ export default function BTLPage() {
             />
             
             <div className="text-center mt-8">
-              <Link href="/contact" className="text-[#B87333] hover:text-[#B87333]/80 font-medium inline-block min-h-[44px] py-2">
+              <Link href="/contact" className="text-accent-mint hover:text-accent-mint/80 font-medium inline-block min-h-[44px] py-2">
                 Have another question? Contact us for answers
               </Link>
             </div>
@@ -498,27 +498,21 @@ export default function BTLPage() {
       </section>
 
       {/* 9. Call-to-Action */}
-      <section className="py-12 bg-[#B87333]">
+      <section className="py-12 bg-accent-mint">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4 md:mb-6">
-              Begin Your Transformation Journey Today
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-white">
+              Ready to Discover Your Skin's True Potential?
             </h2>
-            <p className="text-white/90 text-base md:text-lg mb-6 md:mb-8">
-              Schedule your complimentary consultation to discover how BTL Exion treatments can help you achieve your aesthetic goals.
+            <p className="text-lg text-white/90 mb-8">
+              Book your consultation today to learn how BTL Exion treatments can help you achieve your aesthetic goals.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/contact" className="w-full sm:w-auto">
-                <Button className="bg-white text-[#B87333] hover:bg-white/90 rounded-full px-8 py-3 text-base md:text-lg font-medium w-full sm:w-auto min-h-[54px] touch-manipulation">
-                  Book Your Consultation Now
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <a href="tel:+17149900204" className="hidden sm:flex items-center text-white text-lg gap-2">
-                <Phone className="h-5 w-5" />
-                (714) 990-0204
-              </a>
-            </div>
+            <Link href="/contact">
+              <Button className="bg-white text-accent-mint hover:bg-white/90 rounded-full px-8 py-3 text-base md:text-lg font-medium w-full sm:w-auto min-h-[54px] touch-manipulation">
+                Schedule Your Consultation Now
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

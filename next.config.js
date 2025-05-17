@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // output: 'export', // Commenting out to enable server-side features
   eslint: {
     ignoreDuringBuilds: true,
   },
   images: {
-    unoptimized: true
+    domains: ['localhost'],
+    // unoptimized: true // Removing for server-side rendering
   },
   webpack: (config, { isServer }) => {
     // Disable webpack cache to prevent ENOENT errors
