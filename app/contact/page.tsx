@@ -129,6 +129,15 @@ export default function ContactPage() {
                       New patients welcome! Please have your insurance card and photo ID ready for your appointment.
                     </p>
                     
+                    <div className="bg-light-mint p-4 rounded-xl mb-4">
+                      <div className="flex items-center">
+                        <CheckCircle className="h-5 w-5 text-accent-mint mr-3 flex-shrink-0" />
+                        <p className="text-charcoal/80 text-sm">
+                          We accept all PPO insurance plans and are an in-network provider for Delta Dental.
+                        </p>
+                      </div>
+                    </div>
+                    
                     <div className="bg-light-mint p-4 rounded-xl">
                       <div className="flex items-center">
                         <CheckCircle className="h-5 w-5 text-accent-mint mr-3 flex-shrink-0" />
@@ -215,17 +224,24 @@ export default function ContactPage() {
                           <Film className="h-4 w-4 text-accent-mint" />
                         </div>
                         <div>
-                          <h3 className="text-base font-medium text-charcoal mb-1">X-Rays</h3>
-                          <p className="text-sm text-charcoal/80">Recent dental X-rays (if available)</p>
+                          <h3 className="text-base font-medium text-charcoal mb-1">Digital X-Rays</h3>
+                          <p className="text-sm text-charcoal/80">Safe imaging with no radiation using Siroma sensors</p>
                         </div>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="bg-primary-mint/10 p-4 rounded-xl">
+                  <div className="bg-primary-mint/10 p-4 rounded-xl mb-4">
                     <p className="text-charcoal/80 text-sm flex items-center">
                       <Clock className="inline-block h-4 w-4 mr-2 text-primary-mint" />
                       <span>Please arrive 15 minutes early to complete any necessary paperwork</span>
+                    </p>
+                  </div>
+                  
+                  <div className="bg-primary-mint/10 p-4 rounded-xl">
+                    <p className="text-charcoal/80 text-sm flex items-start">
+                      <CheckCircle className="inline-block h-4 w-4 mr-2 text-primary-mint flex-shrink-0 mt-1" />
+                      <span>Comfortable sedation available with our state-of-the-art Accutron™ Digital Newport™ Flowmeter System for nitrous oxide</span>
                     </p>
                   </div>
                 </div>
@@ -247,7 +263,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <h3 className="text-base font-medium text-charcoal">Delta Dental</h3>
-                          <p className="text-sm text-charcoal/70">Premier Provider</p>
+                          <p className="text-sm text-charcoal/70">In-Network Provider</p>
                         </div>
                       </div>
                     </div>
@@ -259,7 +275,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <h3 className="text-base font-medium text-charcoal">PPO Plans</h3>
-                          <p className="text-sm text-charcoal/70">Most plans accepted</p>
+                          <p className="text-sm text-charcoal/70">We accept all PPO insurance plans</p>
                         </div>
                       </div>
                     </div>

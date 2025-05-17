@@ -14,13 +14,13 @@ const serviceCategories = [
     image: "/images/services/preventive-main.jpg",
     services: [
       {
-        name: "Dental Cleanings & Exams",
+        name: "Dental Cleanings & Clinical Exams",
         description: "Professional cleaning and comprehensive examination to assess your oral health",
         link: "/services/preventive/cleanings"
       },
       {
-        name: "Digital X-Rays",
-        description: "Low-radiation imaging to detect issues that aren't visible during an exam",
+        name: "Digital X-Rays with Siroma Sensors",
+        description: "Advanced digital imaging with no radiation, providing highly detailed images while ensuring patient safety",
         link: "/services/preventive/xrays"
       },
       {
@@ -34,9 +34,9 @@ const serviceCategories = [
         link: "/services/preventive/sealants"
       },
       {
-        name: "Oral Cancer Screenings",
-        description: "Early detection examination for signs of oral cancer",
-        link: "/services/preventive/cancer-screening"
+        name: "Comfortable Sedation Dentistry",
+        description: "Relaxing treatment with our state-of-the-art Accutron™ Digital Newport™ Flowmeter System for nitrous oxide",
+        link: "/services/preventive/sedation"
       },
       {
         name: "Custom Mouthguards",
@@ -158,6 +158,55 @@ export default function ServicesPage() {
             <p className="text-charcoal/70 mb-6">
               Comprehensive dental care with a focus on comfort, quality, and long-term results for you and your family.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Insurance & Technology Highlights */}
+      <section className="py-16 bg-background">
+        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="bg-light-mint/30 rounded-[24px] p-8 md:p-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+              <div>
+                <h2 className="text-2xl font-semibold mb-6 text-charcoal flex items-center">
+                  <ShieldCheck className="h-6 w-6 text-accent-mint mr-3"/> Insurance Accepted
+                </h2>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                    <p className="text-charcoal/80">We accept all PPO insurance plans</p>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                    <p className="text-charcoal/80">In-Network Provider for Delta Dental</p>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                    <p className="text-charcoal/80">Flexible payment options available</p>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h2 className="text-2xl font-semibold mb-6 text-charcoal flex items-center">
+                  <Star className="h-6 w-6 text-accent-mint mr-3"/> Advanced Technology
+                </h2>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                    <p className="text-charcoal/80">Siroma Digital Sensors for safe, no-radiation x-rays</p>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                    <p className="text-charcoal/80">Accutron™ Digital Newport™ Flowmeter System for comfortable nitrous oxide sedation</p>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                    <p className="text-charcoal/80">State-of-the-art sterilization and safety protocols</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
