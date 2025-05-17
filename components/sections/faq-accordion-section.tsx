@@ -52,7 +52,7 @@ export default function FAQAccordionSection() {
             <Link href="/contact">
               <Button 
                 variant="outline"
-                className="border-primary-mint text-charcoal hover:bg-primary-mint/10 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
+                className="border-primary-mint text-charcoal hover:text-charcoal hover:bg-primary-mint/10 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
               >
                 Contact Us for More Information
                 <ArrowRight className="ml-2 h-5 w-5" />

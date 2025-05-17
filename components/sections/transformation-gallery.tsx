@@ -26,8 +26,8 @@ export default function TransformationGallery() {
       id: 3,
       title: "Facial Contouring",
       description: "4 Sessions, 10 Weeks • Patient in her 30s",
-      before: "/images/emface/emface2.jpg",
-      after: "/images/emface/emface2.2.jpg"
+      before: "/images/emface/gailemface2.jpg",
+      after: "/images/emface/gailemface2.2.jpg"
     }
   ];
   

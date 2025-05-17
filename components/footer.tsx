@@ -28,7 +28,7 @@ export default function Footer() {
             <input 
               type="email" 
               placeholder="Your email address" 
-                  className="bg-charcoal/50 border border-light-mint/30 rounded-full px-4 py-2 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-light-mint flex-1"
+                  className="bg-charcoal/50 border border-light-mint/30 rounded-full px-4 py-2 text-charcoal placeholder:text-charcoal focus:outline-none focus:ring-2 focus:ring-light-mint flex-1"
             />
                 <Button className="bg-light-mint text-charcoal hover:bg-primary-mint rounded-full group whitespace-nowrap px-5">
               Subscribe <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

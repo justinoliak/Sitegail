@@ -5,39 +5,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import dynamic from "next/dynamic";
+import TransformationGallery from "@/components/sections/transformation-gallery";
+import TreatmentOptions from "@/components/sections/treatment-options";
+import PricingPackages from "@/components/sections/pricing-packages";
+import FAQAccordionSection from "@/components/sections/faq-accordion-section";
 
-// Set dynamic rendering mode for this page
-export const dynamicPage = "force-dynamic";
-
-// Import the components using dynamic import with proper error handling
-const TransformationGallery = dynamic(() => import("@/components/sections/transformation-gallery"), {
-  ssr: false,
-  loading: () => <div className="py-32 text-center">Loading gallery...</div>
-});
-
-const TreatmentOptions = dynamic(() => import("@/components/sections/treatment-options"), {
-  ssr: false,
-  loading: () => <div className="py-32 text-center">Loading treatments...</div>
-});
-
-const PricingPackages = dynamic(() => import("@/components/sections/pricing-packages"), {
-  ssr: false,
-  loading: () => <div className="py-32 text-center">Loading pricing...</div>
-});
-
-const FAQAccordionSection = dynamic(() => import("@/components/sections/faq-accordion-section"), {
-  ssr: false,
-  loading: () => <div className="py-32 text-center">Loading FAQs...</div>
-});
+// Next.js configuration for server-side rendering
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export default function BTLPage() {
   return (
     <main className="flex-1">
       {/* 1. Hero Section - Update to match home page styling */}
-      <section className="pt-40 pb-32 bg-gradient-to-b from-light-mint to-background relative">
+      <section className="py-32 bg-gradient-to-b from-light-mint to-background relative">
         <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-semibold text-charcoal leading-tight mb-6">
                 Reveal Your Most Radiant Self With Advanced Aesthetic Treatments
@@ -49,15 +32,15 @@ export default function BTLPage() {
                 Natural-looking results • No downtime • Customized to your skin's needs
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6">
+              <div className="flex flex-col gap-6">
                 <Link href="/contact">
-                  <Button className="bg-accent-mint hover:bg-accent-mint-dark text-white rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 whitespace-nowrap">
+                  <Button className="bg-accent-mint hover:bg-accent-mint-dark text-white rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 whitespace-nowrap w-full sm:w-auto">
                     Schedule Consultation
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
                 <Link href="#transformation-gallery">
-                  <Button variant="outline" className="border-primary-mint text-charcoal hover:bg-primary-mint/10 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 whitespace-nowrap">
+                  <Button variant="outline" className="border-primary-mint text-charcoal hover:text-charcoal hover:bg-primary-mint/10 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 whitespace-nowrap w-full sm:w-auto">
                     See Transformation Gallery
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -68,8 +51,8 @@ export default function BTLPage() {
             <div className="relative h-full order-first lg:order-last">
               <div className="relative aspect-[3/4] overflow-hidden rounded-[32px] shadow-xl">
                 <Image 
-                  src="/images/gail-photos/gailwithpatient1.5.jpg" 
-                  alt="Dr. Gail Ann Krishnan"
+                  src="/images/btl/hero-aesthetics.jpg" 
+                  alt="BTL Exion Aesthetic Treatments"
                   fill
                   className="object-cover"
                   priority
@@ -287,7 +270,7 @@ export default function BTLPage() {
               <a href="tel:+17149900204">
                 <Button 
                   variant="outline"
-                  className="bg-white/90 border-charcoal/20 text-charcoal hover:bg-white rounded-[24px] px-10 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto"
+                  className="bg-white/90 border-charcoal/20 text-charcoal hover:text-charcoal hover:bg-white rounded-[24px] px-10 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto"
                 >
                   Call (714) 990-0204
                 </Button>

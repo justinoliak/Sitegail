@@ -26,7 +26,7 @@ export default function AboutPage() {
             <div className="relative order-2 lg:order-1">
               <div className="relative aspect-[3/4] overflow-hidden rounded-[32px] shadow-xl">
                 <Image
-                  src="/images/dr-krishnan-portrait.jpg"
+                  src="/images/about/dr-krishnan-portrait.jpg"
                   alt="Dr. Gail Ann Krishnan"
                   fill
                   className="object-cover"
@@ -70,7 +70,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Education */}
-            <div className="bg-background rounded-[12px] p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-none">
+            <div className="bg-background rounded-[24px] p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] border-none">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 rounded-full bg-light-mint flex items-center justify-center mr-5">
                   <GraduationCap className="h-6 w-6 text-accent-mint" />
@@ -103,7 +103,7 @@ export default function AboutPage() {
             </div>
 
             {/* Professional Memberships */}
-            <div className="bg-background rounded-[12px] p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-none">
+            <div className="bg-background rounded-[24px] p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] border-none">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 rounded-full bg-light-mint flex items-center justify-center mr-5">
                   <Award className="h-6 w-6 text-accent-mint" />
@@ -136,7 +136,7 @@ export default function AboutPage() {
             </div>
 
             {/* Certifications & Training */}
-            <div className="bg-background rounded-[12px] p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-none">
+            <div className="bg-background rounded-[24px] p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px] border-none">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 rounded-full bg-light-mint flex items-center justify-center mr-5">
                   <CalendarClock className="h-6 w-6 text-accent-mint" />
@@ -219,7 +219,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 gap-8">
               <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg">
                 <Image
-                  src="/images/dr-krishnan-with-patient.jpg"
+                  src="/images/about/dr-krishnan-with-patient.jpg"
                   alt="Dr. Krishnan with a patient"
                   fill
                   className="object-cover"
@@ -227,7 +227,7 @@ export default function AboutPage() {
               </div>
               <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg mt-12">
                 <Image
-                  src="/images/dr-krishnan-working.jpg"
+                  src="/images/about/dr-krishnan-working.jpg"
                   alt="Dr. Krishnan working"
                   fill
                   className="object-cover"
@@ -235,7 +235,7 @@ export default function AboutPage() {
               </div>
               <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg">
                 <Image
-                  src="/images/dr-krishnan-consultation.jpg"
+                  src="/images/about/dr-krishnan-consultation.jpg"
                   alt="Dr. Krishnan in consultation"
                   fill
                   className="object-cover"
@@ -243,7 +243,7 @@ export default function AboutPage() {
               </div>
               <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg mt-12">
                 <Image
-                  src="/images/dr-krishnan-office.jpg"
+                  src="/images/about/dr-krishnan-office.jpg"
                   alt="Dr. Krishnan in her office"
                   fill
                   className="object-cover"
@@ -255,8 +255,16 @@ export default function AboutPage() {
       </section>
 
       {/* Personal Life Section (Optional) */}
-      <section className="py-32 bg-light-mint">
-        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <section className="py-32 bg-light-mint relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <Image
+            src="/images/about/dr-krishnan-office.jpg"
+            alt="Office Background"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl font-semibold mb-6 text-charcoal">Beyond the Dental Chair</h2>
             <p className="text-charcoal/80 leading-relaxed text-lg">
@@ -265,10 +273,10 @@ export default function AboutPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div className="bg-background rounded-[12px] p-8 shadow-lg text-center">
+            <div className="bg-background/90 backdrop-blur-sm rounded-[24px] p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px]">
               <div className="w-20 h-20 rounded-full bg-accent-mint flex items-center justify-center mx-auto mb-6">
                 <Image
-                  src="/images/icon-community.png"
+                  src="/images/icons/icon-community.png"
                   alt="Community icon"
                   width={40}
                   height={40}
@@ -280,10 +288,10 @@ export default function AboutPage() {
               </p>
             </div>
             
-            <div className="bg-background rounded-[12px] p-8 shadow-lg text-center">
+            <div className="bg-background/90 backdrop-blur-sm rounded-[24px] p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px]">
               <div className="w-20 h-20 rounded-full bg-accent-mint flex items-center justify-center mx-auto mb-6">
                 <Image
-                  src="/images/icon-family.png"
+                  src="/images/icons/icon-family.png"
                   alt="Family icon"
                   width={40}
                   height={40}
@@ -295,10 +303,10 @@ export default function AboutPage() {
               </p>
             </div>
             
-            <div className="bg-background rounded-[12px] p-8 shadow-lg text-center">
+            <div className="bg-background/90 backdrop-blur-sm rounded-[24px] p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px]">
               <div className="w-20 h-20 rounded-full bg-accent-mint flex items-center justify-center mx-auto mb-6">
                 <Image
-                  src="/images/icon-interests.png"
+                  src="/images/icons/icon-interests.png"
                   alt="Interests icon"
                   width={40}
                   height={40}
