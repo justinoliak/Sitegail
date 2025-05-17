@@ -12,7 +12,7 @@ export default function AboutPage() {
         <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-charcoal">Meet Dr. Gail Ann Krishnan</h1>
-            <p className="text-charcoal/80 leading-relaxed mb-8 text-lg">
+            <p className="text-charcoal/70 mb-6">
               Dedicated to providing exceptional dental care with a personal touch and creating beautiful smiles that last a lifetime.
             </p>
           </div>

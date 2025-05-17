@@ -155,7 +155,7 @@ export default function ServicesPage() {
         <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-charcoal">Our Dental Services</h1>
-            <p className="text-charcoal/80 leading-relaxed mb-8 text-lg">
+            <p className="text-charcoal/70 mb-6">
               Comprehensive dental care with a focus on comfort, quality, and long-term results for you and your family.
             </p>
           </div>

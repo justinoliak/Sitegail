@@ -41,10 +41,10 @@ export default function BTLPage() {
               <h1 className="text-4xl md:text-5xl font-semibold text-charcoal leading-tight mb-6">
                 Reveal Your Most Radiant Self With Advanced Aesthetic Treatments
               </h1>
-              <p className="text-charcoal/80 leading-relaxed mb-10 text-lg">
+              <p className="text-charcoal/70 mb-6">
                 Experience the transformative power of BTL Exion technology—the gold standard in non-invasive facial rejuvenation and skin treatments
               </p>
-              <p className="text-charcoal/80 mb-10 text-lg">
+              <p className="text-charcoal/70 mb-6">
                 Natural-looking results • No downtime • Customized to your skin's needs
               </p>
               
