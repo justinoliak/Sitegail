@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Check, ArrowUpRight, ChevronDown, Star, Shield, Phone } from "lucide-react";
 import FAQAccordion from "@/components/ui/faq-accordion";
 import { ResponsiveImage } from "@/components/ui/responsive-image";
-import { BeforeAfterSlider } from "@/components/ui/before-after-slider";
 
 export default function BTLPage() {
   return (
@@ -220,7 +219,7 @@ export default function BTLPage() {
         </div>
       </section>
 
-      {/* 5. Before & After Gallery with new BeforeAfterSlider */}
+      {/* 5. Before & After Gallery - Using regular images instead of BeforeAfterSlider */}
       <section id="transformation-gallery" className="py-12 md:py-16 bg-light-mint">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
@@ -250,105 +249,116 @@ export default function BTLPage() {
               },
               {
                 id: 3,
-                title: "Full Face Rejuvenation",
-                description: "4 Sessions, 8 Weeks • Patient in her 60s",
-                before: "/images/emface/gailemface2.jpg",
-                after: "/images/emface/gailemface2.2.jpg"
+                title: "Facial Contouring",
+                description: "4 Sessions, 10 Weeks • Patient in her 30s",
+                before: "/images/emface/emface2.jpg",
+                after: "/images/emface/emface2.2.jpg"
               }
             ].map((item) => (
-              <div key={item.id} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
-                <BeforeAfterSlider
-                  beforeSrc={item.before}
-                  afterSrc={item.after}
-                  beforeAlt={`Before ${item.title} Treatment`}
-                  afterAlt={`After ${item.title} Treatment`}
-                  width={400}
-                  height={300}
-                  className="h-64 md:h-60"
-                />
-                
+              <div key={item.id} className="bg-white rounded-xl overflow-hidden shadow-lg">
                 <div className="p-4">
-                  <h3 className="font-medium text-charcoal">{item.title}</h3>
+                  <h3 className="text-lg font-medium text-charcoal">{item.title}</h3>
                   <p className="text-sm text-charcoal/70">{item.description}</p>
+                </div>
+                
+                {/* Before/After Images side by side */}
+                <div className="grid grid-cols-2 gap-1">
+                  <div className="relative">
+                    <div className="absolute top-2 left-2 bg-white/80 px-2 py-1 text-xs font-medium rounded">Before</div>
+                    <ResponsiveImage
+                      src={item.before}
+                      alt={`Before ${item.title}`}
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover"
+                      aspectRatio="3/4"
+                    />
+                  </div>
+                  <div className="relative">
+                    <div className="absolute top-2 right-2 bg-primary-mint/80 text-white px-2 py-1 text-xs font-medium rounded">After</div>
+                    <ResponsiveImage
+                      src={item.after}
+                      alt={`After ${item.title}`}
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover"
+                      aspectRatio="3/4"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
           </div>
-
+          
           <div className="text-center">
+            <p className="text-charcoal/80 text-sm italic mb-4">Results may vary. Images show typical results after completing the recommended treatment protocol.</p>
             <Link href="/contact">
-              <Button className="bg-accent-mint text-white hover:bg-accent-mint/90 rounded-full px-6 py-3 min-h-[54px] touch-manipulation">
-                See Which Treatment Is Right For You
-                <ArrowRight className="ml-2 h-4 w-4" />
+              <Button 
+                className="bg-accent-mint text-white hover:bg-accent-mint/90 rounded-full px-6 py-3 inline-flex items-center"
+              >
+                Schedule Your Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 6. Treatment Options - Mobile Optimized */}
+      {/* 6. Treatment Options */}
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-8 md:mb-16">
-            <h2 className="text-2xl md:text-4xl font-semibold text-charcoal mb-4 md:mb-6">
-              Customized Treatments For Your Unique Needs
-            </h2>
+          <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-semibold text-charcoal mb-4">Customized Treatments for Your Specific Needs</h2>
             <p className="text-base md:text-lg text-charcoal/80">
-              Our BTL Exion platform offers versatile treatment options that can be personalized to address your specific concerns.
+              Dr. Krishnan will create a personalized treatment plan tailored to your unique concerns, goals, and skin condition
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
               {
-                title: "Facial Rejuvenation",
-                headline: "Turn Back the Clock Naturally",
-                description: "Restore youthful firmness and reduce fine lines with our signature facial rejuvenation treatments.",
-                bestFor: "Fine lines, wrinkles, skin laxity, and overall facial aging",
-                results: "Smoother, firmer skin with visible reduction in fine lines and improved contours",
-                sessions: "4 weekly sessions recommended for optimal results"
+                title: "EmFace",
+                description: "Non-invasive facial treatment that lifts, tightens and tones facial muscles for a more youthful appearance",
+                benefits: ["Reduces fine lines and wrinkles", "Lifts and tones facial muscles", "Zero downtime"],
+                image: "/images/btl/Emface_PIC_Model-3625_ENUS100.jpg"
               },
               {
-                title: "RF Microneedling",
-                headline: "Advanced Skin Resurfacing",
-                description: "Experience the power of RF microneedling with minimal discomfort and exceptional results.",
-                bestFor: "Acne scars, skin texture concerns, enlarged pores, and early signs of aging",
-                results: "Improved skin texture, reduced scarring, and refined pore appearance",
-                sessions: "3-4 sessions spaced 4-6 weeks apart for optimal results"
+                title: "Skin Rejuvenation",
+                description: "Advanced treatments to improve skin texture, tone and restore a healthy, vibrant glow to your complexion",
+                benefits: ["Improves skin tone and texture", "Reduces sun damage", "Minimizes pore appearance"],
+                image: "/images/btl/Emface_PIC_Model-3651_ENUS100.jpg"
               },
               {
-                title: "Skin Tightening",
-                headline: "Restore Firmness and Definition",
-                description: "Non-surgical skin tightening that delivers visible lifting and contouring effects.",
-                bestFor: "Jawline definition, neck laxity, and mild to moderate skin sagging",
-                results: "More defined contours, firmer skin, and a more youthful profile",
-                sessions: "4 weekly sessions recommended for optimal results"
+                title: "Combination Therapy",
+                description: "Customized protocol combining multiple modalities for enhanced results targeting your unique concerns",
+                benefits: ["Comprehensive approach", "Enhanced results", "Personalized to your needs"],
+                image: "/images/btl/Emface_PIC_Unit_9560_ENUS100.jpg"
               }
             ].map((treatment, index) => (
-              <div key={index} className="bg-gradient-to-br from-white to-light-mint/10 rounded-xl shadow-md overflow-hidden border border-light-mint touch-manipulation">
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-charcoal mb-2">{treatment.headline}</h3>
-                  <p className="text-charcoal/80 mb-6">{treatment.description}</p>
-                  
-                  <div className="space-y-4 mb-6">
-                    <div>
-                      <h4 className="text-sm font-medium text-accent-mint uppercase tracking-wider">Best For</h4>
-                      <p className="text-charcoal/80 text-sm">{treatment.bestFor}</p>
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-medium text-accent-mint uppercase tracking-wider">Typical Results</h4>
-                      <p className="text-charcoal/80 text-sm">{treatment.results}</p>
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-medium text-accent-mint uppercase tracking-wider">Session Information</h4>
-                      <p className="text-charcoal/80 text-sm">{treatment.sessions}</p>
-                    </div>
+              <div key={index} className="group rounded-xl overflow-hidden shadow-lg">
+                <div className="relative h-64">
+                  <ResponsiveImage
+                    src={treatment.image}
+                    alt={treatment.title}
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent flex items-end p-6">
+                    <h3 className="text-xl font-semibold text-white">{treatment.title}</h3>
                   </div>
-                  
-                  <Link href="/contact" className="inline-flex items-center text-accent-mint hover:text-accent-mint/80 font-medium min-h-[44px] py-2">
-                    Book a Consultation
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                </div>
+                
+                <div className="p-6 border-t-4 border-primary-mint">
+                  <p className="text-charcoal/80 mb-4">{treatment.description}</p>
+                  <ul className="space-y-2">
+                    {treatment.benefits.map((benefit, i) => (
+                      <li key={i} className="flex items-center">
+                        <Check className="h-4 w-4 text-accent-mint mr-2 flex-shrink-0" />
+                        <span className="text-sm text-charcoal/70">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
@@ -356,169 +366,195 @@ export default function BTLPage() {
         </div>
       </section>
 
-      {/* Mobile Tap-to-Call Action */}
-      <div className="md:hidden bg-primary-mint py-4 px-4">
-        <a href="tel:+17149900204" className="flex items-center justify-center gap-3 min-h-[54px] touch-manipulation">
-          <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-            <Phone className="h-5 w-5 text-primary-mint" />
-          </div>
-          <div>
-            <p className="text-sm text-charcoal/80">Questions? Call us now</p>
-            <p className="text-lg font-medium text-charcoal">(714) 990-0204</p>
-          </div>
-        </a>
-      </div>
-
-      {/* 7. Why Choose Us */}
+      {/* 7. Pricing & Packages */}
       <section className="py-12 md:py-16 bg-light-mint">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row overflow-hidden rounded-2xl">
-            <div className="lg:w-1/2 bg-primary-mint p-8 md:p-12">
-              <h2 className="text-2xl md:text-3xl font-semibold text-charcoal mb-8">
-                Why Choose Dr. Gail Ann for Your Aesthetic Treatments?
-              </h2>
-              
-              <ul className="space-y-6">
-                {[
-                  {
-                    title: "Advanced Certification",
-                    description: "Dr. Krishnan has completed specialized training in BTL Exion technology and advanced aesthetic treatments."
-                  },
-                  {
-                    title: "Personalized Approach",
-                    description: "Your treatment plan is customized to your unique needs, goals, and skin characteristics."
-                  },
-                  {
-                    title: "Dental + Aesthetic Expertise",
-                    description: "Experience the unique advantage of comprehensive facial analysis from both dental and aesthetic perspectives."
-                  },
-                  {
-                    title: "Comfortable Environment",
-                    description: "Enjoy your treatments in our luxurious, private setting designed for your comfort."
-                  },
-                  {
-                    title: "Honest Recommendations",
-                    description: "Receive candid guidance about which treatments will truly benefit you—and which ones won't."
-                  }
-                ].map((point, index) => (
-                  <li key={index} className="flex items-start">
-                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center mr-4 mt-0.5 flex-shrink-0">
-                      <Check className="h-5 w-5 text-accent-mint" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-charcoal">{point.title}</h3>
-                      <p className="text-charcoal/80 text-sm">{point.description}</p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="mt-8 flex flex-wrap gap-4">
-                <div className="bg-white/80 py-2 px-4 rounded-full text-xs font-medium text-charcoal">
-                  BTL Certified Provider
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-semibold text-charcoal mb-4">Investment in Your Confidence</h2>
+              <p className="text-base md:text-lg text-charcoal/80">
+                Our BTL Exion treatments are customized to your unique needs. Pricing varies based on treatment areas and your specific goals.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg mb-8 border-l-4 border-accent-mint">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-charcoal mb-2">Personalized Consultation</h3>
+                  <p className="text-charcoal/80">
+                    Start with a comprehensive assessment with Dr. Krishnan to create your customized treatment plan.
+                  </p>
                 </div>
-                <div className="bg-white/80 py-2 px-4 rounded-full text-xs font-medium text-charcoal">
-                  American Academy of Facial Esthetics Member
+                <div className="md:text-right">
+                  <p className="text-accent-mint font-medium text-xl">$150</p>
+                  <p className="text-sm text-charcoal/70">(Applied to your treatment package)</p>
                 </div>
-                <div className="bg-white/80 py-2 px-4 rounded-full text-xs font-medium text-charcoal">
-                  Advanced Aesthetic Training
-                </div>
-              </div>
-              
-              <div className="mt-8">
-                <Link href="/about">
-                  <Button className="bg-accent-mint text-white hover:bg-accent-mint/90 rounded-full min-h-[54px] touch-manipulation">
-                    Meet Dr. Krishnan
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
               </div>
             </div>
             
-            <div className="lg:w-1/2 relative">
-              <ResponsiveImage
-                src="/images/gail-photos/gailwithpatient1.3.jpg"
-                alt="Dr. Krishnan consulting with a patient"
-                width={800}
-                height={600}
-                containerClassName="h-64 md:h-full"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. FAQ Accordion */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-semibold text-charcoal text-center mb-8 md:mb-12">
-              Common Questions About BTL Exion Treatments
-            </h2>
-            
-            <FAQAccordion 
-              faqs={[
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
                 {
-                  question: "How many sessions will I need to see results?",
-                  answer: "Most patients begin seeing improvement after their first or second treatment, with optimal results typically visible after completing a series of 3-4 sessions. The exact number of sessions will be determined during your consultation based on your specific concerns and goals."
+                  title: "Single Session",
+                  priceRange: "$400-750",
+                  description: "Perfect for maintenance or trying a treatment",
+                  features: [
+                    "One full treatment session",
+                    "Personalized settings",
+                    "Post-treatment care instructions"
+                  ]
                 },
                 {
-                  question: "Is there any downtime after treatments?",
-                  answer: "BTL Exion treatments require minimal to no downtime. You may experience mild redness for a few hours after treatment, but most patients return to their normal activities immediately. This makes it perfect for those with busy lifestyles."
+                  title: "Package of 4",
+                  priceRange: "$1,500-2,500",
+                  description: "Our most popular option",
+                  features: [
+                    "Four treatment sessions",
+                    "15% savings vs. single sessions",
+                    "Complimentary skin analysis",
+                    "Custom home care plan"
+                  ],
+                  isPopular: true
                 },
                 {
-                  question: "Are BTL Exion treatments painful?",
-                  answer: "Most patients describe BTL Exion treatments as comfortable and even relaxing. You may feel a warming sensation and mild tingling during the procedure. Our technicians will ensure your comfort throughout the treatment."
-                },
-                {
-                  question: "How long do results last?",
-                  answer: "Results can last 1-2 years or longer, depending on your age, skin condition, and lifestyle factors. We recommend maintenance sessions every 6-12 months to preserve and enhance your results."
-                },
-                {
-                  question: "Who is an ideal candidate for these treatments?",
-                  answer: "BTL Exion treatments are suitable for adults of all ages who want to improve skin texture, reduce fine lines, or address mild to moderate skin laxity without surgery. The treatments work well on all skin types, though certain medical conditions may affect candidacy, which we'll discuss during your consultation."
-                },
-                {
-                  question: "How soon will I see results?",
-                  answer: "Some patients notice improvement immediately after the first treatment, while others see gradual changes over the course of their treatment series. Collagen remodeling continues for 2-3 months after your final session, with improvements continuing to develop during this time."
-                },
-                {
-                  question: "Can I combine BTL Exion with other treatments?",
-                  answer: "Yes, BTL Exion treatments can be complemented by other aesthetic procedures for enhanced results. Dr. Krishnan will create a comprehensive treatment plan that may include combinations with other treatments for optimal outcomes."
-                },
-                {
-                  question: "What makes BTL Exion different from other technologies?",
-                  answer: "BTL Exion's unique combination of monopolar radiofrequency, targeted ultrasound, and AI-controlled delivery provides more consistent, effective results than single-technology treatments. The system's advanced applicators allow for customized treatments that precisely target your specific concerns."
+                  title: "Package of 6",
+                  priceRange: "$2,200-3,600",
+                  description: "Maximum results",
+                  features: [
+                    "Six treatment sessions",
+                    "20% savings vs. single sessions",
+                    "Complimentary skin analysis",
+                    "Custom home care plan",
+                    "Free follow-up visit"
+                  ]
                 }
-              ]}
-            />
+              ].map((pkg, index) => (
+                <div key={index} className={`bg-white rounded-xl overflow-hidden shadow-lg border ${pkg.isPopular ? 'border-accent-mint' : 'border-light-mint/50'} relative`}>
+                  {pkg.isPopular && (
+                    <div className="absolute top-4 right-4 bg-accent-mint text-white text-xs rounded-full px-3 py-1 font-medium">
+                      Most Popular
+                    </div>
+                  )}
+                  <div className={`p-6 ${pkg.isPopular ? 'bg-primary-mint/10' : ''}`}>
+                    <h3 className="text-xl font-semibold text-charcoal">{pkg.title}</h3>
+                    <p className="text-2xl font-bold text-accent-mint mt-2">{pkg.priceRange}</p>
+                    <p className="text-sm text-charcoal/70 mt-1">{pkg.description}</p>
+                  </div>
+                  <div className="p-6 border-t border-light-mint/30">
+                    <ul className="space-y-3">
+                      {pkg.features.map((feature, i) => (
+                        <li key={i} className="flex items-start">
+                          <Check className="h-4 w-4 text-accent-mint mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm text-charcoal/80">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
             
-            <div className="text-center mt-8">
-              <Link href="/contact" className="text-accent-mint hover:text-accent-mint/80 font-medium inline-block min-h-[44px] py-2">
-                Have another question? Contact us for answers
+            <div className="mt-8 text-center">
+              <p className="text-charcoal/70 mb-4 italic">
+                Financing options are available. We also accept HSA/FSA for qualified treatments.
+              </p>
+              <Link href="/contact">
+                <Button 
+                  className="bg-accent-mint text-white hover:bg-accent-mint/90 rounded-full px-6 py-3 inline-flex items-center"
+                >
+                  Schedule a Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 9. Call-to-Action */}
-      <section className="py-12 bg-accent-mint">
+      {/* 8. FAQ Section */}
+      <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-white">
-              Ready to Discover Your Skin's True Potential?
-            </h2>
-            <p className="text-lg text-white/90 mb-8">
-              Book your consultation today to learn how BTL Exion treatments can help you achieve your aesthetic goals.
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-8 md:mb-12">
+              <h2 className="text-2xl md:text-3xl font-semibold text-charcoal mb-4">Frequently Asked Questions</h2>
+              <p className="text-base md:text-lg text-charcoal/80">
+                We're here to address your concerns about BTL Exion treatments
+              </p>
+            </div>
+            
+            <FAQAccordion 
+              faqs={[
+                {
+                  question: "How many treatments will I need?",
+                  answer: "Most patients see optimal results after 4-6 treatments, spaced 1-2 weeks apart. However, Dr. Krishnan will create a personalized treatment plan based on your specific concerns and goals during your consultation."
+                },
+                {
+                  question: "Is there any downtime after BTL Exion treatments?",
+                  answer: "BTL Exion treatments are designed to be non-invasive with minimal to no downtime. Most patients return to their normal activities immediately after treatment. Some may experience mild redness that typically subsides within a few hours."
+                },
+                {
+                  question: "When will I see results?",
+                  answer: "Some patients notice improvements after their first session, but optimal results typically develop over 2-3 months as your body naturally produces new collagen and elastin. Results continue to improve with each treatment session."
+                },
+                {
+                  question: "Are BTL Exion treatments painful?",
+                  answer: "Most patients describe the treatments as comfortable with sensations of warmth and gentle muscle contractions. The BTL Exion system includes built-in cooling technology to maintain comfort throughout your session."
+                },
+                {
+                  question: "How long do results last?",
+                  answer: "Results can last 6-12 months or longer, depending on your age, skin condition, and lifestyle factors. Maintenance treatments every 3-6 months can help extend your results."
+                },
+                {
+                  question: "Is BTL Exion safe for all skin types?",
+                  answer: "Yes, BTL Exion treatments are safe and effective for all skin types and tones. During your consultation, Dr. Krishnan will assess your skin condition to ensure the treatment is appropriate for your specific situation."
+                }
+              ]} 
+            />
+            
+            <div className="mt-8 text-center">
+              <p className="mb-4 text-charcoal/80">Don't see your question answered here?</p>
+              <Link href="/contact" className="text-accent-mint hover:underline font-medium inline-flex items-center">
+                Contact us for more information
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. Final CTA */}
+      <section className="py-12 md:py-16 bg-gradient-to-r from-primary-mint to-accent-mint text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4 md:mb-6">Ready to Transform Your Look?</h2>
+            <p className="text-base md:text-lg mb-8 text-white/90">
+              Schedule your consultation with Dr. Krishnan today and discover how BTL Exion treatments can help you look and feel your best.
             </p>
-            <Link href="/contact">
-              <Button className="bg-white text-accent-mint hover:bg-white/90 rounded-full px-8 py-3 text-base md:text-lg font-medium w-full sm:w-auto min-h-[54px] touch-manipulation">
-                Schedule Your Consultation Now
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link href="/contact">
+                <Button 
+                  className="bg-white text-accent-mint hover:bg-white/90 rounded-full px-6 py-3 text-base md:text-lg w-full sm:w-auto min-h-[54px] touch-manipulation"
+                >
+                  Book Your Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <a href="tel:+17149900204">
+                <Button 
+                  variant="outline"
+                  className="border-white text-white hover:bg-white/10 rounded-full px-6 py-3 text-base md:text-lg w-full sm:w-auto min-h-[54px] touch-manipulation"
+                >
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call (714) 990-0204
+                </Button>
+              </a>
+            </div>
+            
+            <p className="mt-8 text-white/80 italic">
+              "My goal is to help you achieve natural-looking rejuvenation that enhances your confidence."<br />
+              — Dr. Gail Ann Krishnan
+            </p>
           </div>
         </div>
       </section>
