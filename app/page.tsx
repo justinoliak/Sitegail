@@ -90,7 +90,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="order-1 lg:order-2 relative h-full">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-[32px] shadow-xl h-[110%] lg:h-[130%] lg:-mt-12 lg:mb-8 pt-8">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-[32px] shadow-xl h-[110%] lg:h-[120%] lg:-mt-12 lg:mb-8 pt-8">
                 <Image
                   src="/images/gail-photos/gailwithpatient1.jpg"
                   alt="Dr. Krishnan's welcoming dental office"
@@ -99,10 +99,10 @@ export default function HomePage() {
                   priority
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-background p-6 rounded-2xl shadow-lg border-t-4 border-primary-mint">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="h-6 w-6 text-accent-mint" />
-                  <p className="text-charcoal font-medium">New patients welcome!</p>
+              <div className="absolute bottom-4 right-4 lg:bottom-6 lg:right-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-xl border-l-4 border-primary-mint">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-accent-mint" />
+                  <p className="text-charcoal text-sm font-medium whitespace-nowrap">New patients welcome!</p>
                 </div>
               </div>
             </div>

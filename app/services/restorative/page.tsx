@@ -44,7 +44,7 @@ export default function RestorativeDentistry() {
             <div className="lg:w-1/2">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/restorative-dentistry.jpg"
+                  src="/images/services/restorative-main.jpg"
                   alt="Restorative Dentistry"
                   width={600}
                   height={400}
@@ -79,7 +79,7 @@ export default function RestorativeDentistry() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-blush-pink/20 hover:border-dusty-rose/40">
               <div className="h-48 relative">
                 <Image
-                  src="/images/dental-crowns.jpg"
+                  src="/images/services/restorative/restorative-care.jpg"
                   alt="Dental Crowns"
                   fill
                   className="object-cover"
@@ -114,7 +114,7 @@ export default function RestorativeDentistry() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-blush-pink/20 hover:border-dusty-rose/40">
               <div className="h-48 relative">
                 <Image
-                  src="/images/dental-bridges.jpg"
+                  src="/images/services/restorative/restorative-care.jpg"
                   alt="Dental Bridges"
                   fill
                   className="object-cover"
@@ -149,7 +149,7 @@ export default function RestorativeDentistry() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-blush-pink/20 hover:border-dusty-rose/40">
               <div className="h-48 relative">
                 <Image
-                  src="/images/dental-implants.jpg"
+                  src="/images/services/restorative/restorative-care.jpg"
                   alt="Dental Implants"
                   fill
                   className="object-cover"
@@ -184,7 +184,7 @@ export default function RestorativeDentistry() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-blush-pink/20 hover:border-dusty-rose/40">
               <div className="h-48 relative">
                 <Image
-                  src="/images/root-canal.jpg"
+                  src="/images/services/restorative/restorative-care.jpg"
                   alt="Root Canal Therapy"
                   fill
                   className="object-cover"
@@ -219,7 +219,7 @@ export default function RestorativeDentistry() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-blush-pink/20 hover:border-dusty-rose/40">
               <div className="h-48 relative">
                 <Image
-                  src="/images/dentures.jpg"
+                  src="/images/services/restorative/restorative-care.jpg"
                   alt="Dentures & Partials"
                   fill
                   className="object-cover"
@@ -254,7 +254,7 @@ export default function RestorativeDentistry() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-blush-pink/20 hover:border-dusty-rose/40">
               <div className="h-48 relative">
                 <Image
-                  src="/images/inlays-onlays.jpg"
+                  src="/images/services/restorative/restorative-care.jpg"
                   alt="Inlays & Onlays"
                   fill
                   className="object-cover"
@@ -307,7 +307,7 @@ export default function RestorativeDentistry() {
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
                   <Image 
-                    src="/images/before-4.jpg" 
+                    src="/images/services/gallery/before-1.jpg" 
                     alt="Before Treatment"
                     fill
                     className="object-cover"
@@ -318,7 +318,7 @@ export default function RestorativeDentistry() {
                 </div>
                 <div className="relative h-48">
                   <Image 
-                    src="/images/after-4.jpg" 
+                    src="/images/services/gallery/after-1.jpg" 
                     alt="After Treatment"
                     fill
                     className="object-cover"
@@ -339,7 +339,7 @@ export default function RestorativeDentistry() {
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
                   <Image 
-                    src="/images/before-5.jpg" 
+                    src="/images/services/gallery/before-2.jpg" 
                     alt="Before Treatment"
                     fill
                     className="object-cover"
@@ -350,7 +350,7 @@ export default function RestorativeDentistry() {
                 </div>
                 <div className="relative h-48">
                   <Image 
-                    src="/images/after-5.jpg" 
+                    src="/images/services/gallery/after-2.jpg" 
                     alt="After Treatment"
                     fill
                     className="object-cover"
@@ -371,7 +371,7 @@ export default function RestorativeDentistry() {
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
                   <Image 
-                    src="/images/before-6.jpg" 
+                    src="/images/services/gallery/before-3.jpg" 
                     alt="Before Treatment"
                     fill
                     className="object-cover"
@@ -382,7 +382,7 @@ export default function RestorativeDentistry() {
                 </div>
                 <div className="relative h-48">
                   <Image 
-                    src="/images/after-6.jpg" 
+                    src="/images/services/gallery/after-3.jpg" 
                     alt="After Treatment"
                     fill
                     className="object-cover"

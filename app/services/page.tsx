@@ -11,7 +11,7 @@ const serviceCategories = [
     title: "Preventive Dentistry",
     description: "Maintain your oral health and prevent issues before they start",
     icon: <ShieldCheck className="h-6 w-6 text-copper" />,
-    image: "/images/services/preventive-dentistry.jpg",
+    image: "/images/services/preventive-main.jpg",
     services: [
       {
         name: "Dental Cleanings & Exams",
@@ -50,7 +50,7 @@ const serviceCategories = [
     title: "Cosmetic Dentistry",
     description: "Enhance your smile's appearance with our aesthetic treatments",
     icon: <Smile className="h-6 w-6 text-copper" />,
-    image: "/images/services/cosmetic-dentistry.jpg",
+    image: "/images/services/cosmetic-main.jpg",
     services: [
       {
         name: "Teeth Whitening",
@@ -89,7 +89,7 @@ const serviceCategories = [
     title: "Restorative Dentistry",
     description: "Repair damaged teeth and restore both function and appearance",
     icon: <Hammer className="h-6 w-6 text-copper" />,
-    image: "/images/services/restorative-dentistry.jpg",
+    image: "/images/services/restorative-main.jpg",
     services: [
       {
         name: "Tooth-Colored Fillings",
@@ -130,19 +130,19 @@ const featuredServices = [
   {
     title: "Smile Makeovers",
     description: "Comprehensive treatment plan combining multiple cosmetic procedures to transform your smile.",
-    image: "/images/services/featured-smile-makeover.jpg",
+    image: "/images/services/cosmetic/smile-makeover.jpg",
     link: "/services/cosmetic/smile-makeovers"
   },
   {
     title: "Dental Implants",
     description: "The most advanced solution for missing teeth that look, feel, and function like natural teeth.",
-    image: "/images/services/featured-implants.jpg",
+    image: "/images/services/restorative/restorative-care.jpg",
     link: "/services/restorative/implants"
   },
   {
     title: "Invisalign®",
     description: "Straighten your teeth discreetly with clear aligners.",
-    image: "/images/services/featured-invisalign.jpg",
+    image: "/images/services/cosmetic/invisalign.jpg",
     link: "/services/cosmetic/invisalign"
   }
 ];
@@ -296,7 +296,7 @@ export default function ServicesPage() {
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-[8px] shadow-md">
                   <Image
-                    src="/images/gallery/before-1.jpg"
+                    src="/images/services/gallery/before-1.jpg"
                     alt="Before Smile Makeover"
                     fill
                     className="object-cover"
@@ -305,7 +305,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="relative aspect-[4/3] overflow-hidden rounded-[8px] shadow-md">
                   <Image
-                    src="/images/gallery/after-1.jpg"
+                    src="/images/services/gallery/after-1.jpg"
                     alt="After Smile Makeover"
                     fill
                     className="object-cover"
@@ -323,7 +323,7 @@ export default function ServicesPage() {
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-[8px] shadow-md">
                   <Image
-                    src="/images/gallery/before-2.jpg"
+                    src="/images/services/gallery/before-2.jpg"
                     alt="Before Dental Implants"
                     fill
                     className="object-cover"
@@ -332,7 +332,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="relative aspect-[4/3] overflow-hidden rounded-[8px] shadow-md">
                   <Image
-                    src="/images/gallery/after-2.jpg"
+                    src="/images/services/gallery/after-2.jpg"
                     alt="After Dental Implants"
                     fill
                     className="object-cover"

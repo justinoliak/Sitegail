@@ -44,7 +44,7 @@ export default function CosmeticDentistry() {
             <div className="lg:w-1/2">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/cosmetic-dentistry.jpg"
+                  src="/images/services/cosmetic-main.jpg"
                   alt="Cosmetic Dentistry"
                   width={600}
                   height={400}
@@ -79,7 +79,7 @@ export default function CosmeticDentistry() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-light-mint hover:border-primary-mint">
               <div className="h-48 relative">
                 <Image
-                  src="/images/teeth-whitening.jpg"
+                  src="/images/services/cosmetic/teeth-whitening.jpg"
                   alt="Teeth Whitening"
                   fill
                   className="object-cover"
@@ -115,7 +115,7 @@ export default function CosmeticDentistry() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-light-mint hover:border-primary-mint">
               <div className="h-48 relative">
                 <Image
-                  src="/images/veneers.jpg"
+                  src="/images/services/cosmetic/veneers.jpg"
                   alt="Porcelain Veneers"
                   fill
                   className="object-cover"
@@ -150,7 +150,7 @@ export default function CosmeticDentistry() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-light-mint hover:border-primary-mint">
               <div className="h-48 relative">
                 <Image
-                  src="/images/bonding.jpg"
+                  src="/images/services/cosmetic/bonding.jpg"
                   alt="Dental Bonding"
                   fill
                   className="object-cover"
@@ -185,7 +185,7 @@ export default function CosmeticDentistry() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-light-mint hover:border-primary-mint">
               <div className="h-48 relative">
                 <Image
-                  src="/images/smile-makeover.jpg"
+                  src="/images/services/cosmetic/smile-makeover.jpg"
                   alt="Smile Makeover"
                   fill
                   className="object-cover"
@@ -220,7 +220,7 @@ export default function CosmeticDentistry() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-light-mint hover:border-primary-mint">
               <div className="h-48 relative">
                 <Image
-                  src="/images/tooth-colored-fillings.jpg"
+                  src="/images/services/cosmetic/tooth-colored-fillings.jpg"
                   alt="Tooth-Colored Fillings"
                   fill
                   className="object-cover"
@@ -255,7 +255,7 @@ export default function CosmeticDentistry() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-light-mint hover:border-primary-mint">
               <div className="h-48 relative">
                 <Image
-                  src="/images/gum-contouring.jpg"
+                  src="/images/services/cosmetic/gum-contouring.jpg"
                   alt="Gum Contouring"
                   fill
                   className="object-cover"
@@ -308,7 +308,7 @@ export default function CosmeticDentistry() {
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
                   <Image 
-                    src="/images/before-1.jpg" 
+                    src="/images/services/gallery/before-1.jpg" 
                     alt="Before Treatment"
                     fill
                     className="object-cover"
@@ -319,7 +319,7 @@ export default function CosmeticDentistry() {
                 </div>
                 <div className="relative h-48">
                   <Image 
-                    src="/images/after-1.jpg" 
+                    src="/images/services/gallery/after-1.jpg" 
                     alt="After Treatment"
                     fill
                     className="object-cover"
@@ -340,7 +340,7 @@ export default function CosmeticDentistry() {
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
                   <Image 
-                    src="/images/before-2.jpg" 
+                    src="/images/services/gallery/before-2.jpg" 
                     alt="Before Treatment"
                     fill
                     className="object-cover"
@@ -351,7 +351,7 @@ export default function CosmeticDentistry() {
                 </div>
                 <div className="relative h-48">
                   <Image 
-                    src="/images/after-2.jpg" 
+                    src="/images/services/gallery/after-2.jpg" 
                     alt="After Treatment"
                     fill
                     className="object-cover"
@@ -372,7 +372,7 @@ export default function CosmeticDentistry() {
               <div className="grid grid-cols-2">
                 <div className="relative h-48">
                   <Image 
-                    src="/images/before-3.jpg" 
+                    src="/images/services/gallery/before-3.jpg" 
                     alt="Before Treatment"
                     fill
                     className="object-cover"
@@ -383,7 +383,7 @@ export default function CosmeticDentistry() {
                 </div>
                 <div className="relative h-48">
                   <Image 
-                    src="/images/after-3.jpg" 
+                    src="/images/services/gallery/after-3.jpg" 
                     alt="After Treatment"
                     fill
                     className="object-cover"

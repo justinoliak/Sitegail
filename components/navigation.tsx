@@ -120,7 +120,7 @@ export function Navigation() {
                   {/* Dental Services Dropdown */}
                   <NavigationMenuItem>
                     <NavigationMenuTrigger className="text-base text-charcoal/90 font-medium hover:text-primary-mint hover:bg-transparent focus:bg-transparent bg-transparent">
-                      Dental Services
+                      Dental
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid gap-3 p-6 w-[400px] md:w-[500px] lg:w-[600px] grid-cols-1 md:grid-cols-2">
@@ -147,7 +147,7 @@ export function Navigation() {
                   {/* Facial Aesthetics Dropdown */}
                   <NavigationMenuItem>
                     <NavigationMenuTrigger className="text-base text-charcoal/90 font-medium hover:text-primary-mint hover:bg-transparent focus:bg-transparent bg-transparent">
-                      Facial Aesthetics
+                      Aesthetics
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid gap-3 p-6 w-[400px] md:w-[500px] grid-cols-1 md:grid-cols-2">
@@ -256,7 +256,7 @@ export function Navigation() {
                     aria-expanded={activeMobileDropdown === 'dental'}
                     aria-controls="dental-dropdown"
                   >
-                    Dental Services
+                    Dental
                     <ChevronDown 
                       className={`h-5 w-5 text-primary-mint transition-transform duration-200 ${
                         activeMobileDropdown === 'dental' ? 'rotate-180' : ''
@@ -297,7 +297,7 @@ export function Navigation() {
                     aria-expanded={activeMobileDropdown === 'aesthetics'}
                     aria-controls="aesthetics-dropdown"
                   >
-                    Facial Aesthetics
+                    Aesthetics
                     <ChevronDown 
                       className={`h-5 w-5 text-primary-mint transition-transform duration-200 ${
                         activeMobileDropdown === 'aesthetics' ? 'rotate-180' : ''

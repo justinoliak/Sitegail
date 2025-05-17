@@ -105,10 +105,10 @@ export default function Footer() {
                   <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">About Dr. Krishnan</span>
                 </Link>
                 <Link href="/services" className="text-white/80 hover:text-light-mint transition-all duration-300 group">
-                <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">Dental Services</span>
+                <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">Dental</span>
               </Link>
                 <Link href="/btl" className="text-white/80 hover:text-light-mint transition-all duration-300 group">
-                <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">Aesthetic Treatments</span>
+                <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">Aesthetics</span>
               </Link>
                 <Link href="/gallery" className="text-white/80 hover:text-light-mint transition-all duration-300 group">
                   <span className="inline-block transform group-hover:translate-x-1 transition-transform duration-300">Smile Gallery</span>

@@ -10,7 +10,7 @@ export default function PreventiveDentalPage() {
     {
       title: "Dental Cleanings & Exams",
       description: "Regular cleanings to remove plaque and tartar, coupled with comprehensive exams to identify potential issues early.",
-      image: "/images/services/preventive-cleanings.jpg",
+      image: "/images/services/preventive/preventive-care.jpg",
       benefits: [
         "Remove plaque and tartar buildup",
         "Prevent cavities and gum disease",
@@ -21,7 +21,7 @@ export default function PreventiveDentalPage() {
     {
       title: "Digital X-Rays",
       description: "Low-radiation digital imaging that helps detect issues not visible during a regular exam.",
-      image: "/images/services/preventive-xrays.jpg",
+      image: "/images/services/preventive/preventive-care.jpg",
       benefits: [
         "80% less radiation than traditional X-rays",
         "Immediate results for faster diagnosis",
@@ -32,7 +32,7 @@ export default function PreventiveDentalPage() {
     {
       title: "Fluoride Treatments",
       description: "Professional-strength fluoride applications that strengthen enamel and help prevent tooth decay.",
-      image: "/images/services/preventive-fluoride.jpg",
+      image: "/images/services/preventive/preventive-care.jpg",
       benefits: [
         "Strengthen tooth enamel",
         "Reverse early signs of decay",
@@ -43,7 +43,7 @@ export default function PreventiveDentalPage() {
     {
       title: "Dental Sealants",
       description: "Protective coating applied to the chewing surfaces of back teeth to prevent decay in hard-to-reach areas.",
-      image: "/images/services/preventive-sealants.jpg",
+      image: "/images/services/preventive/preventive-care.jpg",
       benefits: [
         "Seal deep grooves where decay often starts",
         "Particularly beneficial for children and teens",
@@ -54,7 +54,7 @@ export default function PreventiveDentalPage() {
     {
       title: "Oral Cancer Screenings",
       description: "Early detection examinations for signs of oral cancer, which is highly treatable when caught early.",
-      image: "/images/services/preventive-cancer-screening.jpg",
+      image: "/images/services/preventive/preventive-care.jpg",
       benefits: [
         "Included in regular checkups",
         "Early detection greatly improves outcomes",
@@ -65,7 +65,7 @@ export default function PreventiveDentalPage() {
     {
       title: "Custom Mouthguards",
       description: "Personalized protection for teeth during sports or from nighttime grinding (bruxism).",
-      image: "/images/services/preventive-mouthguards.jpg",
+      image: "/images/services/preventive/preventive-care.jpg",
       benefits: [
         "Custom-fitted for maximum protection and comfort",
         "Prevent sports injuries to teeth and jaw",
@@ -130,7 +130,7 @@ export default function PreventiveDentalPage() {
             <div className="relative">
               <div className="relative aspect-[4/3] rounded-[16px] overflow-hidden shadow-xl">
                 <Image
-                  src="/images/services/preventive-dentistry.jpg"
+                  src="/images/services/preventive-main.jpg"
                   alt="Preventive Dental Care"
                   fill
                   className="object-cover"
