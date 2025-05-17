@@ -119,7 +119,7 @@ export function Navigation() {
                 <NavigationMenuList className="space-x-4">
                   {/* Dental Services Dropdown */}
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-charcoal/90 font-medium hover:text-primary-mint hover:bg-transparent focus:bg-transparent bg-transparent">
+                    <NavigationMenuTrigger className="text-base text-charcoal/90 font-medium hover:text-primary-mint hover:bg-transparent focus:bg-transparent bg-transparent">
                       Dental Services
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -146,7 +146,7 @@ export function Navigation() {
                   
                   {/* Facial Aesthetics Dropdown */}
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-charcoal/90 font-medium hover:text-primary-mint hover:bg-transparent focus:bg-transparent bg-transparent">
+                    <NavigationMenuTrigger className="text-base text-charcoal/90 font-medium hover:text-primary-mint hover:bg-transparent focus:bg-transparent bg-transparent">
                       Facial Aesthetics
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -167,7 +167,7 @@ export function Navigation() {
                   {/* Regular Menu Items */}
                   <NavigationMenuItem>
                     <Link href="/about" legacyBehavior passHref>
-                      <NavigationMenuLink className="text-charcoal/90 font-medium hover:text-primary-mint transition-colors py-2 px-4">
+                      <NavigationMenuLink className="text-base text-charcoal/90 font-medium hover:text-primary-mint transition-colors py-2 px-4">
                         About
                       </NavigationMenuLink>
                     </Link>
@@ -175,7 +175,7 @@ export function Navigation() {
                   
                   <NavigationMenuItem>
                     <Link href="/gallery" legacyBehavior passHref>
-                      <NavigationMenuLink className="text-charcoal/90 font-medium hover:text-primary-mint transition-colors py-2 px-4">
+                      <NavigationMenuLink className="text-base text-charcoal/90 font-medium hover:text-primary-mint transition-colors py-2 px-4">
                         Gallery
                       </NavigationMenuLink>
                     </Link>
@@ -183,7 +183,7 @@ export function Navigation() {
                   
                   <NavigationMenuItem>
                     <Link href="/contact" legacyBehavior passHref>
-                      <NavigationMenuLink className="text-charcoal/90 font-medium hover:text-primary-mint transition-colors py-2 px-4">
+                      <NavigationMenuLink className="text-base text-charcoal/90 font-medium hover:text-primary-mint transition-colors py-2 px-4">
                         Contact
                       </NavigationMenuLink>
                     </Link>
@@ -196,7 +196,7 @@ export function Navigation() {
               <div className="hidden md:block">
                 <Link
                   href="tel:+17149900204"
-                  className="flex items-center text-charcoal/90 hover:text-primary-mint font-medium transition-all duration-300"
+                  className="flex items-center text-base text-charcoal/90 hover:text-primary-mint font-medium transition-all duration-300"
                 >
                   <Phone className="mr-2 h-4 w-4" />
                   (714) 990-0204
@@ -207,7 +207,7 @@ export function Navigation() {
               <Link href="/contact">
                 <Button 
                   size="lg" 
-                  className={`hidden sm:inline-flex bg-accent-mint text-white hover:bg-accent-mint/90 font-bold transition-all duration-300 px-6 rounded-full shadow-sm ${
+                  className={`hidden sm:inline-flex bg-accent-mint text-white hover:bg-accent-mint/90 font-bold transition-all duration-300 px-6 rounded-full shadow-sm text-base ${
                     scrolled ? 'py-2' : 'py-3'
                   }`}>
                   Book Online
@@ -218,7 +218,7 @@ export function Navigation() {
               <a href="tel:+17149900204" className="md:hidden">
                 <Button 
                   size="sm" 
-                  className="bg-light-mint/30 hover:bg-light-mint/40 font-medium px-4 py-2 rounded-full shadow-sm flex items-center"
+                  className="bg-light-mint/30 hover:bg-light-mint/40 font-medium px-4 py-2 rounded-full shadow-sm flex items-center text-base"
                 >
                   <Phone className="mr-1 h-4 w-4" />
                   Call
@@ -271,7 +271,7 @@ export function Navigation() {
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="block px-4 py-3.5 text-sm text-charcoal/90 hover:bg-light-mint/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
+                        className="block px-4 py-3.5 text-base text-charcoal/90 hover:bg-light-mint/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         <span className="w-2 h-2 rounded-full bg-primary-mint mr-2"></span>
@@ -280,7 +280,7 @@ export function Navigation() {
                     ))}
                     <Link
                       href="/services"
-                      className="block px-4 py-3.5 mt-1 text-sm font-medium text-charcoal bg-light-mint/10 hover:bg-light-mint/20 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
+                      className="block px-4 py-3.5 mt-1 text-base font-medium text-charcoal bg-light-mint/10 hover:bg-light-mint/20 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <ChevronRight className="h-4 w-4 text-primary-mint mr-1" />
@@ -312,7 +312,7 @@ export function Navigation() {
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="block px-4 py-3.5 text-sm text-charcoal/90 hover:bg-light-mint/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
+                        className="block px-4 py-3.5 text-base text-charcoal/90 hover:bg-light-mint/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         <span className="w-2 h-2 rounded-full bg-primary-mint mr-2"></span>
@@ -363,7 +363,7 @@ export function Navigation() {
                     <Link href="/contact">
                       <Button 
                         size="lg" 
-                        className="w-full bg-accent-mint text-white hover:bg-accent-mint/90 flex items-center justify-center py-4 rounded-full font-bold shadow-sm min-h-[54px]"
+                        className="w-full bg-accent-mint text-white hover:bg-accent-mint/90 flex items-center justify-center py-4 rounded-full font-bold shadow-sm min-h-[54px] text-base"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         Book Online
@@ -383,7 +383,7 @@ export function Navigation() {
         <Link href="/contact" className="w-full max-w-xs">
           <Button 
             size="lg" 
-            className="w-full bg-accent-mint text-white hover:bg-accent-mint/90 font-bold py-3 rounded-full shadow-lg flex items-center justify-center touch-manipulation"
+            className="w-full bg-accent-mint text-white hover:bg-accent-mint/90 font-bold py-3 rounded-full shadow-lg flex items-center justify-center touch-manipulation text-base"
           >
             <Calendar className="mr-2 h-5 w-5" />
             Book Appointment
