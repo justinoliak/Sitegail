@@ -90,14 +90,17 @@ export default function HomePage() {
               </div>
             </div>
             <div className="order-1 lg:order-2 relative">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-[32px] shadow-xl">
-                <Image
-                  src="/images/gail-photos/gailwithpatient1.jpg"
-                  alt="Dr. Krishnan's welcoming dental office"
-                  fill
-                  className="object-cover"
-                  priority
-                />
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[32px] shadow-xl bg-transparent">
+                <div className="w-full h-full flex items-center justify-center">
+                  <Image
+                    src="/images/gail-png/gail-png@2.png"
+                    alt="Dr. Krishnan with pink gloves"
+                    width={500}
+                    height={600}
+                    className="object-contain h-full"
+                    priority
+                  />
+                </div>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-background p-4 rounded-2xl shadow-lg border-t-4 border-primary-mint">
                 <div className="flex items-center gap-2">
