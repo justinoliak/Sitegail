@@ -5,28 +5,32 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import path from "path";
 
 // Changed imports to fix React Server Components bundler error
 import dynamicImport from "next/dynamic";
 
+// Create path to the components directory to fix TypeScript errors
+const componentsPath = "@/components/sections";
+
 // Use explicit import() function syntax and ensure ssr options are clearly set
 const FAQAccordionSection = dynamicImport(
-  () => import("@/components/sections/faq-accordion-section"), 
+  () => import(`${componentsPath}/faq-accordion-section`), 
   { ssr: false }
 );
 
 const TransformationGallery = dynamicImport(
-  () => import("@/components/sections/transformation-gallery"), 
+  () => import(`${componentsPath}/transformation-gallery`), 
   { ssr: false }
 );
 
 const TreatmentOptions = dynamicImport(
-  () => import("@/components/sections/treatment-options"), 
+  () => import(`${componentsPath}/treatment-options`), 
   { ssr: false }
 );
 
 const PricingPackages = dynamicImport(
-  () => import("@/components/sections/pricing-packages"), 
+  () => import(`${componentsPath}/pricing-packages`), 
   { ssr: false }
 );
 

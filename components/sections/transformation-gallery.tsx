@@ -32,29 +32,29 @@ export default function TransformationGallery() {
   ];
   
   return (
-    <section className="py-12 md:py-16 bg-light-mint">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-4xl font-semibold text-charcoal mb-4 md:mb-6">
+    <section className="py-32 bg-background">
+      <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-3xl font-semibold mb-6 text-charcoal">
             Real Results from Dr. Krishnan's Patients
           </h2>
-          <p className="text-base md:text-lg text-charcoal/80">
+          <p className="text-charcoal/80 text-lg">
             See the transformative potential of BTL Exion treatments. These results represent typical outcomes, though individual experiences may vary.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
           {beforeAfterItems.map((item) => (
-            <div key={item.id} className="bg-white rounded-xl overflow-hidden shadow-lg">
-              <div className="p-4">
-                <h3 className="text-lg font-medium text-charcoal">{item.title}</h3>
-                <p className="text-sm text-charcoal/70">{item.description}</p>
+            <div key={item.id} className="bg-background rounded-[12px] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-charcoal mb-2">{item.title}</h3>
+                <p className="text-charcoal/70 mb-4">{item.description}</p>
               </div>
               
               {/* Before/After Images side by side */}
-              <div className="grid grid-cols-2 gap-1">
+              <div className="grid grid-cols-2 gap-2">
                 <div className="relative">
-                  <div className="absolute top-2 left-2 bg-white/80 px-2 py-1 text-xs font-medium rounded">Before</div>
+                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 text-sm font-medium rounded-md shadow-sm">Before</div>
                   <div className="relative aspect-[3/4]">
                     <Image
                       src={item.before}
@@ -65,7 +65,7 @@ export default function TransformationGallery() {
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="absolute top-2 right-2 bg-primary-mint/80 text-white px-2 py-1 text-xs font-medium rounded">After</div>
+                  <div className="absolute top-3 right-3 bg-accent-mint/90 text-white px-3 py-1 text-sm font-medium rounded-md shadow-sm">After</div>
                   <div className="relative aspect-[3/4]">
                     <Image
                       src={item.after}
@@ -81,10 +81,10 @@ export default function TransformationGallery() {
         </div>
         
         <div className="text-center">
-          <p className="text-charcoal/80 text-sm italic mb-4">Results may vary. Images show typical results after completing the recommended treatment protocol.</p>
+          <p className="text-charcoal/80 text-lg italic mb-8">Results may vary. Images show typical results after completing the recommended treatment protocol.</p>
           <Link href="/contact">
             <Button 
-              className="bg-accent-mint text-white hover:bg-accent-mint/90 rounded-full px-6 py-3 inline-flex items-center"
+              className="bg-accent-mint hover:bg-accent-mint-dark text-white rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 whitespace-nowrap"
             >
               Schedule Your Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
