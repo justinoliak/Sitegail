@@ -8,11 +8,11 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-light-mint/30 to-white">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-40 pb-32 bg-gradient-to-b from-light-mint to-background">
+        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-charcoal">Meet Dr. Gail Ann Krishnan</h1>
-            <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed mb-8">
+            <p className="text-charcoal/80 leading-relaxed mb-8 text-lg">
               Dedicated to providing exceptional dental care with a personal touch and creating beautiful smiles that last a lifetime.
             </p>
           </div>
@@ -20,11 +20,11 @@ export default function AboutPage() {
       </section>
 
       {/* Introduction & Bio Section */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 bg-background">
+        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative order-2 lg:order-1">
-              <div className="relative aspect-square overflow-hidden rounded-[24px] shadow-xl">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-[32px] shadow-xl">
                 <Image
                   src="/images/dr-krishnan-portrait.jpg"
                   alt="Dr. Gail Ann Krishnan"
@@ -33,15 +33,15 @@ export default function AboutPage() {
                   priority
                 />
               </div>
-              <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-[16px] shadow-lg border-t-4 border-primary-mint max-w-xs">
-                <p className="text-charcoal/80 italic">
+              <div className="absolute -bottom-8 -right-8 bg-white p-8 rounded-[16px] shadow-lg border-t-4 border-primary-mint max-w-xs">
+                <p className="text-charcoal/80 italic text-lg">
                   "My goal is to provide comprehensive dental care that not only improves your oral health but enhances your overall wellbeing and confidence."
                 </p>
-                <p className="font-medium text-charcoal mt-2">— Dr. Krishnan</p>
+                <p className="font-medium text-charcoal mt-3">— Dr. Krishnan</p>
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <h2 className="text-3xl font-semibold mb-6 text-charcoal">A Passion for Excellence in Dentistry</h2>
+              <h2 className="text-3xl font-semibold mb-8 text-charcoal">A Passion for Excellence in Dentistry</h2>
               <div className="space-y-6 text-charcoal/80">
                 <p className="text-lg leading-relaxed">
                   Dr. Gail Ann Krishnan brings over 15 years of experience to her dental practice in Brea, California. After earning her Doctor of Dental Surgery (DDS) degree from the University of California, she pursued advanced education, obtaining a Master of Science (MS) in Dental Sciences, allowing her to provide exceptional comprehensive care to her patients.
@@ -59,156 +59,156 @@ export default function AboutPage() {
       </section>
 
       {/* Education & Credentials Section */}
-      <section className="py-20 bg-light-mint">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-semibold mb-4 text-charcoal">Education & Credentials</h2>
-            <p className="text-lg text-charcoal/80">
+      <section className="py-32 bg-light-mint">
+        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-3xl font-semibold mb-6 text-charcoal">Education & Credentials</h2>
+            <p className="text-charcoal/80 text-lg">
               Dr. Krishnan's extensive training and credentials reflect her dedication to providing the highest standard of dental care.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Education */}
-            <Card className="border-none rounded-[8px] shadow-lg bg-white p-8">
+            <div className="bg-background rounded-[12px] p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-none">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-full bg-light-mint flex items-center justify-center mr-4">
+                <div className="w-12 h-12 rounded-full bg-light-mint flex items-center justify-center mr-5">
                   <GraduationCap className="h-6 w-6 text-accent-mint" />
                 </div>
                 <h3 className="text-xl font-semibold text-charcoal">Education</h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-6">
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-accent-mint mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-charcoal">Doctor of Dental Surgery (DDS)</p>
                     <p className="text-charcoal/70">University of California</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-accent-mint mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-charcoal">Master of Science in Dental Sciences</p>
                     <p className="text-charcoal/70">Specialized research in advanced dental techniques</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-accent-mint mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-charcoal">Advanced Education in General Dentistry</p>
                     <p className="text-charcoal/70">Comprehensive postgraduate training program</p>
                   </div>
                 </li>
               </ul>
-            </Card>
+            </div>
 
             {/* Professional Memberships */}
-            <Card className="border-none rounded-[8px] shadow-lg bg-white p-8">
+            <div className="bg-background rounded-[12px] p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-none">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-full bg-light-mint flex items-center justify-center mr-4">
+                <div className="w-12 h-12 rounded-full bg-light-mint flex items-center justify-center mr-5">
                   <Award className="h-6 w-6 text-accent-mint" />
                 </div>
                 <h3 className="text-xl font-semibold text-charcoal">Professional Memberships</h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-6">
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-accent-mint mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-charcoal">American Dental Association</p>
                     <p className="text-charcoal/70">Active member</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-accent-mint mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-charcoal">California Dental Association</p>
                     <p className="text-charcoal/70">Active member</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-accent-mint mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-charcoal">Academy of General Dentistry</p>
                     <p className="text-charcoal/70">Commitment to continuing education</p>
                   </div>
                 </li>
               </ul>
-            </Card>
+            </div>
 
             {/* Certifications & Training */}
-            <Card className="border-none rounded-[8px] shadow-lg bg-white p-8">
+            <div className="bg-background rounded-[12px] p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-none">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 rounded-full bg-light-mint flex items-center justify-center mr-4">
+                <div className="w-12 h-12 rounded-full bg-light-mint flex items-center justify-center mr-5">
                   <CalendarClock className="h-6 w-6 text-accent-mint" />
                 </div>
                 <h3 className="text-xl font-semibold text-charcoal">Specialized Training</h3>
               </div>
-              <ul className="space-y-4">
+              <ul className="space-y-6">
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-accent-mint mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-charcoal">Invisalign® Certified Provider</p>
                     <p className="text-charcoal/70">Clear aligner orthodontic treatment</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-accent-mint mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-charcoal">Advanced Facial Aesthetics</p>
                     <p className="text-charcoal/70">Non-invasive facial rejuvenation treatments</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-accent-mint mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-accent-mint mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-medium text-charcoal">Advanced Cosmetic Dentistry</p>
                     <p className="text-charcoal/70">Comprehensive smile makeover techniques</p>
                   </div>
                 </li>
               </ul>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Philosophy & Approach Section */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-32 bg-background">
+        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl font-semibold mb-6 text-charcoal">My Philosophy & Approach</h2>
-              <div className="space-y-6">
+              <h2 className="text-3xl font-semibold mb-8 text-charcoal">My Philosophy & Approach</h2>
+              <div className="space-y-8">
                 <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-light-mint flex items-center justify-center mr-4 mt-1">
-                    <Heart className="h-5 w-5 text-accent-mint" />
+                  <div className="w-12 h-12 rounded-full bg-light-mint flex items-center justify-center mr-5 mt-1">
+                    <Heart className="h-6 w-6 text-accent-mint" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-medium text-charcoal mb-2">Patient-Centered Care</h3>
-                    <p className="text-charcoal/80 leading-relaxed">
+                    <h3 className="text-xl font-semibold text-charcoal mb-3">Patient-Centered Care</h3>
+                    <p className="text-charcoal/80 leading-relaxed text-lg">
                       I believe in treating the person, not just their teeth. Every treatment plan is tailored to your unique needs, preferences, and goals. My team and I take the time to listen, understand your concerns, and address any anxiety you might have about dental procedures.
                     </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-light-mint flex items-center justify-center mr-4 mt-1">
-                    <CheckCircle className="h-5 w-5 text-accent-mint" />
+                  <div className="w-12 h-12 rounded-full bg-light-mint flex items-center justify-center mr-5 mt-1">
+                    <CheckCircle className="h-6 w-6 text-accent-mint" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-medium text-charcoal mb-2">Preventive Focus</h3>
-                    <p className="text-charcoal/80 leading-relaxed">
+                    <h3 className="text-xl font-semibold text-charcoal mb-3">Preventive Focus</h3>
+                    <p className="text-charcoal/80 leading-relaxed text-lg">
                       The best dental treatment is prevention. I emphasize patient education and preventive care to help you maintain optimal oral health and avoid costly procedures down the road. Regular checkups, cleanings, and early intervention are the foundation of my practice.
                     </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-light-mint flex items-center justify-center mr-4 mt-1">
-                    <GraduationCap className="h-5 w-5 text-accent-mint" />
+                  <div className="w-12 h-12 rounded-full bg-light-mint flex items-center justify-center mr-5 mt-1">
+                    <GraduationCap className="h-6 w-6 text-accent-mint" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-medium text-charcoal mb-2">Lifelong Learning</h3>
-                    <p className="text-charcoal/80 leading-relaxed">
+                    <h3 className="text-xl font-semibold text-charcoal mb-3">Lifelong Learning</h3>
+                    <p className="text-charcoal/80 leading-relaxed text-lg">
                       Dentistry is constantly evolving, and I'm committed to staying at the forefront of new techniques and technologies. I regularly attend continuing education courses to ensure that my patients receive the most advanced and effective treatments available.
                     </p>
                   </div>
@@ -216,8 +216,8 @@ export default function AboutPage() {
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-6">
-              <div className="relative aspect-[3/4] rounded-[16px] overflow-hidden shadow-md">
+            <div className="grid grid-cols-2 gap-8">
+              <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg">
                 <Image
                   src="/images/dr-krishnan-with-patient.jpg"
                   alt="Dr. Krishnan with a patient"
@@ -225,7 +225,7 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="relative aspect-[3/4] rounded-[16px] overflow-hidden shadow-md mt-12">
+              <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg mt-12">
                 <Image
                   src="/images/dr-krishnan-working.jpg"
                   alt="Dr. Krishnan working"
@@ -233,7 +233,7 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="relative aspect-[3/4] rounded-[16px] overflow-hidden shadow-md">
+              <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg">
                 <Image
                   src="/images/dr-krishnan-consultation.jpg"
                   alt="Dr. Krishnan in consultation"
@@ -241,7 +241,7 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-              <div className="relative aspect-[3/4] rounded-[16px] overflow-hidden shadow-md mt-12">
+              <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg mt-12">
                 <Image
                   src="/images/dr-krishnan-office.jpg"
                   alt="Dr. Krishnan in her office"
@@ -255,79 +255,81 @@ export default function AboutPage() {
       </section>
 
       {/* Personal Life Section (Optional) */}
-      <section className="py-20 bg-light-mint">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-semibold mb-6 text-charcoal text-center">Beyond the Dental Chair</h2>
-            <p className="text-lg text-charcoal/80 leading-relaxed mb-12 text-center">
+      <section className="py-32 bg-light-mint">
+        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-3xl font-semibold mb-6 text-charcoal">Beyond the Dental Chair</h2>
+            <p className="text-charcoal/80 leading-relaxed text-lg">
               When I'm not at the office, I enjoy spending time with my family, staying active in the Brea community, and pursuing various interests that keep me balanced and energized.
             </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="bg-background rounded-[12px] p-8 shadow-lg text-center">
+              <div className="w-20 h-20 rounded-full bg-accent-mint flex items-center justify-center mx-auto mb-6">
+                <Image
+                  src="/images/icon-community.png"
+                  alt="Community icon"
+                  width={40}
+                  height={40}
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-charcoal mb-4">Community Involvement</h3>
+              <p className="text-charcoal/80 text-lg">
+                Active participation in local community service and dental health education programs.
+              </p>
+            </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-20 h-20 rounded-full bg-primary-mint flex items-center justify-center mx-auto mb-4">
-                  <Image
-                    src="/images/icon-community.png"
-                    alt="Community icon"
-                    width={40}
-                    height={40}
-                  />
-                </div>
-                <h3 className="text-xl font-medium text-charcoal mb-2">Community Involvement</h3>
-                <p className="text-charcoal/80">
-                  Active participation in local community service and dental health education programs.
-                </p>
+            <div className="bg-background rounded-[12px] p-8 shadow-lg text-center">
+              <div className="w-20 h-20 rounded-full bg-accent-mint flex items-center justify-center mx-auto mb-6">
+                <Image
+                  src="/images/icon-family.png"
+                  alt="Family icon"
+                  width={40}
+                  height={40}
+                />
               </div>
-              
-              <div className="text-center">
-                <div className="w-20 h-20 rounded-full bg-primary-mint flex items-center justify-center mx-auto mb-4">
-                  <Image
-                    src="/images/icon-family.png"
-                    alt="Family icon"
-                    width={40}
-                    height={40}
-                  />
-                </div>
-                <h3 className="text-xl font-medium text-charcoal mb-2">Family Life</h3>
-                <p className="text-charcoal/80">
-                  Cherishing time with family and enjoying the beautiful Southern California outdoors.
-                </p>
+              <h3 className="text-xl font-semibold text-charcoal mb-4">Family Life</h3>
+              <p className="text-charcoal/80 text-lg">
+                Cherishing time with family and enjoying the beautiful Southern California outdoors.
+              </p>
+            </div>
+            
+            <div className="bg-background rounded-[12px] p-8 shadow-lg text-center">
+              <div className="w-20 h-20 rounded-full bg-accent-mint flex items-center justify-center mx-auto mb-6">
+                <Image
+                  src="/images/icon-interests.png"
+                  alt="Interests icon"
+                  width={40}
+                  height={40}
+                />
               </div>
-              
-              <div className="text-center">
-                <div className="w-20 h-20 rounded-full bg-primary-mint flex items-center justify-center mx-auto mb-4">
-                  <Image
-                    src="/images/icon-interests.png"
-                    alt="Interests icon"
-                    width={40}
-                    height={40}
-                  />
-                </div>
-                <h3 className="text-xl font-medium text-charcoal mb-2">Personal Interests</h3>
-                <p className="text-charcoal/80">
-                  Passionate about cooking, reading, and staying active through hiking and yoga.
-                </p>
-              </div>
+              <h3 className="text-xl font-semibold text-charcoal mb-4">Personal Interests</h3>
+              <p className="text-charcoal/80 text-lg">
+                Passionate about cooking, reading, and staying active through hiking and yoga.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="seafoam-gradient rounded-[16px] p-8 md:p-12 shadow-xl text-center">
-            <h2 className="text-3xl font-semibold mb-6 text-charcoal">
-              Ready to Schedule Your Visit?
-            </h2>
-            <p className="text-lg text-charcoal/80 max-w-2xl mx-auto mb-8">
-              I look forward to meeting you and helping you achieve your best smile. New patients are always welcome at our practice.
-            </p>
+      <section className="py-32 bg-background">
+        <div className="container max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="mint-gradient rounded-[24px] p-12 md:p-16 shadow-xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-semibold mb-6 text-white">
+                Ready to Schedule Your Visit?
+              </h2>
+              <p className="text-white/90 max-w-2xl mx-auto text-lg">
+                I look forward to meeting you and helping you achieve your best smile. New patients are always welcome at our practice.
+              </p>
+            </div>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <Link href="/contact">
                 <Button 
-                  className="bg-accent-mint hover:bg-accent-mint/90 text-white rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto shadow-sm"
+                  className="bg-accent-mint hover:bg-accent-mint-dark text-white rounded-[24px] px-10 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto shadow-sm"
                 >
                   <Calendar className="mr-2 h-5 w-5" /> Schedule an Appointment
                 </Button>
@@ -335,11 +337,20 @@ export default function AboutPage() {
               <Link href="/services">
                 <Button 
                   variant="outline"
-                  className="bg-white border-charcoal/20 text-charcoal hover:bg-white/80 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto"
+                  className="bg-white/90 border-charcoal/20 text-charcoal hover:bg-white rounded-[24px] px-10 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto"
                 >
                   Explore Our Services
                 </Button>
               </Link>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-white/90 italic text-lg">
+                "We promise to make your dental experience as comfortable and stress-free as possible."
+              </p>
+              <p className="font-medium text-white mt-3 text-lg">
+                — Dr. Gail Ann Krishnan
+              </p>
             </div>
           </div>
         </div>
