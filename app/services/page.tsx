@@ -243,17 +243,6 @@ export default function ServicesPage() {
                     </div>
                   ))}
                 </div>
-                
-                <div className="mt-10">
-                  <Link href={`/services/${category.id}`}>
-                    <Button 
-                      variant="outline" 
-                      className="border-primary-mint text-charcoal hover:bg-primary-mint/10 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300"
-                    >
-                      View All {category.title} Services
-                    </Button>
-                  </Link>
-                </div>
               </div>
               
               <div className={`${index % 2 !== 0 ? 'order-1' : ''}`}>
