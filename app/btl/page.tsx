@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,25 +7,25 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 // Changed imports to fix React Server Components bundler error
-import dynamic from "next/dynamic";
+import dynamicImport from "next/dynamic";
 
 // Use explicit import() function syntax and ensure ssr options are clearly set
-const FAQAccordionSection = dynamic(
+const FAQAccordionSection = dynamicImport(
   () => import("@/components/sections/faq-accordion-section"), 
   { ssr: false }
 );
 
-const TransformationGallery = dynamic(
+const TransformationGallery = dynamicImport(
   () => import("@/components/sections/transformation-gallery"), 
   { ssr: false }
 );
 
-const TreatmentOptions = dynamic(
+const TreatmentOptions = dynamicImport(
   () => import("@/components/sections/treatment-options"), 
   { ssr: false }
 );
 
-const PricingPackages = dynamic(
+const PricingPackages = dynamicImport(
   () => import("@/components/sections/pricing-packages"), 
   { ssr: false }
 );
