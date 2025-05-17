@@ -15,19 +15,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 
-// Define dropdown menu items
-const dentalServices = [
-  { name: "Preventive Care", href: "/services/preventive", description: "Regular cleanings and checkups to maintain oral health" },
-  { name: "Cosmetic Dentistry", href: "/services/cosmetic", description: "Treatments to enhance your smile's appearance" },
-  { name: "Restorative Dentistry", href: "/services/restorative", description: "Repair damaged teeth and restore function" },
-];
-
-const btlServices = [
-  { name: "BTL Exion", href: "/btl/exion", description: "Advanced facial rejuvenation and skin treatments" },
-  { name: "BTL Emsculpt", href: "/btl/emsculpt", description: "Non-invasive body contouring and muscle building" },
-  { name: "BTL Overview", href: "/btl", description: "Learn about all our advanced BTL aesthetic treatments" },
-];
-
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a">
@@ -119,55 +106,26 @@ export function Navigation() {
                 <NavigationMenuList className="space-x-4">
                   {/* Dental Services Dropdown */}
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-base text-charcoal/90 font-medium hover:text-primary-mint hover:bg-transparent focus:bg-transparent bg-transparent">
-                      Dental
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid gap-3 p-6 w-[400px] md:w-[500px] lg:w-[600px] grid-cols-1 md:grid-cols-2">
-                        {dentalServices.map((service) => (
-                          <ListItem 
-                            key={service.name} 
-                            title={service.name} 
-                            href={service.href}
-                          >
-                            {service.description}
-                          </ListItem>
-                        ))}
-                        <ListItem 
-                          title="All Dental Services" 
-                          href="/services"
-                          className="bg-light-mint/30 hover:bg-light-mint/40"
-                        >
-                          View our complete range of dental services
-                        </ListItem>
-                      </ul>
-                    </NavigationMenuContent>
+                    <Link href="/services" legacyBehavior passHref>
+                      <NavigationMenuLink className="text-base text-charcoal/90 font-medium py-2 px-4">
+                        Dental
+                      </NavigationMenuLink>
+                    </Link>
                   </NavigationMenuItem>
                   
                   {/* Facial Aesthetics Dropdown */}
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-base text-charcoal/90 font-medium hover:text-primary-mint hover:bg-transparent focus:bg-transparent bg-transparent">
-                      Aesthetics
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="grid gap-3 p-6 w-[400px] md:w-[500px] grid-cols-1 md:grid-cols-2">
-                        {btlServices.map((service) => (
-                          <ListItem 
-                            key={service.name} 
-                            title={service.name} 
-                            href={service.href}
-                          >
-                            {service.description}
-                          </ListItem>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
+                    <Link href="/btl" legacyBehavior passHref>
+                      <NavigationMenuLink className="text-base text-charcoal/90 font-medium py-2 px-4">
+                        Aesthetics
+                      </NavigationMenuLink>
+                    </Link>
                   </NavigationMenuItem>
                   
                   {/* Regular Menu Items */}
                   <NavigationMenuItem>
                     <Link href="/about" legacyBehavior passHref>
-                      <NavigationMenuLink className="text-base text-charcoal/90 font-medium hover:text-primary-mint transition-colors py-2 px-4">
+                      <NavigationMenuLink className="text-base text-charcoal/90 font-medium py-2 px-4">
                         About
                       </NavigationMenuLink>
                     </Link>
@@ -175,7 +133,7 @@ export function Navigation() {
                   
                   <NavigationMenuItem>
                     <Link href="/gallery" legacyBehavior passHref>
-                      <NavigationMenuLink className="text-base text-charcoal/90 font-medium hover:text-primary-mint transition-colors py-2 px-4">
+                      <NavigationMenuLink className="text-base text-charcoal/90 font-medium py-2 px-4">
                         Gallery
                       </NavigationMenuLink>
                     </Link>
@@ -183,7 +141,7 @@ export function Navigation() {
                   
                   <NavigationMenuItem>
                     <Link href="/contact" legacyBehavior passHref>
-                      <NavigationMenuLink className="text-base text-charcoal/90 font-medium hover:text-primary-mint transition-colors py-2 px-4">
+                      <NavigationMenuLink className="text-base text-charcoal/90 font-medium py-2 px-4">
                         Contact
                       </NavigationMenuLink>
                     </Link>
@@ -196,7 +154,7 @@ export function Navigation() {
               <div className="hidden md:block">
                 <Link
                   href="tel:+17149900204"
-                  className="flex items-center text-base text-charcoal/90 hover:text-primary-mint font-medium transition-all duration-300"
+                  className="flex items-center text-base text-charcoal/90 font-medium"
                 >
                   <Phone className="mr-2 h-4 w-4" />
                   (714) 990-0204
@@ -207,7 +165,7 @@ export function Navigation() {
               <Link href="/contact">
                 <Button 
                   size="lg" 
-                  className={`hidden sm:inline-flex bg-accent-mint text-white hover:bg-accent-mint/90 font-bold transition-all duration-300 px-6 rounded-full shadow-sm text-base ${
+                  className={`hidden sm:inline-flex bg-accent-mint text-white font-bold px-6 rounded-full shadow-sm text-base ${
                     scrolled ? 'py-2' : 'py-3'
                   }`}>
                   Book Online
@@ -218,7 +176,7 @@ export function Navigation() {
               <a href="tel:+17149900204" className="md:hidden">
                 <Button 
                   size="sm" 
-                  className="bg-light-mint/30 hover:bg-light-mint/40 font-medium px-4 py-2 rounded-full shadow-sm flex items-center text-base"
+                  className="bg-light-mint/30 font-medium px-4 py-2 rounded-full shadow-sm flex items-center text-base"
                 >
                   <Phone className="mr-1 h-4 w-4" />
                   Call
@@ -228,7 +186,7 @@ export function Navigation() {
               {/* Mobile menu button - improved tap target */}
               <button 
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="inline-flex items-center justify-center p-2.5 rounded-full bg-light-mint/20 text-charcoal md:hidden hover:bg-light-mint/40 transition-colors duration-300 min-w-[44px] min-h-[44px]"
+                className="inline-flex items-center justify-center p-2.5 rounded-full bg-light-mint/20 text-charcoal md:hidden min-w-[44px] min-h-[44px]"
                 aria-expanded={isMobileMenuOpen}
                 aria-label="Toggle menu"
               >
@@ -250,76 +208,26 @@ export function Navigation() {
               <div className="px-4 pt-6 pb-8 space-y-1">
                 {/* Mobile dropdown for Dental */}
                 <div className="border-b border-light-mint/20 pb-2">
-                  <button
-                    onClick={() => toggleMobileDropdown('dental')}
-                    className="w-full px-5 py-4 text-base font-medium text-charcoal hover:bg-light-mint/10 rounded-xl transition-colors duration-200 flex justify-between items-center min-h-[54px]"
-                    aria-expanded={activeMobileDropdown === 'dental'}
-                    aria-controls="dental-dropdown"
+                  <Link
+                    href="/services"
+                    className="w-full px-5 py-4 text-base font-medium text-charcoal rounded-xl flex justify-between items-center min-h-[54px]"
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Dental
-                    <ChevronDown 
-                      className={`h-5 w-5 text-primary-mint transition-transform duration-200 ${
-                        activeMobileDropdown === 'dental' ? 'rotate-180' : ''
-                      }`} 
-                    />
-                  </button>
-                  <div 
-                    id="dental-dropdown" 
-                    className={`pl-4 pr-2 mt-1 space-y-1 ${activeMobileDropdown === 'dental' ? '' : 'hidden'}`}
-                  >
-                    {dentalServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="block px-4 py-3.5 text-base text-charcoal/90 hover:bg-light-mint/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        <span className="w-2 h-2 rounded-full bg-primary-mint mr-2"></span>
-                        {service.name}
-                      </Link>
-                    ))}
-                    <Link
-                      href="/services"
-                      className="block px-4 py-3.5 mt-1 text-base font-medium text-charcoal bg-light-mint/10 hover:bg-light-mint/20 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      <ChevronRight className="h-4 w-4 text-primary-mint mr-1" />
-                      View All Dental Services
-                    </Link>
-                  </div>
+                    <ChevronRight className="h-5 w-5 text-primary-mint" />
+                  </Link>
                 </div>
                 
                 {/* Mobile dropdown for Aesthetic Treatments */}
                 <div className="border-b border-light-mint/20 pb-2">
-                  <button
-                    onClick={() => toggleMobileDropdown('aesthetics')}
-                    className="w-full px-5 py-4 text-base font-medium text-charcoal hover:bg-light-mint/10 rounded-xl transition-colors duration-200 flex justify-between items-center min-h-[54px]"
-                    aria-expanded={activeMobileDropdown === 'aesthetics'}
-                    aria-controls="aesthetics-dropdown"
+                  <Link
+                    href="/btl"
+                    className="w-full px-5 py-4 text-base font-medium text-charcoal rounded-xl flex justify-between items-center min-h-[54px]"
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Aesthetics
-                    <ChevronDown 
-                      className={`h-5 w-5 text-primary-mint transition-transform duration-200 ${
-                        activeMobileDropdown === 'aesthetics' ? 'rotate-180' : ''
-                      }`} 
-                    />
-                  </button>
-                  <div 
-                    id="aesthetics-dropdown" 
-                    className={`pl-4 pr-2 mt-1 space-y-1 ${activeMobileDropdown === 'aesthetics' ? '' : 'hidden'}`}
-                  >
-                    {btlServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="block px-4 py-3.5 text-base text-charcoal/90 hover:bg-light-mint/10 rounded-lg transition-colors duration-200 flex items-center min-h-[44px]"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        <span className="w-2 h-2 rounded-full bg-primary-mint mr-2"></span>
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
+                    <ChevronRight className="h-5 w-5 text-primary-mint" />
+                  </Link>
                 </div>
                 
                 {/* Regular mobile links - with improved tap targets */}
