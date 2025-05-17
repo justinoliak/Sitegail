@@ -13,7 +13,7 @@ export default function BTLPage() {
       {/* 1. Hero Section - Emotional Appeal */}
       <section className="pt-32 pb-16 md:pt-36 md:pb-20 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-light-mint/70 to-transparent z-0"></div>
-        <div className="absolute inset-0 bg-cover bg-center z-[-1]" style={{ backgroundImage: "url('/images/btl-hero.jpg')" }}></div>
+        <div className="absolute inset-0 bg-cover bg-center z-[-1]" style={{ backgroundImage: "url('/images/btl/BTL-Aesthetics_PIC_All-App_Blue-Transparent_ENUS100.png')" }}></div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
@@ -46,7 +46,7 @@ export default function BTLPage() {
           <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8">
             <div className="w-20 h-20 md:w-28 md:h-28 rounded-full overflow-hidden border-4 border-white shadow-lg">
               <ResponsiveImage 
-                src="/images/dr-krishnan.jpg" 
+                src="/images/gail-photos/gailwithpatient1.5.jpg" 
                 alt="Dr. Gail Ann Krishnan"
                 width={112}
                 height={112}
@@ -138,11 +138,11 @@ export default function BTLPage() {
               <div key={index} className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-5px] border border-light-mint touch-manipulation">
                 <div className="w-16 h-16 rounded-full bg-light-mint flex items-center justify-center mb-4 md:mb-6">
                   <Image 
-                    src={`/images/icon-${benefit.icon}.svg`} 
+                    src={`/images/btl/${index + 1}.png`} 
                     alt={benefit.title}
                     width={32} 
                     height={32}
-                    className="text-accent-mint"
+                    className="h-8 w-8 object-contain"
                   />
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-charcoal mb-2 md:mb-3">{benefit.title}</h3>
@@ -160,7 +160,7 @@ export default function BTLPage() {
             <div className="lg:w-1/2">
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <ResponsiveImage
-                  src="/images/exion-machine.jpg"
+                  src="/images/btl/Emface_PIC_Unit_9670_ENUS100.jpg"
                   alt="BTL Exion Technology"
                   width={600}
                   height={400}
@@ -237,23 +237,29 @@ export default function BTLPage() {
               {
                 id: 1,
                 title: "Facial Rejuvenation",
-                description: "4 Sessions, 8 Weeks • Patient in her 50s"
+                description: "4 Sessions, 8 Weeks • Patient in her 50s",
+                before: "/images/emface/emface1.jpg",
+                after: "/images/emface/emface1.2.jpg"
               },
               {
                 id: 2,
                 title: "Skin Tightening",
-                description: "3 Sessions, 6 Weeks • Patient in his 40s"
+                description: "3 Sessions, 6 Weeks • Patient in his 40s",
+                before: "/images/emface/gailemface1.jpg",
+                after: "/images/emface/gailemface1.2.jpg"
               },
               {
                 id: 3,
                 title: "Full Face Rejuvenation",
-                description: "4 Sessions, 8 Weeks • Patient in her 60s"
+                description: "4 Sessions, 8 Weeks • Patient in her 60s",
+                before: "/images/emface/gailemface2.jpg",
+                after: "/images/emface/gailemface2.2.jpg"
               }
             ].map((item) => (
               <div key={item.id} className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
                 <BeforeAfterSlider
-                  beforeSrc={`/images/exion-before-${item.id}.jpg`}
-                  afterSrc={`/images/exion-after-${item.id}.jpg`}
+                  beforeSrc={item.before}
+                  afterSrc={item.after}
                   beforeAlt={`Before ${item.title} Treatment`}
                   afterAlt={`After ${item.title} Treatment`}
                   width={400}
@@ -431,7 +437,7 @@ export default function BTLPage() {
             
             <div className="lg:w-1/2 relative">
               <ResponsiveImage
-                src="/images/dr-consultation.jpg"
+                src="/images/gail-photos/gailwithpatient1.3.jpg"
                 alt="Dr. Krishnan consulting with a patient"
                 width={800}
                 height={600}

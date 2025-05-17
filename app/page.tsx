@@ -92,7 +92,7 @@ export default function HomePage() {
             <div className="order-1 lg:order-2 relative">
               <div className="relative aspect-[4/3] overflow-hidden rounded-[32px] shadow-xl">
                 <Image
-                  src="/images/hero-image.jpg"
+                  src="/images/gail-photos/gailwithpatient1.jpg"
                   alt="Dr. Krishnan's welcoming dental office"
                   fill
                   className="object-cover"
@@ -128,7 +128,7 @@ export default function HomePage() {
               <div className="h-48 relative bg-light-mint">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Image 
-                    src="/images/preventive-care.jpg" 
+                    src="/images/dental/stockimagetoothpaste.jpg" 
                     alt="Preventive Dental Care" 
                     width={300} 
                     height={200}
@@ -155,7 +155,7 @@ export default function HomePage() {
               <div className="h-48 relative bg-light-mint">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Image 
-                    src="/images/cosmetic-dentistry.jpg" 
+                    src="/images/dental/stockimageteeth.jpg" 
                     alt="Cosmetic Dentistry" 
                     width={300} 
                     height={200}
@@ -182,7 +182,7 @@ export default function HomePage() {
               <div className="h-48 relative bg-light-mint">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <Image 
-                    src="/images/restorative-dentistry.jpg" 
+                    src="/images/dental/stockimagechair.jpg" 
                     alt="Restorative Dentistry" 
                     width={300} 
                     height={200}
@@ -225,7 +225,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative aspect-square overflow-hidden rounded-[8px] shadow-xl">
               <Image 
-                  src="/images/dr-krishnan.jpg"
+                  src="/images/gail-photos/gailwithpatient1.2.jpg"
                 alt="Dr. Gail Ann Krishnan"
                 fill
                   className="object-cover"
