@@ -4,27 +4,29 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-// Instead of importing complex client components directly
+// Changed imports to fix React Server Components bundler error
 import dynamic from "next/dynamic";
 
-// Dynamically import client components with ssr: false to prevent hydration issues
-const FAQAccordionSection = dynamic(() => import("@/components/sections/faq-accordion-section"), { 
-  ssr: false,
-  loading: () => <div className="min-h-[400px] flex items-center justify-center">Loading FAQs...</div>
-});
+// Use explicit import() function syntax and ensure ssr options are clearly set
+const FAQAccordionSection = dynamic(
+  () => import("@/components/sections/faq-accordion-section"), 
+  { ssr: false }
+);
 
-const TransformationGallery = dynamic(() => import("@/components/sections/transformation-gallery"), {
-  ssr: false,
-  loading: () => <div className="min-h-[400px] flex items-center justify-center">Loading gallery...</div>
-});
+const TransformationGallery = dynamic(
+  () => import("@/components/sections/transformation-gallery"), 
+  { ssr: false }
+);
 
-const TreatmentOptions = dynamic(() => import("@/components/sections/treatment-options"), {
-  ssr: false
-});
+const TreatmentOptions = dynamic(
+  () => import("@/components/sections/treatment-options"), 
+  { ssr: false }
+);
 
-const PricingPackages = dynamic(() => import("@/components/sections/pricing-packages"), {
-  ssr: false
-});
+const PricingPackages = dynamic(
+  () => import("@/components/sections/pricing-packages"), 
+  { ssr: false }
+);
 
 export default function BTLPage() {
   return (
