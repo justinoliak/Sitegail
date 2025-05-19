@@ -20,19 +20,9 @@ import {
 
 const testimonials = [
   {
-    name: "Jennifer L.",
+    name: "Lucy Amador",
     location: "Brea, CA",
-    text: "Dr. Krishnan is incredible! She takes the time to explain everything and makes me feel comfortable. The office is beautiful and the staff is so friendly."
-  },
-  {
-    name: "Michael T.",
-    location: "Fullerton, CA",
-    text: "I've been to many dentists over the years, but Dr. Krishnan is by far the best. Her attention to detail and gentle approach have made me actually look forward to my dental visits."
-  },
-  {
-    name: "Sarah K.",
-    location: "Brea, CA",
-    text: "I came in for Botox and was amazed at Dr. Krishnan's expertise. The results are natural and exactly what I wanted. I'll definitely be back for more treatments!"
+    text: "Dr. Krishnan makes patients feel very special, and she is extremely professional, caring, and knowledgeable. Her assistant Alyssa is also the best!"
   }
 ];
 
@@ -41,7 +31,7 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="pt-40 pb-32 bg-gradient-to-b from-light-mint to-background">
-        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="container max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 lg:pr-12">
               <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-charcoal">
@@ -90,7 +80,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="order-1 lg:order-2 relative h-full">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-[32px] shadow-xl h-[110%] lg:h-[120%] lg:-mt-12 lg:mb-8 pt-8">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-[32px] shadow-xl h-[100%] lg:h-[110%] lg:-mt-8 lg:mb-4 pt-6">
                 <Image
                   src="/images/gail-photos/gailwithpatient1.jpg"
                   alt="Dr. Krishnan's welcoming dental office"
@@ -112,7 +102,7 @@ export default function HomePage() {
 
       {/* Services Section */}
       <section className="py-32 bg-background">
-        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="container max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl font-semibold mb-6 text-charcoal">
               Comprehensive Dental Services for Your Entire Family
@@ -220,7 +210,7 @@ export default function HomePage() {
 
       {/* About Dr. Krishnan Section */}
       <section className="py-32 bg-light-mint">
-        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="container max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <div className="relative aspect-square overflow-hidden rounded-[12px]">
@@ -279,7 +269,7 @@ export default function HomePage() {
 
       {/* Trust Builders Section */}
       <section className="py-32 bg-background">
-        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="container max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl font-semibold mb-6 text-charcoal">
               What Our Patients Say
@@ -289,8 +279,8 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {/* Testimonial 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-10 max-w-2xl mx-auto">
+            {/* Testimonial - Lucy Amador */}
             <Card className="border-none rounded-[12px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden bg-background p-10">
               <div className="flex mb-6">
                 {[1, 2, 3, 4, 5].map((i) => (
@@ -298,57 +288,15 @@ export default function HomePage() {
                 ))}
               </div>
               <p className="text-charcoal/80 mb-8 italic text-lg">
-                "Dr. Krishnan and her team are amazing! They made me feel comfortable from the moment I walked in. My smile has never looked better, and I actually look forward to my dental visits now."
+                "Dr. Krishnan makes patients feel very special, and she is extremely professional, caring, and knowledgeable. Her assistant Alyssa is also the best!"
               </p>
               <div className="flex items-center">
                 <div className="w-14 h-14 rounded-full bg-primary-mint flex items-center justify-center text-white font-medium mr-5">
-                  SM
+                  LA
                 </div>
                 <div>
-                  <h4 className="font-medium text-charcoal text-lg">Sarah M.</h4>
-                  <p className="text-sm text-charcoal/70">Patient since 2019</p>
-                </div>
-              </div>
-            </Card>
-
-            {/* Testimonial 2 */}
-            <Card className="border-none rounded-[12px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden bg-background p-10">
-              <div className="flex mb-6">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="h-5 w-5 fill-accent-mint text-accent-mint" />
-                ))}
-              </div>
-              <p className="text-charcoal/80 mb-8 italic text-lg">
-                "After years of dental anxiety, I finally found a dentist who understands. Dr. Krishnan took the time to address all my concerns and made sure I was comfortable throughout my procedure."
-              </p>
-              <div className="flex items-center">
-                <div className="w-14 h-14 rounded-full bg-primary-mint flex items-center justify-center text-white font-medium mr-5">
-                  JD
-                </div>
-                <div>
-                  <h4 className="font-medium text-charcoal text-lg">James D.</h4>
-                  <p className="text-sm text-charcoal/70">Patient since 2021</p>
-                </div>
-              </div>
-            </Card>
-
-            {/* Testimonial 3 */}
-            <Card className="border-none rounded-[12px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden bg-background p-10">
-              <div className="flex mb-6">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="h-5 w-5 fill-accent-mint text-accent-mint" />
-                ))}
-              </div>
-              <p className="text-charcoal/80 mb-8 italic text-lg">
-                "I couldn't be happier with my veneers! Dr. Krishnan listened to exactly what I wanted and delivered results that exceeded my expectations. The entire team is professional and friendly."
-              </p>
-              <div className="flex items-center">
-                <div className="w-14 h-14 rounded-full bg-primary-mint flex items-center justify-center text-white font-medium mr-5">
-                  EL
-                </div>
-                <div>
-                  <h4 className="font-medium text-charcoal text-lg">Emily L.</h4>
-                  <p className="text-sm text-charcoal/70">Patient since 2020</p>
+                  <h4 className="font-medium text-charcoal text-lg">Lucy Amador</h4>
+                  <p className="text-sm text-charcoal/70">7 months ago</p>
                 </div>
               </div>
             </Card>
@@ -382,7 +330,7 @@ export default function HomePage() {
 
       {/* Location & Hours Section */}
       <section className="py-32 bg-light-mint">
-        <div className="container max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="container max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-3xl font-semibold mb-8 text-charcoal">
@@ -461,7 +409,7 @@ export default function HomePage() {
 
       {/* Final CTA Section */}
       <section className="py-32 bg-background">
-        <div className="container max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="container max-w-5xl mx-auto px-3 sm:px-4 lg:px-6">
           <div className="mint-gradient rounded-[24px] p-12 md:p-16 shadow-xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-semibold mb-6 text-white">

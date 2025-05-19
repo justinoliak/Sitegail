@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import TransformationGallery from "@/components/sections/transformation-gallery";
 import TreatmentOptions from "@/components/sections/treatment-options";
-import PricingPackages from "@/components/sections/pricing-packages";
 import FAQAccordionSection from "@/components/sections/faq-accordion-section";
 
 // Next.js configuration for server-side rendering
@@ -236,10 +235,6 @@ export default function BTLPage() {
 
       <section>
         <TreatmentOptions />
-      </section>
-
-      <section>
-        <PricingPackages />
       </section>
 
       <section>
