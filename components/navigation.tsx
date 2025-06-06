@@ -96,7 +96,7 @@ export function Navigation() {
               <Link href="/" className="flex items-center group">
                 <div className="relative">
                   <Image
-                    src="/images/logo.png"
+                    src="/images/logobw.png"
                     alt="Dr. Gail Krishnan, DDS - Aesthetic Dentistry"
                     width={300}
                     height={75}
