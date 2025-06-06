@@ -1,22 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  /* Modern color system - simplified */
+  --foreground-rgb: 51, 51, 51;
+  --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 255, 255, 255;
-  --light-mint: #E2F7F0;
-  --primary-mint: #7DCFB6;
-  --primary-mint-dark: #5BB8A0;
-  --charcoal: #333333;
-  --accent-mint: #00B894;
-  --accent-mint-dark: #009B7D;
-  --secondary-dark: #009B7D;
-  --navy-blue: #2D4059;
-  --light-gray: #F5F7F9;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,37 +21,73 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;        /* #FFFFFF */
-    --foreground: 0 0% 20%;         /* #333333 Charcoal */
+    /* Core Colors */
+    --background: 0 0% 100%;        
+    --foreground: 222 84% 4.9%;         
     
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 20%;
+    --card-foreground: 222 84% 4.9%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 20%;
+    --popover-foreground: 222 84% 4.9%;
     
-    --primary: 162 49% 65%;         /* #7DCFB6 Primary Mint */
-    --primary-dark: 162 49% 55%;    /* #5BB8A0 Darker Primary Mint */
+    --primary: 162 55% 55%;         
+    --primary-dark: 162 55% 45%;    
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 166 100% 36%;      /* #00B894 Deeper Accent Mint */
-    --secondary-dark: 166 100% 30%; /* #009B7D Darker Accent Mint */
+    --secondary: 166 85% 42%;      
+    --secondary-dark: 166 85% 35%; 
     --secondary-foreground: 0 0% 100%;
     
-    --muted: 163 59% 93%;           /* #E2F7F0 Light Mint */
-    --muted-foreground: 0 0% 30%;   /* Increased contrast from 45% to 30% */
+    --muted: 210 40% 98%;           
+    --muted-foreground: 215.4 16.3% 46.9%;   
     
-    --accent: 166 100% 36%;         /* #00B894 Deeper Accent Mint */
+    --accent: 166 85% 42%;         
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 162 49% 85%;
-    --input: 162 49% 85%;
-    --ring: 162 49% 65%;            /* #7DCFB6 */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 162 55% 55%;           
     
-    --radius: 2rem;
+    /* Design System */
+    --radius-sm: 0.5rem;   /* 8px */
+    --radius-md: 0.75rem;  /* 12px */
+    --radius-lg: 1rem;     /* 16px */
+    --radius-xl: 1.5rem;   /* 24px */
+    --radius-2xl: 2rem;    /* 32px */
+    
+    /* Consistent Spacing Scale */
+    --space-xs: 0.5rem;    /* 8px */
+    --space-sm: 0.75rem;   /* 12px */
+    --space-md: 1rem;      /* 16px */
+    --space-lg: 1.5rem;    /* 24px */
+    --space-xl: 2rem;      /* 32px */
+    --space-2xl: 3rem;     /* 48px */
+    --space-3xl: 4rem;     /* 64px */
+    --space-4xl: 5rem;     /* 80px */
+    
+    /* Typography Scale */
+    --text-xs: 0.75rem;    /* 12px */
+    --text-sm: 0.875rem;   /* 14px */
+    --text-base: 1rem;     /* 16px */
+    --text-lg: 1.125rem;   /* 18px */
+    --text-xl: 1.25rem;    /* 20px */
+    --text-2xl: 1.5rem;    /* 24px */
+    --text-3xl: 1.875rem;  /* 30px */
+    --text-4xl: 2.25rem;   /* 36px */
+    --text-5xl: 3rem;      /* 48px */
+    --text-6xl: 3.75rem;   /* 60px */
+    
+    /* Modern shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   }
 
   .dark {
@@ -102,83 +130,220 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.8;
-    font-weight: 300;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.65;
+    font-weight: 400;
     max-width: 100%;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
-    @apply font-medium tracking-normal;
+    font-family: 'Playfair Display', Georgia, serif;
+    @apply font-medium tracking-tight;
     letter-spacing: -0.01em;
+    text-wrap: balance;
   }
+  /* Consistent Typography System */
   h1 {
-    @apply text-4xl md:text-5xl xl:text-6xl font-semibold leading-tight;
+    font-size: var(--text-4xl);
+    @apply font-semibold leading-tight;
     letter-spacing: -0.02em;
+    text-wrap: balance;
   }
+  
+  @media (min-width: 768px) {
+    h1 { font-size: var(--text-5xl); }
+  }
+  
   h2 {
-    @apply text-3xl md:text-4xl font-semibold leading-tight;
+    font-size: var(--text-3xl);
+    @apply font-semibold leading-tight;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+  
+  @media (min-width: 768px) {
+    h2 { font-size: var(--text-4xl); }
+  }
+  
+  h3 {
+    font-size: var(--text-2xl);
+    @apply font-medium leading-snug;
     letter-spacing: -0.01em;
   }
-  h3 {
-    @apply text-2xl md:text-3xl font-semibold leading-snug;
+  
+  h4 {
+    font-size: var(--text-xl);
+    @apply font-medium leading-snug;
+    font-family: 'Inter', sans-serif;
   }
+  
+  h5 {
+    font-size: var(--text-lg);
+    @apply font-medium leading-normal;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h6 {
+    font-size: var(--text-base);
+    @apply font-semibold leading-normal;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Consistent Body Text */
   p {
-    @apply text-base leading-relaxed font-normal;
+    font-size: var(--text-base);
+    @apply leading-relaxed font-normal;
+    color: rgb(71 85 105);
+    text-wrap: pretty;
+  }
+  
+  .text-large {
+    font-size: var(--text-lg);
+    @apply leading-relaxed;
+    color: rgb(71 85 105);
+  }
+  
+  .text-body {
+    font-size: var(--text-base);
+    @apply leading-relaxed;
+    color: rgb(100 116 139);
+  }
+  
+  .text-small {
+    font-size: var(--text-sm);
+    @apply leading-relaxed;
+    color: rgb(100 116 139);
+  }
+  
+  /* Hero Typography */
+  .hero-title {
+    font-size: var(--text-5xl);
+    @apply font-semibold leading-none;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-title { font-size: var(--text-6xl); }
+  }
+  
+  .hero-subtitle {
+    font-size: var(--text-xl);
+    @apply leading-relaxed font-normal;
+    color: rgb(71 85 105);
   }
 }
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-full text-sm font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
-    padding: 0.75rem 1.5rem;
+    @apply inline-flex items-center justify-center font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
+    border-radius: var(--radius-lg);
+    font-size: var(--text-sm);
+    padding: var(--space-sm) var(--space-lg);
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.01em;
+    box-shadow: var(--shadow-sm);
   }
   
   .btn-primary {
-    @apply bg-primary text-white hover:bg-primary-dark;
+    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-dark)) 100%);
+    @apply text-white;
+    border: 1px solid transparent;
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, hsl(var(--secondary-dark)) 0%, hsl(var(--secondary)) 100%);
   }
   
   .btn-secondary {
-    @apply bg-secondary text-white hover:bg-secondary-dark;
+    @apply bg-white text-charcoal border border-gray-200;
+  }
+  
+  .btn-secondary:hover {
+    @apply bg-gray-50;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
   }
   
   .btn-outline {
-    @apply border border-input bg-background hover:bg-accent hover:text-accent-foreground;
+    @apply border-2 text-charcoal bg-transparent;
+    border-color: hsl(var(--secondary));
+  }
+  
+  .btn-outline:hover {
+    background: hsl(var(--secondary));
+    @apply text-white;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
   }
   
   .btn-lg {
-    @apply text-base px-6 py-3 font-bold;
+    font-size: var(--text-base);
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-xl);
+    min-height: 56px;
   }
   
   .btn-sm {
-    @apply text-sm px-4 py-2 font-bold;
+    font-size: var(--text-sm);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    min-height: 40px;
   }
   
   .container {
-    @apply px-4 sm:px-6 md:px-8 lg:px-10 mx-auto;
-    max-width: 1320px;
+    @apply px-4 sm:px-6 lg:px-8 mx-auto;
+    max-width: 1280px;
+  }
+  
+  .container-narrow {
+    @apply px-4 sm:px-6 lg:px-8 mx-auto;
+    max-width: 768px;
+  }
+  
+  .container-wide {
+    @apply px-4 sm:px-6 lg:px-8 mx-auto;
+    max-width: 1400px;
   }
 
+  /* Consistent Spacing System */
   .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
+    padding-top: var(--space-4xl);
+    padding-bottom: var(--space-4xl);
   }
+  
+  .section-padding-sm {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+  }
+  
+  .section-padding-lg {
+    padding-top: var(--space-4xl);
+    padding-bottom: var(--space-4xl);
+  }
+  
+  @media (min-width: 768px) {
+    .section-padding-lg {
+      padding-top: calc(var(--space-4xl) + var(--space-2xl));
+      padding-bottom: calc(var(--space-4xl) + var(--space-2xl));
+    }
+  }
+  
+  /* Consistent Gap System */
+  .gap-xs { gap: var(--space-xs); }
+  .gap-sm { gap: var(--space-sm); }
+  .gap-md { gap: var(--space-md); }
+  .gap-lg { gap: var(--space-lg); }
+  .gap-xl { gap: var(--space-xl); }
+  .gap-2xl { gap: var(--space-2xl); }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
-  }
-  
-  .elegant-underline {
-    @apply relative inline-block;
-  }
-  
-  .elegant-underline::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-full h-px bg-primary transform scale-x-0 transition-transform duration-300 ease-in-out origin-bottom-right;
-  }
-  
-  .elegant-underline:hover::after {
-    @apply transform scale-x-100 origin-bottom-left;
+    @apply transition-all duration-200 hover:shadow-md;
   }
   
   .text-balance {
@@ -186,11 +351,18 @@
   }
 
   .mint-gradient {
-    @apply bg-gradient-to-r from-secondary/90 via-secondary to-secondary/90 text-white;
+    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-dark)) 100%);
+    @apply text-white;
   }
 
-  .seafoam-gradient {
-    @apply bg-gradient-to-r from-primary/90 via-primary to-primary/90 text-white;
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--muted)) 0%, rgba(255,255,255,0.8) 100%);
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
   
   /* Text on mint backgrounds */
@@ -203,102 +375,70 @@
     @apply text-charcoal/90 font-medium;
   }
   
-  /* Tend-inspired button styling */
-  .book-btn {
-    @apply inline-flex items-center justify-center rounded-full text-base font-bold transition-all duration-300;
-    background-color: var(--accent-mint);
-    color: #FFFFFF;
-    padding: 0.75rem 1.5rem;
+  /* Consistent Card System */
+  .card {
+    @apply bg-white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgb(248 250 252);
   }
   
-  .book-btn:hover {
-    background-color: var(--accent-mint-dark);
-    transform: translateY(-2px);
+  .card-hover-lift {
+    @apply transition-all duration-300 ease-out;
+    box-shadow: var(--shadow-sm);
   }
   
-  .book-btn-lg {
-    @apply px-8 py-4 text-lg font-bold;
-    border-radius: 24px;
-    font-weight: 500;
+  .card-hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
   }
+  
+  .card-padding {
+    padding: var(--space-xl);
+  }
+  
+  .card-padding-sm {
+    padding: var(--space-lg);
+  }
+  
+  .image-hover-scale {
+    @apply transition-transform duration-500 ease-out hover:scale-105;
+  }
+  
+  .text-hover-color {
+    @apply transition-colors duration-300 hover:text-accent-mint;
+  }
+  
+  /* Consistent Shadow System */
+  .shadow-soft {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 0.05), 0 1px 2px rgb(0 0 0 / 0.1);
+  }
+  
+  /* Consistent Border Radius */
+  .rounded-sm { border-radius: var(--radius-sm); }
+  .rounded-md { border-radius: var(--radius-md); }
+  .rounded-lg { border-radius: var(--radius-lg); }
+  .rounded-xl { border-radius: var(--radius-xl); }
+  .rounded-2xl { border-radius: var(--radius-2xl); }
 }
 
-/* Custom animations */
+/* Simplified animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-@keyframes slideUp {
-  from { transform: translateY(30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideInRight {
-  from { transform: translateX(30px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-
-@keyframes pulse {
-  0% { opacity: 0.7; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.05); }
-  100% { opacity: 0.7; transform: scale(1); }
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-pulse {
-  animation: pulse 4s ease-in-out infinite;
-}
-
-.animation-delay-500 {
-  animation-delay: 500ms;
-}
-
-.animation-delay-1000 {
-  animation-delay: 1s;
-}
-
 .animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
-.animate-slide-up {
-  animation: slideUp 0.7s ease-out forwards;
-}
-
-.animate-slide-in-right {
-  animation: slideInRight 0.7s ease-out forwards;
-}
-
-/* Staggered animation delays */
-.delay-100 {
-  animation-delay: 100ms;
-}
-
-.delay-200 {
-  animation-delay: 200ms;
-}
-
-.delay-300 {
-  animation-delay: 300ms;
-}
-
-.delay-400 {
-  animation-delay: 400ms;
-}
-
-/* Smoother transitions */
-.transition-custom {
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.2s ease-out;
 }
 
 /* Smooth scrolling */

@@ -60,21 +60,21 @@ export default function GalleryPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-blush-pink/30 to-white">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-semibold mb-6 text-charcoal">Smile Gallery</h1>
-            <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed mb-8">
-              View our collection of real smile transformations by Dr. Gail Ann Krishnan
+      <section className="section-padding-lg hero-gradient">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-charcoal mb-6">Smile Gallery</h1>
+            <p className="hero-subtitle mb-8">
+              Before and after photos of dental treatments performed by Dr. Krishnan.
             </p>
             
             <div className="flex items-center justify-center mb-8">
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-copper fill-copper" />
+                  <Star key={i} className="h-5 w-5 text-accent-mint fill-accent-mint" />
                 ))}
               </div>
-              <p className="ml-3 text-charcoal/70">
+              <p className="ml-3 text-body">
                 <span className="font-medium">Real patient results</span>
               </p>
             </div>
@@ -83,17 +83,17 @@ export default function GalleryPage() {
       </section>
       
       {/* Gallery Grid */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <section className="section-padding bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-xl">
             {galleryItems.map((item) => (
-              <Card key={item.id} className="border-none rounded-[8px] shadow-lg transition-all duration-300 hover:shadow-xl overflow-hidden group bg-white">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-charcoal group-hover:text-copper transition-colors duration-300">{item.title}</h3>
-                  <p className="text-charcoal/70 mb-4">{item.description}</p>
+              <Card key={item.id} className="card card-hover-lift overflow-hidden group">
+                <CardContent className="card-padding">
+                  <h3 className="text-charcoal mb-3 text-hover-color">{item.title}</h3>
+                  <p className="text-body mb-4">{item.description}</p>
                   
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-[8px] shadow-md">
+                  <div className="grid grid-cols-2 gap-md mb-4">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-soft">
                       <Image
                         src={item.beforeImage}
                         alt={`Before ${item.title}`}
@@ -102,26 +102,26 @@ export default function GalleryPage() {
                       />
                       <div className="absolute bottom-0 left-0 right-0 bg-charcoal/70 text-white text-sm py-1">Before</div>
                     </div>
-                    <div className="relative aspect-[4/3] overflow-hidden rounded-[8px] shadow-md">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-soft">
                       <Image
                         src={item.afterImage}
                         alt={`After ${item.title}`}
                         fill
                         className="object-cover"
                       />
-                      <div className="absolute bottom-0 left-0 right-0 bg-copper/70 text-white text-sm py-1">After</div>
+                      <div className="absolute bottom-0 left-0 right-0 bg-accent-mint/70 text-white text-sm py-1">After</div>
                     </div>
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <span className="inline-block py-1 px-3 rounded-full bg-blush-pink/30 text-charcoal/80 text-sm">
+                    <span className="inline-block py-1 px-3 rounded-full bg-light-mint text-charcoal/80 text-sm">
                       {item.category}
                     </span>
                     <Link 
                       href={item.category === "Cosmetic" || item.category === "Restorative" 
                         ? `/services/${item.category.toLowerCase()}`
                         : "/services"}
-                      className="text-copper text-sm font-medium hover:underline"
+                      className="text-accent-mint text-sm font-medium hover:underline"
                     >
                       View Similar Treatments
                     </Link>
@@ -134,33 +134,33 @@ export default function GalleryPage() {
       </section>
       
       {/* Information Section */}
-      <section className="py-20 bg-blush-pink/10">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="section-padding bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl font-semibold mb-4 text-charcoal">About Our Smile Transformations</h2>
-            <p className="text-lg text-charcoal/80">
+            <h2 className="text-charcoal mb-6">About Our Smile Transformations</h2>
+            <p className="text-large">
               Every smile transformation is customized to meet the unique needs and goals of each patient.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-[16px] shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-charcoal">Personalized Treatment</h3>
-              <p className="text-charcoal/80">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-lg">
+            <div className="card card-padding">
+              <h3 className="text-charcoal mb-4">Personalized Treatment</h3>
+              <p className="text-body">
                 Dr. Krishnan creates custom treatment plans for each patient, taking into account your unique facial features, smile goals, and dental health needs.
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-[16px] shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-charcoal">Conservative Approach</h3>
-              <p className="text-charcoal/80">
+            <div className="card card-padding">
+              <h3 className="text-charcoal mb-4">Conservative Approach</h3>
+              <p className="text-body">
                 We prioritize preserving your natural tooth structure whenever possible, using minimally invasive techniques to achieve beautiful results.
               </p>
             </div>
             
-            <div className="bg-white p-6 rounded-[16px] shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-charcoal">Lasting Results</h3>
-              <p className="text-charcoal/80">
+            <div className="card card-padding">
+              <h3 className="text-charcoal mb-4">Lasting Results</h3>
+              <p className="text-body">
                 Our focus is on creating smile transformations that not only look beautiful but are also functional and designed to last for years to come.
               </p>
             </div>
@@ -169,32 +169,41 @@ export default function GalleryPage() {
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="container max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-blush-pink to-dusty-rose/70 rounded-[16px] p-8 md:p-12 shadow-xl text-center">
-            <h2 className="text-3xl font-semibold mb-6 text-charcoal">
-              Ready to Transform Your Smile?
-            </h2>
-            <p className="text-lg text-charcoal/80 max-w-2xl mx-auto mb-8">
-              Schedule a consultation with Dr. Krishnan to discuss your smile goals and create a personalized treatment plan.
-            </p>
+      <section className="section-padding bg-white">
+        <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mint-gradient rounded-2xl card-padding shadow-xl">
+            <div className="text-center mb-12">
+              <h2 className="text-white mb-6">
+                Ready to Transform Your Smile?
+              </h2>
+              <p className="text-white/90 max-w-3xl mx-auto text-large">
+                Schedule a consultation with Dr. Krishnan to discuss your smile goals and create a personalized treatment plan.
+              </p>
+            </div>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <Link href="/contact">
-                <Button 
-                  className="bg-copper hover:bg-copper/90 text-white rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto shadow-sm"
-                >
+                <Button className="bg-accent-mint hover:bg-accent-mint-dark text-white btn-lg w-full sm:w-auto shadow-sm">
                   Book Your Consultation
                 </Button>
               </Link>
               <a href="tel:+17149900204">
                 <Button 
                   variant="outline"
-                  className="bg-white border-charcoal/20 text-charcoal hover:bg-white/80 rounded-[24px] px-8 py-6 text-lg font-medium transition-all duration-300 w-full sm:w-auto"
+                  className="bg-white border-charcoal/20 text-charcoal hover:bg-white/80 btn-lg w-full sm:w-auto"
                 >
                   <Phone className="mr-2 h-5 w-5" /> Call (714) 990-0204
                 </Button>
               </a>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-white/90 italic text-large">
+                "Every smile tells a story - let us help you write your most confident chapter."
+              </p>
+              <p className="font-medium text-white mt-3 text-large">
+                — Dr. Gail Ann Krishnan
+              </p>
             </div>
           </div>
         </div>

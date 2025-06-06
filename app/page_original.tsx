@@ -33,20 +33,20 @@ export default function HomePage() {
               <div className="space-y-6">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-primary-mint/20 text-sm font-medium text-slate-700">
                   <span className="w-2 h-2 rounded-full bg-accent-mint mr-2 animate-pulse"></span>
-                  Welcoming new patients • Same-day appointments available
+                  Accepting new patients • Same-day appointments
                 </div>
                 <h1 className="hero-title text-charcoal">
-                  Quality Dental Care in
-                  <span className="text-accent-mint block">Brea, CA</span>
+                  Get the Healthy, Beautiful
+                  <span className="text-accent-mint block">Smile You Deserve</span>
                 </h1>
                 <p className="hero-subtitle max-w-2xl">
-                  Dr. Gail Krishnan provides comprehensive dental care for patients and families in Brea. Preventive, cosmetic, and restorative treatments in a comfortable environment.
+                  Stop hiding your smile. Dr. Gail Krishnan makes dental care comfortable, affordable, and effective. New patients welcome—same-day appointments available.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact">
                   <Button className="btn btn-primary btn-lg group">
-                    Schedule Appointment
+                    Schedule Your Visit
                     <Calendar className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />
                   </Button>
                 </Link>
@@ -59,7 +59,7 @@ export default function HomePage() {
               </div>
               <div className="mt-10 flex items-center space-x-6">
                 <div>
-                  <p className="text-charcoal font-medium">Over 1,000 happy patients</p>
+                  <p className="text-charcoal font-medium">Trusted by 1000+ patients</p>
                   <div className="flex mt-1">
                     {[1, 2, 3, 4, 5].map((i) => (
                       <Star key={i} className="h-4 w-4 fill-accent-mint text-accent-mint" />
@@ -197,7 +197,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative aspect-square overflow-hidden rounded-xl">
                 <Image 
-                  src="/images/@2.png"
+                  src="/images/btl/1.png"
                   alt="Dr. Gail Ann Krishnan"
                   fill
                   className="object-cover"
@@ -384,7 +384,7 @@ export default function HomePage() {
           <div className="mint-gradient rounded-2xl card-padding shadow-xl">
             <div className="text-center mb-12">
               <h2 className="text-white mb-6">
-                Ready to Schedule Appointment?
+                Ready to Schedule Your Visit?
               </h2>
               <p className="text-white/90 max-w-3xl mx-auto text-large">
                 We're committed to providing the highest quality dental care in a comfortable environment. New patients welcome!
