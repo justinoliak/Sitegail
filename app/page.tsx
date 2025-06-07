@@ -59,7 +59,7 @@ export default function HomePage() {
               </div>
               <div className="mt-10 flex items-center space-x-6">
                 <div>
-                  <p className="text-charcoal font-medium">Over 1,000 happy patients</p>
+                  <p className="text-charcoal font-medium">Trusted by families in Brea</p>
                   <div className="flex mt-1">
                     {[1, 2, 3, 4, 5].map((i) => (
                       <Star key={i} className="h-4 w-4 fill-accent-mint text-accent-mint" />
@@ -212,7 +212,7 @@ export default function HomePage() {
                 <p className="text-accent-mint font-medium">DDS, MS • 15+ years experience</p>
               </div>
               <p className="text-charcoal/70 mb-6 leading-relaxed text-lg">
-                With 15+ years of experience, Dr. Krishnan has helped over 1,200 patients achieve healthier, more beautiful smiles. She takes time to listen and creates treatment plans that fit your budget and goals.
+                With 15+ years of experience, Dr. Krishnan helps patients achieve healthier, more beautiful smiles. She takes time to listen and creates treatment plans that fit your budget and goals.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3">
