@@ -429,4 +429,3 @@ export default function AestheticsPage() {
     </div>
   );
 }
-EOF < /dev/null
