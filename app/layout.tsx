@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Dr. Gail Ann Krishnan DDS MS",
     images: [
       {
-        url: "/images/gail-photos/gailwithpatient1.jpg",
+        url: "/images/Gail/gail-practice.jpg",
         width: 1200,
         height: 630,
         alt: "Dr. Gail Ann Krishnan's Dental Practice",

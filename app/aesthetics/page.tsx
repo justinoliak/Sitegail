@@ -113,7 +113,7 @@ export default function AestheticsPage() {
             </div>
             <div className="relative">
               <Image
-                src="/images/EMFACE MACHINE/Emface_PIC_Model-3625_ENUS100.jpg"
+                src="/images/emface-machine/Emface_PIC_Model-3625_ENUS100.jpg"
                 alt="BTL Emface machine providing non-surgical facial lifting treatment"
                 width={500}
                 height={600}
@@ -319,7 +319,7 @@ export default function AestheticsPage() {
             <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative">
                 <Image
-                  src="/images/EMFACE before/after/Emface_PIC_Ba-card-female-face-048_ENUS101.png"
+                  src="/images/emface-before-after/Emface_PIC_Ba-card-female-face-048_ENUS101.png"
                   alt="Emface before and after results - Facial lifting and contouring"
                   width={500}
                   height={350}
@@ -345,7 +345,7 @@ export default function AestheticsPage() {
             <Card className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow">
               <div className="relative">
                 <Image
-                  src="/images/EMFACE before/after/Emface_PIC_Ba-card-female-face-083_ENUS100.png"
+                  src="/images/emface-before-after/Emface_PIC_Ba-card-female-face-083_ENUS100.png"
                   alt="Emface before and after results - Wrinkle reduction"
                   width={500}
                   height={350}
@@ -374,7 +374,7 @@ export default function AestheticsPage() {
             <Card className="overflow-hidden border-0 shadow-soft hover:shadow-lg transition-shadow">
               <div className="relative">
                 <Image
-                  src="/images/EMFACE before/after/Emface_PIC_Ba-card-female-face-097_ENUS100.png"
+                  src="/images/emface-before-after/Emface_PIC_Ba-card-female-face-097_ENUS100.png"
                   alt="Emface before and after results - Complete rejuvenation"
                   width={400}
                   height={300}
@@ -395,7 +395,7 @@ export default function AestheticsPage() {
             <Card className="overflow-hidden border-0 shadow-soft hover:shadow-lg transition-shadow">
               <div className="relative">
                 <Image
-                  src="/images/EMFACE before/after/Emface_PIC_Ba-card-female-face-098_ENUS100.png"
+                  src="/images/emface-before-after/Emface_PIC_Ba-card-female-face-098_ENUS100.png"
                   alt="Emface before and after results - Skin texture improvement"
                   width={400}
                   height={300}

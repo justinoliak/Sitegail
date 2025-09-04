@@ -72,7 +72,7 @@ export default function HomePage() {
             <div className="order-1 lg:order-2 relative">
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-lg">
                 <Image
-                  src="/images/gail-photos/gailwithpatient1.jpg"
+                  src="/images/Gail/gail-practice.jpg"
                   alt="Dr. Krishnan with patient"
                   fill
                   className="object-cover"
@@ -107,7 +107,7 @@ export default function HomePage() {
             <Card className="group border-0 rounded-3xl shadow-soft card-hover-lift overflow-hidden bg-white relative">
               <div className="h-64 relative bg-gradient-to-br from-light-mint to-primary-mint/30">
                 <Image 
-                  src="/images/dental/stockimagetoothpaste.jpg" 
+                  src="/images/stock/stockimagetoothpaste.jpg" 
                   alt="Preventive Dental Care" 
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -135,7 +135,7 @@ export default function HomePage() {
             <Card className="border border-gray-100 rounded-xl shadow-sm card-hover-lift overflow-hidden bg-white">
               <div className="h-48 relative bg-light-mint">
                 <Image 
-                  src="/images/dental/stockimageteeth.jpg" 
+                  src="/images/stock/stockimageteeth.jpg" 
                   alt="Cosmetic Dentistry" 
                   fill
                   className="object-cover"
@@ -159,7 +159,7 @@ export default function HomePage() {
             <Card className="border border-gray-100 rounded-xl shadow-sm card-hover-lift overflow-hidden bg-white">
               <div className="h-48 relative bg-light-mint">
                 <Image 
-                  src="/images/dental/stockimagechair.jpg" 
+                  src="/images/stock/stockimagechair.jpg" 
                   alt="Restorative Dentistry" 
                   fill
                   className="object-cover"

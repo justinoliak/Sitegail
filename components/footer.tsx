@@ -44,7 +44,7 @@ export default function Footer() {
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
                 <Image
-                  src="/images/logo3.png"
+                  src="/images/logobw.png"
                   alt="Dr. Gail Krishnan"
                   width={48}
                   height={48}

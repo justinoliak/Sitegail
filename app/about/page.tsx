@@ -44,7 +44,7 @@ export default function AboutPage() {
               <h2 className="text-charcoal mb-8">Education and Experience</h2>
               <div className="space-y-6">
                 <p className="text-large">
-                  Dr. Gail Krishnan brings over 15 years of experience to her dental practice in Brea, California. After earning her Doctor of Dental Surgery (DDS) degree and Master of Science (MS) in Dental Sciences, she provides exceptional comprehensive care to her patients.
+                  Dr. Gail Krishnan brings over 23 years of experience to her dental practice in Brea, California. After earning her Doctor of Dental Surgery (DDS) degree and Master of Science (MS) in Dental Sciences, she provides exceptional comprehensive care to her patients.
                 </p>
                 <p className="text-large">
                   Her approach to dentistry combines technical precision with genuine compassion. Dr. Krishnan believes in creating partnerships with her patients, educating them about their oral health, and developing personalized treatment plans.
