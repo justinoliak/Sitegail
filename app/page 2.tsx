@@ -11,9 +11,7 @@ import {
   Star, 
   CheckCircle,
   ChevronRight,
-  Shield,
-  Smile,
-  Heart
+  Shield
 } from "lucide-react";
 
 const testimonials = [
@@ -35,7 +33,7 @@ export default function HomePage() {
               <div className="space-y-6">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-primary-mint/20 text-sm font-medium text-slate-700">
                   <span className="w-2 h-2 rounded-full bg-accent-mint mr-2 animate-pulse"></span>
-                  23 Years of Excellence • Welcoming New Patients
+                  Welcoming new patients • Same-day appointments available
                 </div>
                 <h1 className="hero-title text-charcoal">
                   Quality Dental Care in
@@ -74,8 +72,8 @@ export default function HomePage() {
             <div className="order-1 lg:order-2 relative">
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-lg">
                 <Image
-                  src="/images/dr-krishnan-home-hero.png"
-                  alt="Dr. Gail Krishnan - Quality dental care in Brea, CA"
+                  src="/images/gail-photos/gailwithpatient1.jpg"
+                  alt="Dr. Krishnan with patient"
                   fill
                   className="object-cover"
                   priority
@@ -109,7 +107,7 @@ export default function HomePage() {
             <Card className="group border-0 rounded-3xl shadow-soft card-hover-lift overflow-hidden bg-white relative">
               <div className="h-64 relative bg-gradient-to-br from-light-mint to-primary-mint/30">
                 <Image 
-                  src="/images/stock/stockimagetoothpaste.jpg" 
+                  src="/images/dental/stockimagetoothpaste.jpg" 
                   alt="Preventive Dental Care" 
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -134,57 +132,49 @@ export default function HomePage() {
             </Card>
 
             {/* Service Card 2 */}
-            <Card className="group border-0 rounded-3xl shadow-soft card-hover-lift overflow-hidden bg-white relative">
-              <div className="h-64 relative bg-gradient-to-br from-light-mint to-primary-mint/30">
+            <Card className="border border-gray-100 rounded-xl shadow-sm card-hover-lift overflow-hidden bg-white">
+              <div className="h-48 relative bg-light-mint">
                 <Image 
-                  src="/images/stock/stockimageteeth.jpg" 
+                  src="/images/dental/stockimageteeth.jpg" 
                   alt="Cosmetic Dentistry" 
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <div className="p-8">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary-mint to-accent-mint flex items-center justify-center mb-4">
-                  <Smile className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4 text-charcoal">Cosmetic Dentistry</h3>
-                <p className="text-slate-600 mb-6 leading-relaxed">
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3 text-charcoal">Cosmetic Dentistry</h3>
+                <p className="text-charcoal/70 mb-4 leading-relaxed">
                   Love your smile again. Professional whitening, veneers, and smile makeovers that look completely natural.
                 </p>
                 <Link 
                   href="/services" 
-                  className="inline-flex items-center text-accent-mint font-semibold hover:gap-2 transition-all duration-300"
+                  className="inline-flex items-center text-accent-mint font-medium hover:underline transition-colors"
                 >
-                  Learn more <ChevronRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
+                  Learn more <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
               </div>
             </Card>
 
             {/* Service Card 3 */}
-            <Card className="group border-0 rounded-3xl shadow-soft card-hover-lift overflow-hidden bg-white relative">
-              <div className="h-64 relative bg-gradient-to-br from-light-mint to-primary-mint/30">
+            <Card className="border border-gray-100 rounded-xl shadow-sm card-hover-lift overflow-hidden bg-white">
+              <div className="h-48 relative bg-light-mint">
                 <Image 
-                  src="/images/stock/stockimagechair.jpg" 
+                  src="/images/dental/stockimagechair.jpg" 
                   alt="Restorative Dentistry" 
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <div className="p-8">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary-mint to-accent-mint flex items-center justify-center mb-4">
-                  <Heart className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4 text-charcoal">Restorative Dentistry</h3>
-                <p className="text-slate-600 mb-6 leading-relaxed">
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3 text-charcoal">Restorative Dentistry</h3>
+                <p className="text-charcoal/70 mb-4 leading-relaxed">
                   Eat what you want again. Crowns, implants, and bridges that feel and function like your natural teeth.
                 </p>
                 <Link 
                   href="/services" 
-                  className="inline-flex items-center text-accent-mint font-semibold hover:gap-2 transition-all duration-300"
+                  className="inline-flex items-center text-accent-mint font-medium hover:underline transition-colors"
                 >
-                  Learn more <ChevronRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
+                  Learn more <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
               </div>
             </Card>
@@ -207,8 +197,8 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative aspect-square overflow-hidden rounded-xl">
                 <Image 
-                  src="/images/Gail/2.png"
-                  alt="Dr. Gail Ann Krishnan - Friendly and professional dental care"
+                  src="/images/@2.png"
+                  alt="Dr. Gail Ann Krishnan"
                   fill
                   className="object-cover"
                 />
@@ -261,38 +251,18 @@ export default function HomePage() {
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="border border-gray-100 rounded-xl shadow-sm bg-white p-6">
+          <div className="max-w-2xl mx-auto">
+            <Card className="border border-gray-100 rounded-xl shadow-sm bg-white p-8">
               <div className="flex mb-4">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Star key={i} className="h-4 w-4 fill-accent-mint text-accent-mint" />
                 ))}
               </div>
-              <p className="text-charcoal/70 mb-6 italic leading-relaxed">
-                "Dr K is The Best DDS I've Ever Seen. Patience is Her Speciality. I had a Huge Fear of Dentist Until Seeing Her! I Totally Recommend Seeing Her for Your Dental Needs."
+              <p className="text-charcoal/70 mb-6 italic text-lg leading-relaxed">
+                "Dr. Krishnan makes patients feel very special, and she is extremely professional, caring, and knowledgeable. Her assistant Alyssa is also the best!"
               </p>
               <div className="flex items-center">
-                <div className="w-10 h-10 rounded-full bg-primary-mint flex items-center justify-center text-white font-medium mr-3 text-sm">
-                  RS
-                </div>
-                <div>
-                  <h4 className="font-medium text-charcoal">Randall Small</h4>
-                  <p className="text-sm text-charcoal/60">Verified patient</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="border border-gray-100 rounded-xl shadow-sm bg-white p-6">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} className="h-4 w-4 fill-accent-mint text-accent-mint" />
-                ))}
-              </div>
-              <p className="text-charcoal/70 mb-6 italic leading-relaxed">
-                "Dr. Krishnan makes patients feel very special and she is extremely professional, caring and knowledgeable. Her assistant Alyssa is also the best!"
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 rounded-full bg-primary-mint flex items-center justify-center text-white font-medium mr-3 text-sm">
+                <div className="w-12 h-12 rounded-full bg-primary-mint flex items-center justify-center text-white font-medium mr-4">
                   LA
                 </div>
                 <div>

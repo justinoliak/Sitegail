@@ -79,9 +79,9 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h4 className="text-charcoal mb-1">Email</h4>
-                        <p className="text-body">breadentaloffice@gmail.com</p>
+                        <p className="text-body">info@drgailanndds.com</p>
                         <a 
-                          href="mailto:breadentaloffice@gmail.com" 
+                          href="mailto:info@drgailanndds.com" 
                           className="mt-2 inline-flex items-center text-accent-mint hover:underline"
                         >
                           Send email
@@ -129,15 +129,6 @@ export default function ContactPage() {
                       New patients welcome! Please have your insurance card and photo ID ready for your appointment.
                     </p>
                     
-                    <div className="bg-light-mint p-4 rounded-xl mb-4">
-                      <div className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-accent-mint mr-3 flex-shrink-0" />
-                        <p className="text-small">
-                          We accept all PPO insurance plans and are an in-network provider for Delta Dental.
-                        </p>
-                      </div>
-                    </div>
-                    
                     <div className="bg-light-mint p-4 rounded-xl">
                       <div className="flex items-center">
                         <CheckCircle className="h-5 w-5 text-accent-mint mr-3 flex-shrink-0" />
@@ -148,9 +139,12 @@ export default function ContactPage() {
                     </div>
                     
                     <div className="space-y-4 pt-2">
-                      <Button className="btn btn-primary btn-lg w-full">
-                        Book Appointment
-                      </Button>
+                      <a href="https://calendly.com/drgailannkrishnan/30min" target="_blank" rel="noopener noreferrer" className="block">
+                        <Button className="btn btn-primary btn-lg w-full">
+                          <CalendarDays className="mr-2 h-5 w-5" />
+                          Book Appointment
+                        </Button>
+                      </a>
                       <a href="tel:+17149900204" className="block">
                         <Button className="btn btn-outline btn-lg w-full">
                           <Phone className="mr-2 h-5 w-5" /> Call (714) 990-0204
@@ -348,154 +342,25 @@ export default function ContactPage() {
         </div>
       </section>
       
-      {/* Contact Form Section */}
+      {/* Email Us Section */}
       <section className="section-padding bg-light-mint">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-charcoal mb-6">Send Us a Message</h2>
-              <p className="text-large">
-                Have a question or need more information? Fill out the form below and we'll get back to you promptly.
-              </p>
-            </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-charcoal mb-6">Send Us a Message</h2>
+            <p className="text-large mb-8">
+              Have a question or need more information? Click below to send us an email using your default email client.
+            </p>
             
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-charcoal mb-2">
-                    First Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    className="w-full rounded-lg border border-primary-mint/30 bg-white p-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-primary-mint"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-charcoal mb-2">
-                    Last Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    className="w-full rounded-lg border border-primary-mint/30 bg-white p-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-primary-mint"
-                    required
-                  />
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-charcoal mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full rounded-lg border border-primary-mint/30 bg-white p-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-primary-mint"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-charcoal mb-2">
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full rounded-lg border border-primary-mint/30 bg-white p-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-primary-mint"
-                    required
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-charcoal mb-2">
-                  Subject *
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  className="w-full rounded-lg border border-primary-mint/30 bg-white p-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-primary-mint"
-                  required
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-charcoal mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  className="w-full rounded-lg border border-primary-mint/30 bg-white p-3 text-charcoal focus:outline-none focus:ring-2 focus:ring-primary-mint"
-                  required
-                ></textarea>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="flex items-center h-5">
-                  <input
-                    id="privacy"
-                    type="checkbox"
-                    className="h-4 w-4 rounded border-primary-mint/30 text-accent-mint focus:ring-primary-mint"
-                    required
-                  />
-                </div>
-                <div className="ml-3 text-sm">
-                  <label htmlFor="privacy" className="text-charcoal/80">
-                    I agree to the <a href="/privacy-policy" className="text-accent-mint hover:underline">Privacy Policy</a> and consent to having my submitted information collected and stored.
-                  </label>
-                </div>
-              </div>
-              
-              <div className="text-center pt-4">
-                <Button
-                  type="submit"
-                  className="btn btn-primary btn-lg"
-                >
-                  Send Message
-                </Button>
-              </div>
-            </form>
+            <a href="mailto:info@drgailanndds.com?subject=Website%20Inquiry">
+              <Button className="btn btn-primary btn-lg">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </Button>
+            </a>
           </div>
         </div>
       </section>
       
-      {/* Emergency Information Section */}
-      <section className="section-padding-sm bg-white">
-        <div className="container max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mint-gradient rounded-xl card-padding shadow-soft">
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center flex-shrink-0">
-                <Phone className="h-8 w-8 text-accent-mint" />
-              </div>
-              <div>
-                <h2 className="text-white mb-2">Dental Emergency?</h2>
-                <p className="text-white/90 mb-4">
-                  If you're experiencing a dental emergency during business hours, please call us immediately at (714) 990-0204. For after-hours emergencies, please call our emergency line.
-                </p>
-                <a href="tel:+17149900204">
-                  <Button 
-                    className="bg-white text-accent-mint hover:bg-white/90 btn-lg border border-white"
-                  >
-                    Call Emergency Line: (714) 990-0204
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
