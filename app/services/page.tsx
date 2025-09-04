@@ -65,7 +65,7 @@ export default function ServicesPage() {
             <div className="relative">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/services-hero.jpg"
+                  src="/images/Gail/Photo May 08 2025, 12 15 17 PM.jpg"
                   alt="Professional dental services at Dr. Krishnan's practice"
                   fill
                   className="object-cover"
