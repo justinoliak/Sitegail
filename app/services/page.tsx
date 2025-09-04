@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { 
@@ -14,6 +18,15 @@ import {
 import { CheckCircle, ArrowRight, Calendar, Phone, Star, Shield, Heart, Smile, Users, Zap, Clock, Award, Info } from "lucide-react";
 
 export default function ServicesPage() {
+  const searchParams = useSearchParams();
+  const [openDialog, setOpenDialog] = useState<string | null>(null);
+
+  useEffect(() => {
+    const openParam = searchParams.get('open');
+    if (openParam) {
+      setOpenDialog(openParam);
+    }
+  }, [searchParams]);
   return (
     <div className="flex flex-col min-h-screen">
       <section className="section-padding-lg hero-gradient relative overflow-hidden">
@@ -87,7 +100,7 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mb-20">
             {/* Preventive Family Care */}
-            <Dialog>
+            <Dialog open={openDialog === 'preventive'} onOpenChange={(open) => setOpenDialog(open ? 'preventive' : null)}>
               <DialogTrigger asChild>
                 <Card className="group bg-white border-0 rounded-3xl shadow-soft overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
                   <div className="h-48 relative overflow-hidden">
@@ -224,7 +237,7 @@ export default function ServicesPage() {
             </Dialog>
 
             {/* Restoring Your Smile's Health */}
-            <Dialog>
+            <Dialog open={openDialog === 'restorative'} onOpenChange={(open) => setOpenDialog(open ? 'restorative' : null)}>
               <DialogTrigger asChild>
                 <Card className="group bg-white border-0 rounded-3xl shadow-soft overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
                   <div className="h-48 relative overflow-hidden">
@@ -414,7 +427,7 @@ export default function ServicesPage() {
             </Dialog>
 
             {/* Creating Your Dream Smile */}
-            <Dialog>
+            <Dialog open={openDialog === 'cosmetic'} onOpenChange={(open) => setOpenDialog(open ? 'cosmetic' : null)}>
               <DialogTrigger asChild>
                 <Card className="group bg-white border-0 rounded-3xl shadow-soft overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
                   <div className="h-48 relative overflow-hidden">
@@ -604,7 +617,7 @@ export default function ServicesPage() {
             </Dialog>
 
             {/* Advanced Solutions & Technology */}
-            <Dialog>
+            <Dialog open={openDialog === 'advanced'} onOpenChange={(open) => setOpenDialog(open ? 'advanced' : null)}>
               <DialogTrigger asChild>
                 <Card className="group bg-white border-0 rounded-3xl shadow-soft overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
                   <div className="h-48 relative overflow-hidden">

@@ -26,7 +26,7 @@ export default function AboutPage() {
             <div className="relative order-2 lg:order-1">
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-soft">
                 <Image
-                  src="/images/@2.png"
+                  src="/images/Gail/1.png"
                   alt="Dr. Gail Krishnan"
                   fill
                   className="object-cover"
@@ -216,35 +216,19 @@ export default function AboutPage() {
               </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg">
                 <Image
-                  src="/images/about/dr-krishnan-with-patient.jpg"
-                  alt="Dr. Krishnan with a patient"
+                  src="/images/philosophy-approach.jpg"
+                  alt="Dr. Krishnan professional portrait"
                   fill
                   className="object-cover"
                 />
               </div>
-              <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg mt-12">
+              <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg md:mt-12">
                 <Image
-                  src="/images/about/dr-krishnan-working.jpg"
-                  alt="Dr. Krishnan working"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg">
-                <Image
-                  src="/images/about/dr-krishnan-consultation.jpg"
-                  alt="Dr. Krishnan in consultation"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative aspect-[3/4] rounded-[24px] overflow-hidden shadow-lg mt-12">
-                <Image
-                  src="/images/about/dr-krishnan-office.jpg"
-                  alt="Dr. Krishnan in her office"
+                  src="/images/Gail/Photo May 19 2025, 12 12 41 PM.jpg"
+                  alt="Dr. Krishnan in her practice"
                   fill
                   className="object-cover"
                 />
@@ -258,7 +242,7 @@ export default function AboutPage() {
       <section className="py-32 bg-light-mint relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <Image
-            src="/images/about/dr-krishnan-office.jpg"
+            src="/images/Gail/1.png"
             alt="Office Background"
             fill
             className="object-cover"
@@ -274,14 +258,7 @@ export default function AboutPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="bg-background/90 backdrop-blur-sm rounded-[24px] p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px]">
-              <div className="w-20 h-20 rounded-full bg-accent-mint flex items-center justify-center mx-auto mb-6">
-                <Image
-                  src="/images/icons/icon-community.png"
-                  alt="Community icon"
-                  width={40}
-                  height={40}
-                />
-              </div>
+              <div className="text-5xl mb-6">🤝</div>
               <h3 className="text-xl font-semibold text-charcoal mb-4">Community Involvement</h3>
               <p className="text-charcoal/80 text-lg">
                 Active participation in local community service and dental health education programs.
@@ -289,14 +266,7 @@ export default function AboutPage() {
             </div>
             
             <div className="bg-background/90 backdrop-blur-sm rounded-[24px] p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px]">
-              <div className="w-20 h-20 rounded-full bg-accent-mint flex items-center justify-center mx-auto mb-6">
-                <Image
-                  src="/images/icons/icon-family.png"
-                  alt="Family icon"
-                  width={40}
-                  height={40}
-                />
-              </div>
+              <div className="text-5xl mb-6">👨‍👩‍👧‍👦</div>
               <h3 className="text-xl font-semibold text-charcoal mb-4">Family Life</h3>
               <p className="text-charcoal/80 text-lg">
                 Cherishing time with family and enjoying the beautiful Southern California outdoors.
@@ -304,14 +274,7 @@ export default function AboutPage() {
             </div>
             
             <div className="bg-background/90 backdrop-blur-sm rounded-[24px] p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px]">
-              <div className="w-20 h-20 rounded-full bg-accent-mint flex items-center justify-center mx-auto mb-6">
-                <Image
-                  src="/images/icons/icon-interests.png"
-                  alt="Interests icon"
-                  width={40}
-                  height={40}
-                />
-              </div>
+              <div className="text-5xl mb-6">🌟</div>
               <h3 className="text-xl font-semibold text-charcoal mb-4">Personal Interests</h3>
               <p className="text-charcoal/80 text-lg">
                 Passionate about cooking, reading, and staying active through hiking and yoga.

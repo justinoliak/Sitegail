@@ -125,7 +125,7 @@ export default function HomePage() {
                   Stop problems before they start. Regular cleanings and exams save you money and keep your smile healthy for life.
                 </p>
                 <Link 
-                  href="/services" 
+                  href="/services?open=preventive" 
                   className="inline-flex items-center text-accent-mint font-semibold hover:gap-2 transition-all duration-300"
                 >
                   Learn more <ChevronRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
@@ -153,7 +153,7 @@ export default function HomePage() {
                   Love your smile again. Professional whitening, veneers, and smile makeovers that look completely natural.
                 </p>
                 <Link 
-                  href="/services" 
+                  href="/services?open=cosmetic" 
                   className="inline-flex items-center text-accent-mint font-semibold hover:gap-2 transition-all duration-300"
                 >
                   Learn more <ChevronRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
@@ -181,7 +181,7 @@ export default function HomePage() {
                   Eat what you want again. Crowns, implants, and bridges that feel and function like your natural teeth.
                 </p>
                 <Link 
-                  href="/services" 
+                  href="/services?open=restorative" 
                   className="inline-flex items-center text-accent-mint font-semibold hover:gap-2 transition-all duration-300"
                 >
                   Learn more <ChevronRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
