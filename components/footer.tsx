@@ -27,10 +27,10 @@ export default function Footer() {
                 Get dental health tips, appointment reminders, and exclusive offers delivered to your inbox.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email" 
-                  className="glass-effect border-0 rounded-2xl px-6 py-4 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-mint flex-1"
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="glass-effect border-0 rounded-2xl px-6 py-4 text-slate-900 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-accent-mint flex-1 bg-white/90"
                 />
                 <Button className="btn btn-primary btn-lg whitespace-nowrap">
                   Subscribe <ArrowRight className="ml-2 h-4 w-4" />
@@ -44,11 +44,11 @@ export default function Footer() {
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
                 <Image
-                  src="/images/logobw.png"
+                  src="/images/logo.png"
                   alt="Dr. Gail Krishnan"
-                  width={48}
-                  height={48}
-                  className="rounded-xl"
+                  width={120}
+                  height={30}
+                  className="h-8 w-auto"
                 />
                 <div>
                   <div className="text-lg font-semibold text-white">Dr. Gail Krishnan</div>
@@ -116,9 +116,6 @@ export default function Footer() {
                 <Link href="/services" className="block text-slate-300 hover:text-accent-mint transition-colors duration-300">
                   Restorative Dentistry
                 </Link>
-                <Link href="/btl" className="block text-slate-300 hover:text-accent-mint transition-colors duration-300">
-                  BTL Aesthetics
-                </Link>
                 <Link href="/gallery" className="block text-slate-300 hover:text-accent-mint transition-colors duration-300">
                   Results Gallery
                 </Link>
@@ -134,12 +131,6 @@ export default function Footer() {
                 </Link>
                 <Link href="/contact" className="block text-slate-300 hover:text-accent-mint transition-colors duration-300">
                   Schedule Consultation
-                </Link>
-                <Link href="/gallery" className="block text-slate-300 hover:text-accent-mint transition-colors duration-300">
-                  Patient Results
-                </Link>
-                <Link href="#" className="block text-slate-300 hover:text-accent-mint transition-colors duration-300">
-                  Patient Portal
                 </Link>
               </div>
               
