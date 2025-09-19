@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Clock, ChevronRight, Car, CalendarDays, FileText, CreditCard, Shield, CheckCircle, Film } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ChevronRight, Car, CalendarDays, FileText, CreditCard, Shield, CheckCircle, Film, MessageSquare } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -72,7 +72,24 @@ export default function ContactPage() {
                         </a>
                       </div>
                     </div>
-                    
+
+                    <div className="flex items-start">
+                      <div className="mr-4 w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                        <MessageSquare className="h-5 w-5 text-accent-mint" />
+                      </div>
+                      <div>
+                        <h4 className="text-charcoal mb-1">Text</h4>
+                        <p className="text-body">(714) 423-0240</p>
+                        <a
+                          href="sms:+17144230240"
+                          className="mt-2 inline-flex items-center text-accent-mint hover:underline"
+                        >
+                          Send message
+                          <ChevronRight className="h-4 w-4 ml-1" />
+                        </a>
+                      </div>
+                    </div>
+
                     <div className="flex items-start">
                       <div className="mr-4 w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
                         <Mail className="h-5 w-5 text-accent-mint" />
@@ -148,6 +165,11 @@ export default function ContactPage() {
                       <a href="tel:+17149900204" className="block">
                         <Button className="btn btn-outline btn-lg w-full">
                           <Phone className="mr-2 h-5 w-5" /> Call (714) 990-0204
+                        </Button>
+                      </a>
+                      <a href="sms:+17144230240" className="block">
+                        <Button className="btn btn-outline btn-lg w-full">
+                          <MessageSquare className="mr-2 h-5 w-5" /> Text (714) 423-0240
                         </Button>
                       </a>
                     </div>

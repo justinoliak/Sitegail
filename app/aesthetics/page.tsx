@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, Calendar, Phone, Star, Zap, Clock, Users } from "lucide-react";
+import { CheckCircle, ArrowRight, Calendar, Phone, Star, Zap, Clock, Users, MessageSquare } from "lucide-react";
 
 export default function AestheticsPage() {
   return (
@@ -24,20 +24,28 @@ export default function AestheticsPage() {
                 Experience the latest in non-invasive facial treatments with Emface and Exion. Lift, tighten, and rejuvenate your skin with zero downtime and natural-looking results.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <div className="flex flex-col lg:flex-row lg:items-start gap-6">
+                <div className="flex flex-col gap-3">
+                  <a href="tel:+17149900204">
+                    <Button className="btn btn-outline btn-lg group w-full sm:w-auto">
+                      <Phone className="mr-2 w-5 h-5" />
+                      Call (714) 990-0204
+                    </Button>
+                  </a>
+                  <a href="sms:+17144230240">
+                    <Button className="btn btn-outline btn-lg group w-full sm:w-auto">
+                      <MessageSquare className="mr-2 w-5 h-5" />
+                      Text (714) 423-0240
+                    </Button>
+                  </a>
+                </div>
                 <Link href="/contact">
-                  <Button className="btn btn-primary btn-lg group shadow-lg hover:shadow-xl transition-all">
+                  <Button className="btn btn-primary btn-lg group shadow-lg hover:shadow-xl transition-all w-full sm:w-auto">
                     <Calendar className="mr-2 w-5 h-5" />
                     Book FREE Consultation
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
-                <a href="tel:+17149900204">
-                  <Button className="btn btn-outline btn-lg">
-                    <Phone className="mr-2 w-5 h-5" />
-                    (714) 990-0204
-                  </Button>
-                </a>
               </div>
             </div>
 

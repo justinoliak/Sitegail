@@ -3,17 +3,18 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 // import { Section, Heading, ServiceCard } from "@/components/common";
-import { 
-  Calendar, 
-  Clock, 
-  MapPin, 
-  Phone, 
-  Star, 
+import {
+  Calendar,
+  Clock,
+  MapPin,
+  Phone,
+  Star,
   CheckCircle,
   ChevronRight,
   Shield,
   Smile,
-  Heart
+  Heart,
+  MessageSquare
 } from "lucide-react";
 
 const testimonials = [
@@ -46,16 +47,16 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact">
-                  <Button className="btn btn-primary btn-lg group">
-                    Schedule Appointment
-                    <Calendar className="ml-2 h-5 w-5 transition-transform group-hover:scale-110" />
-                  </Button>
-                </Link>
                 <Link href="tel:+17149900204">
-                  <Button className="btn btn-outline btn-lg group">
+                  <Button className="btn btn-outline btn-lg group w-full sm:w-auto">
                     <Phone className="mr-2 h-5 w-5" />
                     Call (714) 990-0204
+                  </Button>
+                </Link>
+                <Link href="sms:+17144230240">
+                  <Button className="btn btn-outline btn-lg group w-full sm:w-auto">
+                    <MessageSquare className="mr-2 h-5 w-5" />
+                    Text (714) 423-0240
                   </Button>
                 </Link>
               </div>
