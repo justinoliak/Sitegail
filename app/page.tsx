@@ -380,7 +380,7 @@ export default function HomePage() {
                   <div>
                     <h4 className="font-medium text-charcoal mb-2">Contact</h4>
                     <p className="text-charcoal/70">(714) 990-0204</p>
-                    <p className="text-charcoal/70">breadentaloffice@gmail.com</p>
+                    <p className="text-charcoal/70">info@drgailanndds.com</p>
                   </div>
                 </div>
               </div>

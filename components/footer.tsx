@@ -72,9 +72,9 @@ export default function Footer() {
                   <Phone className="h-5 w-5 mr-3 text-accent-mint flex-shrink-0" />
                   <span>(714) 990-0204</span>
                 </a>
-                <a href="mailto:breadentaloffice@gmail.com" className="flex items-center group text-slate-300 hover:text-white transition-colors duration-300">
+                <a href="mailto:info@drgailanndds.com" className="flex items-center group text-slate-300 hover:text-white transition-colors duration-300">
                   <Mail className="h-5 w-5 mr-3 text-accent-mint flex-shrink-0" />
-                  <span>breadentaloffice@gmail.com</span>
+                  <span>info@drgailanndds.com</span>
                 </a>
               </div>
             </div>

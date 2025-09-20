@@ -91,7 +91,7 @@ export function Navigation() {
             : "bg-white border-b border-gray-100"
         }`}>
           <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-20">
+            <div className="flex items-center justify-between h-16 md:h-20">
               {/* Logo */}
               <Link href="/" className="flex items-center group">
                 <div className="relative">
@@ -100,7 +100,7 @@ export function Navigation() {
                     alt="Dr. Gail Krishnan, DDS - Aesthetic Dentistry"
                     width={600}
                     height={150}
-                    className="h-16 w-auto"
+                    className="h-12 md:h-16 w-auto"
                     priority
                   />
                 </div>
@@ -143,7 +143,7 @@ export function Navigation() {
               </div>
 
               {/* Right Side Actions */}
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-2 md:space-x-3">
                 {/* Log in Button */}
                 <Link href="/contact">
                   <Button variant="ghost" className="hidden md:inline-flex text-gray-700 hover:text-gray-900 font-medium px-4 py-2 transition-colors duration-200">
@@ -153,16 +153,17 @@ export function Navigation() {
                 
                 {/* CTA Button */}
                 <Link href="/contact">
-                  <Button className="bg-accent-mint hover:bg-accent-mint-dark text-white px-6 py-2.5 rounded-full font-medium transition-all duration-200">
-                    Book Appointment
+                  <Button className="bg-accent-mint hover:bg-accent-mint-dark text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full font-medium transition-all duration-200 text-sm md:text-base min-h-[44px] min-w-[44px]">
+                    <span className="hidden sm:inline">Book Appointment</span>
+                    <span className="sm:hidden">Book</span>
                   </Button>
                 </Link>
                 
                 {/* Mobile Actions */}
-                <div className="flex items-center space-x-2 lg:hidden">
-                  <button 
+                <div className="flex items-center lg:hidden">
+                  <button
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    className="inline-flex items-center justify-center p-2.5 rounded-lg text-gray-700 hover:text-gray-900 transition-colors duration-200"
+                    className="inline-flex items-center justify-center p-3 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors duration-200 min-h-[44px] min-w-[44px]"
                     aria-expanded={isMobileMenuOpen}
                     aria-label="Toggle menu"
                   >
@@ -180,14 +181,17 @@ export function Navigation() {
         </div>
         
         {/* Modern Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-100">
+        <div className={`lg:hidden bg-white/95 backdrop-blur-xl border-t border-gray-100 transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen
+            ? "opacity-100 translate-y-0 visible"
+            : "opacity-0 -translate-y-2 invisible"
+        }`}>
             <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="py-6 space-y-2">
+              <div className="py-4 space-y-1">
                 {/* Navigation Links */}
                 <Link
                   href="/services"
-                  className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
+                  className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200 min-h-[48px] flex items-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Services
@@ -195,41 +199,41 @@ export function Navigation() {
                 
                 <Link
                   href="/aesthetics"
-                  className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
+                  className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200 min-h-[48px] flex items-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Aesthetics
                 </Link>
                 
-                <Link 
+                <Link
                   href="/about"
-                  className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
+                  className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200 min-h-[48px] flex items-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   About
                 </Link>
                 
-                <Link 
+                <Link
                   href="/gallery"
-                  className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
+                  className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200 min-h-[48px] flex items-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Gallery
                 </Link>
                 
-                <Link 
+                <Link
                   href="/contact"
-                  className="block px-4 py-3 text-lg font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
+                  className="block px-4 py-3 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg transition-all duration-200 min-h-[48px] flex items-center"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact
                 </Link>
                 
                 {/* CTA Section */}
-                <div className="pt-4 mt-4 border-t border-gray-200">
+                <div className="pt-3 mt-3 border-t border-gray-200">
                   <Link href="/contact">
-                    <Button 
-                      className="w-full bg-accent-mint hover:bg-accent-mint-dark text-white py-3 rounded-full font-medium transition-all duration-200"
+                    <Button
+                      className="w-full bg-accent-mint hover:bg-accent-mint-dark text-white py-3 rounded-full font-medium transition-all duration-200 min-h-[48px]"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Book Appointment
@@ -238,8 +242,7 @@ export function Navigation() {
                 </div>
               </div>
             </div>
-          </div>
-        )}
+        </div>
       </nav>
       
       {/* Mobile persistent booking button */}
